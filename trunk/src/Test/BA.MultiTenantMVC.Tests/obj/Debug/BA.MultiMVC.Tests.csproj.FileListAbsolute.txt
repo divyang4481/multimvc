@@ -1,0 +1,16 @@
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\obj\Debug\BA.MultiTenantMVC.Tests.dll
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\obj\Debug\BA.MultiTenantMVC.Tests.pdb
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\bin\Debug\BA.MultiTenantMVC.Tests.dll
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\bin\Debug\BA.MultiTenantMVC.Tests.pdb
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\bin\Debug\BA.MultiMVC.dll
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\bin\Debug\BA.MultiTenantMVC.Sample.dll
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\bin\Debug\BA.MultiTenantMVC.Sample.Extensions.Contoso.dll
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\bin\Debug\BA.MultiTenantMVC.Test.Util.dll
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\bin\Debug\StructureMap.dll
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\bin\Debug\Castle.Components.Validator.dll
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\bin\Debug\Moq.dll
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\bin\Debug\BA.MultiTenantMVC.Test.Util.pdb
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\bin\Debug\BA.MultiTenantMVC.Sample.Extensions.Contoso.pdb
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\bin\Debug\BA.MultiTenantMVC.Sample.pdb
+C:\Dev\MultiMVC\src\Test\BA.MultiTenantMVC.Tests\bin\Debug\BA.MultiMVC.pdb

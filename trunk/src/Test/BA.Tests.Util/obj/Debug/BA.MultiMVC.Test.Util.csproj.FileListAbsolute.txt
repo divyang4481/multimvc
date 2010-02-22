@@ -1,0 +1,10 @@
+C:\Dev\MultiMVC\src\Test\BA.Tests.Util\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\MultiMVC\src\Test\BA.Tests.Util\bin\Debug\BA.MultiTenantMVC.Test.Util.dll
+C:\Dev\MultiMVC\src\Test\BA.Tests.Util\bin\Debug\BA.MultiTenantMVC.Test.Util.pdb
+C:\Dev\MultiMVC\src\Test\BA.Tests.Util\bin\Debug\BA.MultiMVC.dll
+C:\Dev\MultiMVC\src\Test\BA.Tests.Util\bin\Debug\Moq.dll
+C:\Dev\MultiMVC\src\Test\BA.Tests.Util\bin\Debug\StructureMap.dll
+C:\Dev\MultiMVC\src\Test\BA.Tests.Util\bin\Debug\Castle.Components.Validator.dll
+C:\Dev\MultiMVC\src\Test\BA.Tests.Util\bin\Debug\BA.MultiMVC.pdb
+C:\Dev\MultiMVC\src\Test\BA.Tests.Util\obj\Debug\BA.MultiTenantMVC.Test.Util.dll
+C:\Dev\MultiMVC\src\Test\BA.Tests.Util\obj\Debug\BA.MultiTenantMVC.Test.Util.pdb
