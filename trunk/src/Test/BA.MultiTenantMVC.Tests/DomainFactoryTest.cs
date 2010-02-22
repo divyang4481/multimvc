@@ -20,7 +20,7 @@ namespace BA.MultiMVC.Tests
         [TestInitialize]
         public void Initialize()
         {
-            Bootstrapper.ConfigureStructureMap();
+            Bootstrapper.ConfigureStructureMap(".");
         }
 
         [TestMethod]

@@ -23,7 +23,7 @@ namespace BA.MultiMVC.Sample
         protected void Application_Start()
         {
             RegisterRoutes(RouteTable.Routes);
-            Bootstrapper.ConfigureStructureMap();
+            Bootstrapper.ConfigureStructureMap(Bootstrapper.ExtensionPath);
             ApplicationHelpers.ApplicationStart();
         }
     }
