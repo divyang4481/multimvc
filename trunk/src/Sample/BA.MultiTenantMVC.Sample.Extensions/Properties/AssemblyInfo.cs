@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BA.MultiTenantMVC.Sample.Extensions")]
+[assembly: AssemblyTitle("BA.MultiMVC.Sample.Extensions")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BA.MultiTenantMVC.Sample.Extensions")]
+[assembly: AssemblyProduct("BA.MultiMVC.Sample.Extensions")]
 [assembly: AssemblyCopyright("Copyright ©  2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
