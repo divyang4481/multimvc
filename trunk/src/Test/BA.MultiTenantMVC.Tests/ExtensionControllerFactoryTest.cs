@@ -1,13 +1,12 @@
 ﻿using System;
-
-using BA.MultiMVC.Sample;
-using BA.MultiMVC.Test.Util.Stubs;
-using BA.MultiMVC.Sample.Controllers;
-using BA.MultiMVC.Core;
-using BA.MultiMVC.Sample.Extensions.Contoso.Controllers;
+using BA.MultiMVC.Framework.Core.MultiMVC.Sample;
+using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Controllers;
+using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Contoso.Controllers;
+using BA.MultiMVC.Framework.Core.MultiMVC.Test.Util.Stubs;
+using BA.MultiMVC.Framework.Core;
 using NUnit.Framework;
 
-namespace BA.MultiTenantMVC.UnitTests
+namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.UnitTests
 {
    
 

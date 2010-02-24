@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Web.Mvc;
 
-namespace BA.MultiMVC.Ressources
+namespace BA.MultiMVC.Framework.Ressources
 {
     [Serializable]
     public class RessourceDictionary : Dictionary<string, string>, IRessourceDictionary

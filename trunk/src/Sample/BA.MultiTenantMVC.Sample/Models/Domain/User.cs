@@ -1,6 +1,6 @@
-﻿using BA.MultiMVC.Core;
+﻿using BA.MultiMVC.Framework.Core;
 
-namespace BA.MultiMVC.Sample.Models.Domain
+namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Domain
 {
     public class User:IModel
     {

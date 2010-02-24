@@ -1,7 +1,7 @@
-﻿using BA.MultiMVC.Sample.Models.Domain;
-using BA.MultiMVC.Core;
+﻿using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Domain;
+using BA.MultiMVC.Framework.Core;
 
-namespace BA.MultiMVC.Sample.Models.Infrastructure
+namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Infrastructure
 {
     public interface IUserRepository:IRepository
     {

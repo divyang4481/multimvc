@@ -1,8 +1,8 @@
 ﻿using System.Reflection;
+using BA.MultiMVC.Framework.Core;
 using StructureMap;
-using BA.MVC.MultiTenant.Core;
 
-namespace BA.MultiMVC.Core
+namespace BA.MultiMVC.Framework.Core
 {
     public static class Configurator<T>
     {

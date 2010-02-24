@@ -1,8 +1,8 @@
 ﻿using System;
+using BA.MultiMVC.Framework.Core;
 using StructureMap;
-using BA.MVC.MultiTenant.Core;
 
-namespace BA.MultiMVC.Core
+namespace BA.MultiMVC.Framework.Core
 {
     public  class TenantFactory
     {

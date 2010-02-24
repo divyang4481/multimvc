@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using BA.MultiMVC.Framework.Ressources;
 using Castle.Components.Validator;
-using BA.MultiMVC.Ressources;
 using System.Collections.Specialized;
 using System.Web.Routing;
 
-namespace BA.MultiMVC.Helpers
+namespace BA.MultiMVC.Framework.Helpers
 {
     public static class ExtensionMethods
     {

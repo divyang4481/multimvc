@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Configuration;
-using BA.MultiMVC.Ressources;
-using BA.MultiMVC.Core;
+using BA.MultiMVC.Framework.Ressources;
 
-namespace BA.MVC.MultiTenant.Core
+namespace BA.MultiMVC.Framework.Core
 {
     public class TenantContext
     {

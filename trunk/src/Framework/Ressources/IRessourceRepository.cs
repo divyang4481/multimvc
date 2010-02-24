@@ -1,7 +1,8 @@
-﻿using BA.MultiMVC.Core;
+﻿using BA.MultiMVC.Framework.Core;
 
 
-namespace BA.MultiMVC.Ressources
+
+namespace BA.MultiMVC.Framework.Ressources
 {
     public interface IRessourceProvider : IRepository
     {

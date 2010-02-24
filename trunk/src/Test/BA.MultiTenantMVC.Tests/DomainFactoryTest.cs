@@ -1,14 +1,14 @@
-﻿using BA.MultiMVC.Sample;
-using BA.MultiMVC.Sample.Extensions.Contoso.Infrastructure;
-using BA.MultiMVC.Sample.Models.Infrastructure;
-using BA.MultiMVC.Sample.Models.Domain;
-using BA.MultiMVC.Sample.Extensions.Domain;
-using BA.MultiTenantMVC.Test.Util.ParamatrizedTests;
-using BA.MVC.MultiTenant.Core;
+﻿using BA.MultiMVC.Framework.Core.MultiMVC.Sample;
+using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Contoso.Infrastructure;
+using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Domain;
+using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Domain;
+using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Infrastructure;
+using BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests;
+using BA.MultiMVC.Framework.Core;
 using NUnit.Framework;
 
 
-namespace BA.MultiTenantMVC.UnitTests
+namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.UnitTests
 {
     /// <summary>
     /// Summary description for SaasMVCFactory

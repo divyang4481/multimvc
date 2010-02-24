@@ -103,9 +103,9 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Framework\BA.MultiMVC.csproj">
+    <ProjectReference Include="..\..\Framework\BA.MultiMVC.Framework.csproj">
       <Project>{A26E06A2-3468-4DD0-9E7C-7155C7807E84}</Project>
-      <Name>BA.MultiMVC</Name>
+      <Name>BA.MultiMVC.Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

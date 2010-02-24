@@ -1,7 +1,7 @@
-﻿using System.Linq;
-using BA.MultiMVC.Ressources;
+﻿
+using BA.MultiMVC.Framework.Ressources;
 
-namespace BA.MultiMVC.Sample.Models.Infrastructure
+namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Infrastructure
 {
     public class RessourceRepository :  IRessourceProvider
     {

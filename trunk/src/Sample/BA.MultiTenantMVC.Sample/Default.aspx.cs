@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using System.Web.UI;
 
-namespace BA.MultiMVC.Sample
+namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample
 {
     public partial class _Default : Page
     {

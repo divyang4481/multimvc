@@ -1,7 +1,7 @@
 ﻿using System.Web.Routing;
-using BA.MultiMVC.Helpers;
+using BA.MultiMVC.Framework.Ressources;
 
-namespace BA.MultiMVC.Sample
+namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801

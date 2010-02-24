@@ -3,9 +3,9 @@ using System.Globalization;
 using System.Security.Principal;
 using System.Web.Mvc;
 using System.Web.Security;
-using BA.MultiMVC.Core;
+using BA.MultiMVC.Framework.Core;
 
-namespace BA.MultiMVC.Sample.Controllers
+namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Controllers
 {
 
     [HandleError]

@@ -1,6 +1,7 @@
-﻿using NUnit.Framework;
+﻿using BA.MultiMVC.Framework.Ressources;
+using NUnit.Framework;
 
-namespace BA.MultiTenantMVC.UnitTests
+namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.UnitTests
 {
     [TestFixture]
     public class RessourcesTest
@@ -10,7 +11,7 @@ namespace BA.MultiTenantMVC.UnitTests
         public void Ressources_Key_ReturnValue()
         {
             //Arrange
-            var subject = new MultiMVC.Ressources.RessourceDictionary();
+            var subject = new RessourceDictionary();
             subject.Add("AKey", "AValue");
 
             //Act

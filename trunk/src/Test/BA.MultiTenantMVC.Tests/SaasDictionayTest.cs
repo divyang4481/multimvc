@@ -1,9 +1,10 @@
 ﻿
 
-using BA.MultiMVC.Ressources;
+using BA.MultiMVC.Framework.Core;
+using BA.MultiMVC.Framework.Ressources;
 using NUnit.Framework;
 
-namespace BA.MultiTenantMVC.UnitTests
+namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.UnitTests
 {
     /// <summary>
     /// Summary description for SaasDistionayTest

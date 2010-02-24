@@ -1,4 +1,4 @@
-﻿namespace BA.MultiMVC.Ressources
+﻿namespace BA.MultiMVC.Framework.Ressources
 {
     public interface IRessourceDictionary
     {

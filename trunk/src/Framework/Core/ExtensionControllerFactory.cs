@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Web.Mvc;
-using BA.MultiMVC.Helpers;
+using BA.MultiMVC.Framework.Core;
+using BA.MultiMVC.Framework.Helpers;
 using StructureMap;
-using BA.MVC.MultiTenant.Core;
 using System.Web.Routing;
 
 
-namespace BA.MultiMVC.Core
+namespace BA.MultiMVC.Framework.Core
 {
     public class ExtensionControllerFactory : StructureMapControllerFactory
     {

@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
-using BA.MultiMVC.Core;
+using BA.MultiMVC.Framework.Core;
 
-namespace BA.MultiMVC.Sample.Controllers
+namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Controllers
 {
     [HandleError]
     public class HomeController : BaseController

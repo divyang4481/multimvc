@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
-using BA.MultiMVC.Core;
+using BA.MultiMVC.Framework.Core.MultiMVC.Sample;
+using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Contoso.Controllers;
+using BA.MultiMVC.Framework.Core;
 using NUnit.Framework;
 using StructureMap;
-using BA.MultiMVC.Sample;
-using BA.MultiMVC.Sample.Extensions.Contoso.Controllers;
 
-namespace BA.MultiTenantMVC.UnitTests
+namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.UnitTests
 {
     /// <summary>
     /// Summary description for StructureMapTester

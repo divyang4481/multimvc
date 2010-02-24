@@ -1,4 +1,4 @@
-﻿namespace BA.MultiMVC.Core
+﻿namespace BA.MultiMVC.Framework.Core
 {
     public interface IRepository
     {
