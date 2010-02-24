@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
 <asp:Content ID="indexTitle" ContentPlaceHolderID="TitleContent" runat="server">
-    <%= Html.Encode(((Dictionary<string, string>)ViewData["ressources"])["Home.Title"])%>
+    <%= Html.Encode(((Dictionary<string, string>)ViewData["Ressources"])["Home.Title"])%>
 </asp:Content>
 
 <asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">
