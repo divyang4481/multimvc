@@ -27,9 +27,11 @@ namespace BA.MultiMVC.IntegrationTests
             _ressource = new Ressource()
                              {
                                  RessourceKey = RessourceKeyString, 
-                                 RessourceValue = RessourceValueString
+                                 RessourceValue = RessourceValueString,
+                                 RessourceLanguage = Language
                              };
             _db.Ressources.InsertOnSubmit(_ressource);
+            _db.SubmitChanges();
         }
 
         [Test]
