@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RessourcesTest.cs" />
+    <Compile Include="Spesialised\RessourceRepositoryForTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Framework\BA.MultiMVC.Framework.csproj">

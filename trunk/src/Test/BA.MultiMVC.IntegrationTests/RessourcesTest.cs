@@ -6,6 +6,7 @@ using BA.MultiMVC.Framework.Ressources;
 using BA.MultiTenantMVC.Sample.Models.Infrastructure;
 using NUnit.Framework;
 using BA.MultiTenantMVC.Sample.Models.Infrastructure.Linq;
+using BA.MultiMVC.IntegrationTests.Spesialised;
 
 namespace BA.MultiMVC.IntegrationTests
 {
@@ -38,7 +39,7 @@ namespace BA.MultiMVC.IntegrationTests
         public void RessourceServiceProvider_GetRessourceDictionary_ContainsTestRessource()
         {
             //Arrange
-            var ressourceRepository = new RessourceRepository(_db);
+            var ressourceRepository = new RessourceRepositoryForTest(_db);
             IRessourceProviderService subject = new RessourceProviderService(ressourceRepository);
 
             //Act

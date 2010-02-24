@@ -4,6 +4,7 @@ using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Infrastructure;
 using BA.MultiMVC.Framework.Core;
 using BA.MultiMVC.Framework.Ressources;
 using StructureMap;
+using BA.MultiTenantMVC.Sample.Models.Infrastructure;
 
 namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample
 {
@@ -43,6 +44,8 @@ namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample
                 .TheDefaultIsConcreteType<UserRepository>();
             ForRequestedType<IRessourceProviderService>()
                 .TheDefaultIsConcreteType<RessourceProviderService>();
+            ForRequestedType<IRessourceRepository>()
+                .TheDefaultIsConcreteType<RessourceRepository>();
 
             ScanControllersAndRepositoriesFromPath(extensionPath);
         }

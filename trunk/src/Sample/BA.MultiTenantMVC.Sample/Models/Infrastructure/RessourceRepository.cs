@@ -7,15 +7,10 @@ namespace BA.MultiTenantMVC.Sample.Models.Infrastructure
 {
     public class RessourceRepository :  IRessourceRepository
     {
-        DBDataContext _db;
+        protected DBDataContext _db;
 
         public RessourceRepository()
         {}
-
-        public RessourceRepository(DBDataContext db) // Contructor used by tests!
-        {
-            _db = db;
-        }
 
         #region IRessourceRepository Members
 
