@@ -1,39 +1,52 @@
-﻿
+﻿using System.Collections.Generic;
 using BA.MultiMVC.Framework.Ressources;
+using BA.MultiTenantMVC.Sample.Models.Infrastructure.Linq;
+using System.Linq;
 
-namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Infrastructure
+namespace BA.MultiTenantMVC.Sample.Models.Infrastructure
 {
-    public class RessourceRepository :  IRessourceProvider
+    public class RessourceRepository :  IRessourceRepository
     {
-        #region Methods
+        DBDataContext _db;
 
-        public IRessourceDictionary GetDictionary(string controller, string language)
+        public RessourceRepository()
+        {}
+
+        public RessourceRepository(DBDataContext db) // Contructor used by tests!
         {
-            //Todo: change signature to retrieve all ressources & implement caching
-            var ressources = new RessourceDictionary();
+            _db = db;
+        }
+
+        #region IRessourceRepository Members
+
+        public System.Collections.Generic.IDictionary<string, string> Find(string language)
+        {
+            var query = from p in _db.Ressources
+                         where p.RessourceLanguage == language
+                         select p;
+
+            Dictionary<string, string> ressources = new Dictionary<string, string>();
+            foreach(var item in query)
+            {
+                ressources.Add(item.RessourceKey,item.RessourceValue);
+            }
             return ressources;
         }
 
-        public IRessourceDictionary GetDictionary(System.Web.Routing.RouteData routeData)
+        #endregion
+
+        #region IRepository Members
+
+        private string _connectionString;
+        public string ConnectionString 
         {
-            var controller = routeData.Values["controller"].ToString();
-            var language = routeData.Values["language"].ToString();
-
-            return this.GetDictionary(controller, language);
+            get { return _connectionString; }
+            set
+            {
+               _connectionString = value;
+               _db = new DBDataContext(_connectionString);
+            }
         }
-
-        public IRessourceDictionary GetErrorMessagesDictionary(string language)
-        {
-            const string controller = "ErrorMessages";
-
-            return this.GetDictionary(controller, language);
-        }
-
-        #endregion Methods
-
-
-        #region Properties
-        public string ConnectionString { get; set; }
 
         #endregion
     }

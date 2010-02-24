@@ -41,8 +41,8 @@ namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample
                 .TheDefaultIsConcreteType<MembershipService>();
             ForRequestedType<IUserRepository>()
                 .TheDefaultIsConcreteType<UserRepository>();
-            ForRequestedType<IRessourceProvider>()
-                .TheDefaultIsConcreteType<RessourceRepository>();
+            ForRequestedType<IRessourceProviderService>()
+                .TheDefaultIsConcreteType<RessourceProviderService>();
 
             ScanControllersAndRepositoriesFromPath(extensionPath);
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using BA.MultiMVC.Framework.Ressources;
 
@@ -6,7 +7,7 @@ namespace BA.MultiMVC.Framework.Core
 {
     public class TenantContext
     {
-       private IRessourceDictionary _ressources;
+       private IDictionary<string,string> _ressources;
        private string _connectionString;
 
        public TenantContext(string tenantKey, string language)
@@ -30,7 +31,7 @@ namespace BA.MultiMVC.Framework.Core
                 _connectionString = value;
             }
         }
-       public IRessourceDictionary Ressources
+       public IDictionary<string,string> Ressources
        {
             get
             {
@@ -60,10 +61,10 @@ namespace BA.MultiMVC.Framework.Core
            }
        }
 
-       protected virtual IRessourceDictionary GetRessources()
+       protected virtual IDictionary<string,string>GetRessources()
        {
            var factory = new TenantFactory(this);
-           return factory.CreateRepository<IRessourceProvider>().GetDictionary(TenantKey, Language);
+           return factory.CreateService<IRessourceProviderService>().GetRessources(Language);
        }
       
     }

@@ -58,8 +58,6 @@
     <Compile Include="DomainFactoryTest.cs" />
     <Compile Include="ExtensionControllerFactoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RessourcesTest.cs" />
-    <Compile Include="SaasDictionayTest.cs" />
     <Compile Include="StructureMapConfigurationTest.cs" />
   </ItemGroup>
   <ItemGroup>

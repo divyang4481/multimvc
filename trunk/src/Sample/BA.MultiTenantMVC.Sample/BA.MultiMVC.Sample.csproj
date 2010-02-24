@@ -43,6 +43,9 @@
     <Reference Include="System.Data.DataSetExtensions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -73,12 +76,22 @@
     <Compile Include="Models\Domain\User.cs" />
     <Compile Include="Models\Infrastructure\IMembershipService.cs" />
     <Compile Include="Models\Infrastructure\IUserRepository.cs" />
+    <Compile Include="Models\Infrastructure\Linq\DB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Models\Infrastructure\MembershipService.cs" />
     <Compile Include="Models\Infrastructure\RessourceRepository.cs" />
     <Compile Include="Models\Infrastructure\UserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\MultiMVCSampleDB.mdf">
+    </Content>
+    <Content Include="App_Data\MultiMVCSampleDB_log.ldf">
+      <DependentUpon>MultiMVCSampleDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -109,7 +122,21 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <None Include="Models\Infrastructure\Linq\DB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\Infrastructure\Linq\DB.dbml.layout">
+      <DependentUpon>DB.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="Extensions\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

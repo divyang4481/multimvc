@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using BA.MultiMVC.Framework.Ressources;
 using Castle.Components.Validator;
 using System.Collections.Specialized;
 using System.Web.Routing;
@@ -13,7 +12,7 @@ namespace BA.MultiMVC.Framework.Helpers
         public static void AddModelErrors(
           this ModelStateDictionary modelState,
           ErrorSummary errorSummary,
-          IRessourceDictionary dictionary,
+          IDictionary<string,string> dictionary,
           NameValueCollection data)
         {
             if (errorSummary != null && errorSummary.HasError)
