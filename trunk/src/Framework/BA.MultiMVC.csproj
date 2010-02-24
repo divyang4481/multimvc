@@ -73,7 +73,6 @@
     <Compile Include="Core\ExtensionRegistry.cs" />
     <Compile Include="Core\IRepository.cs" />
     <Compile Include="Helpers\ExtensionMethods.cs" />
-    <Compile Include="ParametrizedTest\TenantFactoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\StructureMapControllerFactory.cs" />
     <Compile Include="Ressources\RessourceDictionary.cs" />
@@ -81,6 +80,7 @@
     <Compile Include="Ressources\IRessourceRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ParametrizedTest\" />
     <Folder Include="Theming\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

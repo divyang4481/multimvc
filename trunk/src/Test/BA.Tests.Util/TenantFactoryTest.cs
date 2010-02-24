@@ -1,6 +1,7 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using BA.MultiMVC.Core;
+using NUnit.Framework;
 
 namespace BA.MultiMVC.ParametrizedTest
 {
@@ -18,7 +19,7 @@ namespace BA.MultiMVC.ParametrizedTest
             var result = _tenantFactory.CreateRepository(requestedType);
 
             //Assert
-            Assert.IsInstanceOfType(result, expectedType);
+            Assert.IsInstanceOfType(expectedType,result);
         }
 
         public void CreateRepositoryAssertIsNotNull(Type requestedType)
@@ -36,7 +37,7 @@ namespace BA.MultiMVC.ParametrizedTest
             var result = _tenantFactory.CreateService(requestedType);
 
             //Assert
-            Assert.IsInstanceOfType(result, expectedType);
+            Assert.IsInstanceOfType(expectedType ,result);
         }
 
         public void CreateServiceAssertIsNotNull(Type requestedType)
@@ -54,7 +55,7 @@ namespace BA.MultiMVC.ParametrizedTest
             var result = _tenantFactory.CreateModel(requestedType);
 
             //Assert
-            Assert.IsInstanceOfType(result, expectedType);
+            Assert.IsInstanceOfType(expectedType, result);
         }
 
           public void CreateServiceAssertRepositoryIsInstanceOfType(Type requestedType, Type expectedType)
@@ -70,7 +71,7 @@ namespace BA.MultiMVC.ParametrizedTest
             }
 
             //Assert
-            Assert.IsInstanceOfType(result, expectedType);
+            Assert.IsInstanceOfType(expectedType,result);
         }
     }
 }

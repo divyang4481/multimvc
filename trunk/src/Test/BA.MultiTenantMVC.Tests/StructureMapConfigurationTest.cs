@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using BA.MultiMVC.Core;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using StructureMap;
 using BA.MultiMVC.Sample;
 using BA.MultiMVC.Sample.Extensions.Contoso.Controllers;
@@ -11,35 +11,33 @@ namespace BA.MultiMVC.Tests
     /// <summary>
     /// Summary description for StructureMapTester
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class StructureMapConfigurationTest
     {
         #region Methods
 
-       
-        [TestInitialize]
+        [TestFixtureSetUp]
         public void Initialize()
         {
             Bootstrapper.ConfigureStructureMap(".");
-            
         }
 
-        [TestMethod]
+        [Test]
         public void What_do_we_have()
         {
             Debug.WriteLine(ObjectFactory.WhatDoIHave());  
         }
 
-        [TestMethod]
+        [Test]
         public void ShouldFindContosoHomeController()
         {
             var result = ObjectFactory.GetNamedInstance(typeof(BaseController), "ContosoHome");
 
-            Assert.IsInstanceOfType(result, typeof(ContosoHomeController));
+            Assert.IsInstanceOfType(typeof(ContosoHomeController),result);
         }
 
  
-        [TestMethod]
+        [Test]
         public void ScanControllers_WithRootPath_ShouldRegister_AtLeastOneController()
         {
             var check = false;
@@ -52,7 +50,7 @@ namespace BA.MultiMVC.Tests
             Assert.IsTrue(check, "Not one Controller was found!");
         }
 
-        [TestMethod]
+        [Test]
         public void ScanControllersAndRepositoriesFromPath_WithRootPath_ShouldRegister_AtLeastOneDomainFactory()
         {
             bool check = false;
@@ -64,7 +62,7 @@ namespace BA.MultiMVC.Tests
             Assert.IsTrue(check, "Not one Repository was found!");
         }
 
-        [TestMethod]
+        [Test]
         public void ScanControllersAndRepositoriesFromPath_WithRootPath_ShouldRegister_AtLeastOneRepository()
         {
             bool check = false;

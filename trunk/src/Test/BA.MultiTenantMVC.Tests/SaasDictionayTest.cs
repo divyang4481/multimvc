@@ -1,18 +1,19 @@
 ﻿
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using BA.MultiMVC.Ressources;
+using NUnit.Framework;
 
 namespace BA.MultiMVC.Tests
 {
     /// <summary>
     /// Summary description for SaasDistionayTest
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class SaasDictionayTest
     {
         #region Methods
 
-        [TestMethod]
+        [Test]
         public void CreateDictionary_Add_ShouldAddTheStrings()
         {
             //Arrenge
@@ -25,7 +26,7 @@ namespace BA.MultiMVC.Tests
             Assert.AreEqual("FirstValue",dictionary["FirstKey"]);
         }
 
-        [TestMethod]
+        [Test]
         public void CreateDictionary_ShouldCreateNewDictionary()
         {
             //Act

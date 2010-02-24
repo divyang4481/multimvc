@@ -1,10 +1,11 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using BA.MultiMVC.Sample;
 using BA.MultiMVC.Test.Util.Stubs;
 using BA.MultiMVC.Sample.Controllers;
 using BA.MultiMVC.Core;
 using BA.MultiMVC.Sample.Extensions.Contoso.Controllers;
+using NUnit.Framework;
 
 namespace BA.MultiMVC.Tests
 {
@@ -13,35 +14,35 @@ namespace BA.MultiMVC.Tests
     /// <summary>
     /// Summary description for SaasMVCFactory
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class ExtensionControllerFactoryTest
     {
-        [TestInitialize]
+        [TestFixtureSetUp]
         public void Initialize()
         {
             Bootstrapper.ConfigureStructureMap(".");
         }
 
-        [TestMethod]
+        [Test]
         public void GetControllerInstance_ForHomeControllerAndDefaultTenant_ControllerIsInstanceOfTypeHomeController()
         {
             var result = ExtensionControllerFactoryCreateInstance(typeof(HomeController), "Default");
             
             //Assert
-            Assert.IsInstanceOfType(result, typeof(HomeController));
+            Assert.IsInstanceOfType(typeof(HomeController),result);
 
         }
 
-        [TestMethod]
+        [Test]
         public void GetControllerInstance_ForHomeControllerAndContosoTenant_ControllerIsInstanceOfTypeContosoHomeController()
         {
             var result = ExtensionControllerFactoryCreateInstance(typeof(HomeController), "Contoso");
             
             //Assert
-            Assert.IsInstanceOfType(result, typeof(ContosoHomeController));
+            Assert.IsInstanceOfType(typeof(ContosoHomeController),result);
         }
 
-        [TestMethod]
+        [Test]
         public void GetControllerInstance_ForHomeControllerAndContosoTenant_TenantKeyIsContoso()
         {
             var result = ExtensionControllerFactoryCreateInstance(typeof(HomeController), "contoso");
@@ -50,7 +51,7 @@ namespace BA.MultiMVC.Tests
             Assert.AreEqual("Contoso", ((BaseController)result).TenantContext.TenantKey);
         }
 
-        [TestMethod]
+        [Test]
         public void GetControllerInstance_ForHomeControllerAndDefaultTenant_TenantContextIsNotNull()
         {
             var result = ExtensionControllerFactoryCreateInstance(typeof(HomeController), "Default");

@@ -1,11 +1,12 @@
 ﻿using BA.MultiMVC.ParametrizedTest;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using BA.MultiMVC.Sample;
 using BA.MultiMVC.Sample.Extensions.Contoso.Infrastructure;
 using BA.MultiMVC.Sample.Models.Infrastructure;
 using BA.MultiMVC.Sample.Models.Domain;
 using BA.MultiMVC.Sample.Extensions.Domain;
 using BA.MVC.MultiTenant.Core;
+using NUnit.Framework;
 
 
 namespace BA.MultiMVC.Tests
@@ -13,17 +14,17 @@ namespace BA.MultiMVC.Tests
     /// <summary>
     /// Summary description for SaasMVCFactory
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class DomainFactoryTest
     {
 
-        [TestInitialize]
+        [TestFixtureSetUp]
         public void Initialize()
         {
             Bootstrapper.ConfigureStructureMap(".");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateRepository_ForDefault_IsNotNull()
         {
             //Arrenge
@@ -33,7 +34,7 @@ namespace BA.MultiMVC.Tests
         }
 
 
-        [TestMethod]
+        [Test]
         public void CreateRepository_ForDefault_IsUserRepository()
         {
             //Arrenge
@@ -42,7 +43,7 @@ namespace BA.MultiMVC.Tests
             parametrizedTest.CreateRepositoryAssertIsInstanceOfType(typeof(IUserRepository), typeof(UserRepository));
         }
 
-        [TestMethod]
+        [Test]
         public void CreateUserRepository_ForContoso_IsContosoUserRepository()
         {
             //Arrenge
@@ -51,7 +52,7 @@ namespace BA.MultiMVC.Tests
             parametrizedTest.CreateRepositoryAssertIsInstanceOfType(typeof(IUserRepository), typeof(ContosoUserRepository));
         }
 
-        [TestMethod]
+        [Test]
         public void CreateService_ForDefault_IsNotNull()
         {
             //Arrenge
@@ -60,7 +61,7 @@ namespace BA.MultiMVC.Tests
             parametrizedTest.CreateServiceAssertIsNotNull(typeof(IMembershipService));
         }
 
-        [TestMethod]
+        [Test]
         public void CreateService_ForDefault_IsDefaultMembershipService()
         {
             //Arrenge
@@ -69,7 +70,7 @@ namespace BA.MultiMVC.Tests
             parametrizedTest.CreateServiceAssertIsInstanceOfType(typeof(IMembershipService), typeof(MembershipService));
         }
 
-        [TestMethod]
+        [Test]
         public void CreateService_ForContoso_IsContosoMembershipService()
         {
             //Arrenge
@@ -78,7 +79,7 @@ namespace BA.MultiMVC.Tests
             parametrizedTest.CreateServiceAssertIsInstanceOfType(typeof(IMembershipService), typeof(ContosoMembershipService));
         }
 
-        [TestMethod]
+        [Test]
         public void CreateService_ForDefault_RepositoryIsUserRepository()
         {
              //Arrenge
@@ -89,7 +90,7 @@ namespace BA.MultiMVC.Tests
                 typeof(UserRepository));
         }
 
-        [TestMethod]
+        [Test]
         public void CreateService_ForContoso_RepositoryIsContosoUserRepository()
         {
             //Arrenge
@@ -100,7 +101,7 @@ namespace BA.MultiMVC.Tests
                 typeof(ContosoUserRepository));
         }
 
-        [TestMethod]
+        [Test]
         public void CreateUser_ForDefault_IsUser()
         {
             //Arrenge
@@ -109,7 +110,7 @@ namespace BA.MultiMVC.Tests
             parametrizedTest.CreateModelAssertIsInstanceOfType(typeof(User), typeof(User));
         }
 
-        [TestMethod]
+        [Test]
         public void CreateUser_ForContoso_IsContosoUser()
         {
             //Arrenge
