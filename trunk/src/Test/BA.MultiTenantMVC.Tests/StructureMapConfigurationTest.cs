@@ -6,7 +6,7 @@ using StructureMap;
 using BA.MultiMVC.Sample;
 using BA.MultiMVC.Sample.Extensions.Contoso.Controllers;
 
-namespace BA.MultiMVC.Tests
+namespace BA.MultiTenantMVC.UnitTests
 {
     /// <summary>
     /// Summary description for StructureMapTester

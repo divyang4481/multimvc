@@ -1,15 +1,14 @@
-﻿using BA.MultiMVC.ParametrizedTest;
-
-using BA.MultiMVC.Sample;
+﻿using BA.MultiMVC.Sample;
 using BA.MultiMVC.Sample.Extensions.Contoso.Infrastructure;
 using BA.MultiMVC.Sample.Models.Infrastructure;
 using BA.MultiMVC.Sample.Models.Domain;
 using BA.MultiMVC.Sample.Extensions.Domain;
+using BA.MultiTenantMVC.Test.Util.ParamatrizedTests;
 using BA.MVC.MultiTenant.Core;
 using NUnit.Framework;
 
 
-namespace BA.MultiMVC.Tests
+namespace BA.MultiTenantMVC.UnitTests
 {
     /// <summary>
     /// Summary description for SaasMVCFactory

@@ -80,7 +80,6 @@
     <Compile Include="Ressources\IRessourceRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ParametrizedTest\" />
     <Folder Include="Theming\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,7 +7,7 @@ using BA.MultiMVC.Core;
 using BA.MultiMVC.Sample.Extensions.Contoso.Controllers;
 using NUnit.Framework;
 
-namespace BA.MultiMVC.Tests
+namespace BA.MultiTenantMVC.UnitTests
 {
    
 

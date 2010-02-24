@@ -3,7 +3,7 @@
 using BA.MultiMVC.Core;
 using NUnit.Framework;
 
-namespace BA.MultiMVC.ParametrizedTest
+namespace BA.MultiTenantMVC.Test.Util.ParamatrizedTests
 {
     public class TenantFactoryTest
     {
@@ -58,7 +58,7 @@ namespace BA.MultiMVC.ParametrizedTest
             Assert.IsInstanceOfType(expectedType, result);
         }
 
-          public void CreateServiceAssertRepositoryIsInstanceOfType(Type requestedType, Type expectedType)
+        public void CreateServiceAssertRepositoryIsInstanceOfType(Type requestedType, Type expectedType)
         {
             //Act
             var service = _tenantFactory.CreateService(requestedType);
