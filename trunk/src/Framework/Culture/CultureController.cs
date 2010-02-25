@@ -1,9 +1,12 @@
-using System;
-using System.Web;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Web.Mvc;
+using System.Web;
 using BA.MultiMVC.Framework.Core;
 
-namespace BA.MultiTenantMVC.Sample.Controllers
+namespace BA.MultiMVC.Framework.Culture
 {
     public class CultureController : BaseController
     {
@@ -13,7 +16,7 @@ namespace BA.MultiTenantMVC.Sample.Controllers
             Response.Cookies.Add(
                 languageCookie
                 );
-            return RedirectToAction(actionName, controllerName, new {language = newLanguage});
+            return RedirectToAction(actionName, controllerName, new { language = newLanguage });
         }
 
     }
