@@ -34,9 +34,12 @@ namespace BA.MultiMVC.Framework.Core
 
         protected virtual IController GetControllerInstance(TenantContext tenantContext, Type controllerType)
         {
-            var controller = CreateControllerExtension(tenantContext.TenantKey, controllerType)
-                                                 ?? base.GetControllerInstance(controllerType) as BaseController;
+            if (controllerType==null)
+                return null;
 
+            var controller = CreateControllerExtension(tenantContext.TenantKey, controllerType)
+                             ?? base.GetControllerInstance(controllerType) as BaseController;
+                                              
             controller.TenantContext = tenantContext;
             return controller;
         }

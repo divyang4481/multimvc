@@ -20,7 +20,11 @@
             </div> 
             
             <div id="menucontainer">
-            
+                <ul id="languages">              
+                    <li><%= Html.ActionLink("fr","SetLanguage","Culture", new {newLanguage="fr", actionName="index", controllerName="home"},null)%></li>
+                    <li><%= Html.ActionLink("nl", "SetLanguage", "Culture", new { newLanguage = "nl", actionName = "index", controllerName = "home" }, null)%></li>
+                    <li><%= Html.ActionLink("en", "SetLanguage", "Culture", new { newLanguage = "en", actionName = "index", controllerName = "home" }, null)%></li>
+                </ul>
                 <ul id="menu">              
                     <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%= Html.ActionLink("About", "About", "Home")%></li>
