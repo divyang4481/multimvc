@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using Castle.Components.Validator;
 using System.Collections.Specialized;
 using System.Web.Routing;
+using System.Web.Mvc.Html;
 
 namespace BA.MultiMVC.Framework.Helpers
 {
@@ -78,6 +79,19 @@ namespace BA.MultiMVC.Framework.Helpers
             return camelCased;
         }
 
+        public static string LanguageActionLink(this HtmlHelper h, string languageCode, string linkText)
+        {
+            return h.ActionLink(
+                linkText, "SetLanguage", "Culture",
+                new
+                {
+                    newLanguage = languageCode,
+                    actionName = h.ViewContext.RouteData.Values["action"],
+                    controllerName = h.ViewContext.RouteData.Values["controller"]
+                },
+                null
+                );
+        }
      
     }
 }
