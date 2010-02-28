@@ -65,6 +65,7 @@ namespace BA.MultiMVC.Framework.Core
             {
                 serviceInstance = (IService)ObjectFactory.GetInstance(T);
             }
+            serviceInstance.Context = Context;
             return Configurator<IService>.InjectNamedInstanceOfRepositoriesAndServicesIntoSubject(Context, serviceInstance);
         }
 

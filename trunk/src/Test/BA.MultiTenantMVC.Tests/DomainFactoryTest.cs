@@ -4,7 +4,6 @@ using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Domain;
 using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Domain;
 using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Infrastructure;
 using BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests;
-using BA.MultiMVC.Framework.Core;
 using NUnit.Framework;
 
 
@@ -77,6 +76,16 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.UnitTests
             //Act & Assert
             parametrizedTest.CreateServiceAssertIsInstanceOfType(typeof(IMembershipService), typeof(ContosoMembershipService));
         }
+
+        [Test]
+        public void CreateService_ForDefault_ContextIsNotNull()
+        {
+            //Arrenge
+            var parametrizedTest = CreateTenantFactoryTest("Default");
+            //Act & Assert
+            parametrizedTest.CreateServiceAssertContextIsNotNull(typeof(IMembershipService));
+        }
+            
 
         [Test]
         public void CreateService_ForDefault_RepositoryIsUserRepository()

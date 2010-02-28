@@ -2,5 +2,6 @@
 {
     public interface IService
     {
+        TenantContext Context { get; set; }
     }
 }

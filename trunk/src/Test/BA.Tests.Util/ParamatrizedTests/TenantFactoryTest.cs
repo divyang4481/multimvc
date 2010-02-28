@@ -72,5 +72,15 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
             //Assert
             Assert.IsInstanceOfType(expectedType,result);
         }
+
+
+        public void CreateServiceAssertContextIsNotNull(Type requestedType)
+        {
+            //Act
+            var service = _tenantFactory.CreateService(requestedType);
+            var subject = service.Context;
+            //Assert
+            Assert.IsNotNull(subject);
+        }
     }
 }

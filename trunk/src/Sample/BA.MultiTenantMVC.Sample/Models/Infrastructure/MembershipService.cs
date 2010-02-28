@@ -32,5 +32,11 @@ namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Infrastructure
         }
 
         #endregion
+
+        #region IService Members
+
+        public TenantContext Context { get; set; }
+
+        #endregion
     }
 }

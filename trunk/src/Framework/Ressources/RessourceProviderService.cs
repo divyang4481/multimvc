@@ -16,5 +16,11 @@ namespace BA.MultiMVC.Framework.Ressources
         {
             return RessourceRepository.Find(language);
         }
+
+        #region IService Members
+
+        public BA.MultiMVC.Framework.Core.TenantContext Context { get; set; }
+
+        #endregion
     }
 }
