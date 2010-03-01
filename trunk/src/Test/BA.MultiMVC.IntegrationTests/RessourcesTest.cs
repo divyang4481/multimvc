@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Transactions;
+using BA.MultiMVC.Framework.IntegrationTests.Specialized;
 using BA.MultiMVC.Framework.Ressources;
 using BA.MultiTenantMVC.Sample.Models.Infrastructure;
 using NUnit.Framework;
 using BA.MultiTenantMVC.Sample.Models.Infrastructure.Linq;
-using BA.MultiMVC.IntegrationTests.Spesialised;
 using BA.MultiMVC.Framework.Core;
 
 namespace BA.MultiMVC.IntegrationTests

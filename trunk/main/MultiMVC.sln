@@ -13,11 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BA.MultiMVC.Sample", "..\sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BA.MultiMVC.Sample.Extensions.Contoso", "..\src\Sample\BA.MultiTenantMVC.Sample.Extensions\BA.MultiMVC.Sample.Extensions.Contoso.csproj", "{36FE7F5D-28B5-4007-B619-884D9B9E6F05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BA.MultiMVC.UnitTests", "..\src\Test\BA.MultiTenantMVC.Tests\BA.MultiMVC.UnitTests.csproj", "{7563FE04-EC54-40B5-AB80-228171027D2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BA.MultiMVC.Framework.UnitTests", "..\src\Test\BA.MultiTenantMVC.Tests\BA.MultiMVC.Framework.UnitTests.csproj", "{7563FE04-EC54-40B5-AB80-228171027D2B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BA.MultiMVC.Test.Util", "..\src\Test\BA.Tests.Util\BA.MultiMVC.Test.Util.csproj", "{3F1B67AA-140C-419E-9F8B-1F7DE6EBDB20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BA.MultiMVC.IntegrationTests", "..\src\Test\BA.MultiMVC.IntegrationTests\BA.MultiMVC.IntegrationTests.csproj", "{AA11F93B-8AA0-4CD8-8D0C-3B849CF16786}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BA.MultiMVC.Framework.IntegrationTests", "..\src\Test\BA.MultiMVC.IntegrationTests\BA.MultiMVC.Framework.IntegrationTests.csproj", "{AA11F93B-8AA0-4CD8-8D0C-3B849CF16786}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
