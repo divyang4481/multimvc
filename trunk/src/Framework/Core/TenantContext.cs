@@ -64,7 +64,7 @@ namespace BA.MultiMVC.Framework.Core
        protected virtual IDictionary<string,string>GetRessources()
        {
            var factory = new TenantFactory(this);
-           return factory.CreateService<IRessourceProviderService>().GetRessources(Language);
+           return factory.CreateService<IRessourceProviderService>().GetRessources();
        }
       
     }

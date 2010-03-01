@@ -7,6 +7,7 @@ using BA.MultiTenantMVC.Sample.Models.Infrastructure;
 using NUnit.Framework;
 using BA.MultiTenantMVC.Sample.Models.Infrastructure.Linq;
 using BA.MultiMVC.IntegrationTests.Spesialised;
+using BA.MultiMVC.Framework.Core;
 
 namespace BA.MultiMVC.IntegrationTests
 {
@@ -40,10 +41,11 @@ namespace BA.MultiMVC.IntegrationTests
         {
             //Arrange
             var ressourceRepository = new RessourceRepositoryForTest(_db);
-            IRessourceProviderService subject = new RessourceProviderService(ressourceRepository);
+            var subject = new RessourceProviderService(ressourceRepository);
+            subject.Context = new TenantContext("Default", Language);
 
             //Act
-            IDictionary<string,string> result = subject.GetRessources(Language);
+            var result = subject.GetRessources();
 
             //Assert
             Assert.AreEqual(result[RessourceKeyString],RessourceValueString);

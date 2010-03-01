@@ -5,6 +5,6 @@ namespace BA.MultiMVC.Framework.Ressources
 {
     public interface IRessourceProviderService:IService
     {
-        IDictionary<string, string> GetRessources(string language);
+        IDictionary<string, string> GetRessources();
     }
 }

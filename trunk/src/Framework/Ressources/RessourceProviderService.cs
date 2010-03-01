@@ -5,6 +5,7 @@ namespace BA.MultiMVC.Framework.Ressources
 {
     public class RessourceProviderService : IRessourceProviderService
     {
+        public Core.TenantContext Context { get; set; }
         public IRessourceRepository RessourceRepository { get; set; }
 
         public RessourceProviderService(IRessourceRepository repository)
@@ -12,15 +13,9 @@ namespace BA.MultiMVC.Framework.Ressources
             RessourceRepository = repository;
         }
 
-        public IDictionary<string, string> GetRessources(string language)
+        public IDictionary<string, string> GetRessources()
         {
-            return RessourceRepository.Find(language);
+            return RessourceRepository.Find(Context.Language);
         }
-
-        #region IService Members
-
-        public BA.MultiMVC.Framework.Core.TenantContext Context { get; set; }
-
-        #endregion
     }
 }
