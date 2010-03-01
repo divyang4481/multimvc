@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using BA.MultiMVC.Framework.Caching;
 
 
 namespace BA.MultiMVC.Framework.Ressources
@@ -7,10 +8,12 @@ namespace BA.MultiMVC.Framework.Ressources
     {
         public Core.TenantContext Context { get; set; }
         public IRessourceRepository RessourceRepository { get; set; }
+        public ICacheService CacheService { get; set; }
 
-        public RessourceProviderService(IRessourceRepository repository)
+        public RessourceProviderService(IRessourceRepository repository,ICacheService cache)
         {
             RessourceRepository = repository;
+            CacheService = cache;
         }
 
         public IDictionary<string, string> GetRessources()

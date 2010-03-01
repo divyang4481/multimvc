@@ -41,7 +41,7 @@ namespace BA.MultiMVC.IntegrationTests
         {
             //Arrange
             var ressourceRepository = new RessourceRepositoryForTest(_db);
-            var subject = new RessourceProviderService(ressourceRepository);
+            var subject = new RessourceProviderService(ressourceRepository,null);
             subject.Context = new TenantContext("Default", Language);
 
             //Act

@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caching\ICacheService.cs" />
     <Compile Include="Core\BaseController.cs" />
     <Compile Include="Core\TenantContext.cs" />
     <Compile Include="Core\TenantFactory.cs" />
