@@ -5,6 +5,7 @@ using BA.MultiMVC.Framework.Core;
 using BA.MultiMVC.Framework.Ressources;
 using StructureMap;
 using BA.MultiTenantMVC.Sample.Models.Infrastructure;
+using BA.MultiMVC.Framework.Caching;
 
 namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample
 {
@@ -46,6 +47,9 @@ namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample
                 .TheDefaultIsConcreteType<RessourceProviderService>();
             ForRequestedType<IRessourceRepository>()
                 .TheDefaultIsConcreteType<RessourceRepository>();
+            ForRequestedType<ICacheService>()
+                .TheDefaultIsConcreteType<DefaultCacheService>();
+
 
             ScanControllersAndRepositoriesFromPath(extensionPath);
         }

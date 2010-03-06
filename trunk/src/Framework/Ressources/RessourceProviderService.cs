@@ -18,7 +18,11 @@ namespace BA.MultiMVC.Framework.Ressources
 
         public IDictionary<string, string> GetRessources()
         {
-            return RessourceRepository.Find(Context.Language);
+            if (CacheService.GetObject("ressources") == null)
+            {
+                CacheService.Add("ressources", RessourceRepository.Find(Context.Language));
+            }
+            return (IDictionary<string, string>)CacheService.GetObject("ressources");
         }
     }
 }

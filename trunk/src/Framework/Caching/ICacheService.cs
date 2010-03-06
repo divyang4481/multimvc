@@ -4,6 +4,8 @@ namespace BA.MultiMVC.Framework.Caching
 {
     public interface ICacheService:IService
     {
-        object GetObject(string p);
+        object GetObject(string key);
+
+        void Add(string key, object o);
     }
 }

@@ -17,12 +17,13 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Ressources
             var mockCache = new Moq.Mock<ICacheService>();
             var subject = new RessourceProviderService(mockRepository.Object, mockCache.Object);
             subject.Context = new TenantContext("Default","fr");
+            mockCache.Expect(c => c.GetObject("ressources"));
 
             //Act
             subject.GetRessources();
 
             //Assert
-            mockCache.Verify(c=>c.GetObject("ressources"));
+            mockCache.Verify();
         }
     }
 }
