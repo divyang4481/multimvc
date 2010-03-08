@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using BA.MultiMVC.Framework.Caching;
 using BA.MultiMVC.Framework.Core;
 
 namespace BA.MultiMVC.Framework.IntegrationTests.Stubs
 {
-    public class StubCacheService:Caching.ICacheService 
+    public class StubCacheService: ICacheService 
     {
         private Dictionary<string, object> hashTable;
         public StubCacheService()

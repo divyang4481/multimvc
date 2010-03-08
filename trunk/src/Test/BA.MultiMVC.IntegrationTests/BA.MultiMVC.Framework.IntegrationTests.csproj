@@ -54,8 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caching\DefaultCacheServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RessourcesTest.cs" />
+    <Compile Include="Ressources\RessourcesTest.cs" />
     <Compile Include="Specialized\RessourceRepositoryForTest.cs" />
     <Compile Include="Stubs\StubCacheService.cs" />
   </ItemGroup>
