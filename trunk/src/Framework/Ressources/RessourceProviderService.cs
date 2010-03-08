@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using BA.MultiMVC.Framework.Caching;
 
 
@@ -12,6 +13,11 @@ namespace BA.MultiMVC.Framework.Ressources
 
         public RessourceProviderService(IRessourceRepository repository,ICacheService cache)
         {
+            if (repository==null)
+                throw new ArgumentException("repository");
+            if (cache == null)
+                throw new ArgumentException("cache");
+
             RessourceRepository = repository;
             CacheService = cache;
         }

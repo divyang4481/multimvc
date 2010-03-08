@@ -8,6 +8,7 @@ using BA.MultiTenantMVC.Sample.Models.Infrastructure;
 using NUnit.Framework;
 using BA.MultiTenantMVC.Sample.Models.Infrastructure.Linq;
 using BA.MultiMVC.Framework.Core;
+using BA.MultiMVC.Framework.IntegrationTests.Stubs;
 
 namespace BA.MultiMVC.IntegrationTests
 {
@@ -41,7 +42,7 @@ namespace BA.MultiMVC.IntegrationTests
         {
             //Arrange
             var ressourceRepository = new RessourceRepositoryForTest(_db);
-            var subject = new RessourceProviderService(ressourceRepository,null);
+            var subject = new RessourceProviderService(ressourceRepository,new StubCacheService());
             subject.Context = new TenantContext("Default", Language);
 
             //Act
