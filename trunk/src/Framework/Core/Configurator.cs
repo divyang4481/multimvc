@@ -4,18 +4,17 @@ using StructureMap;
 
 namespace BA.MultiMVC.Framework.Core
 {
-    public static class Configurator<T>
+    public static class Configurator
     {
-        
 
-        public static T InjectModelNamedInstance(TenantContext context, T subject)
+        public static ITenantModel InjectTenantModelNamedInstance(TenantContext context, ITenantModel subject)
         {
             var properties = subject.GetType().GetProperties();
             foreach (var property in properties)
             {
                 if (IsATenantModelProperty(property))
                 {
-                    if (context.TenantKey != null) subject = InjectService(context, subject, property);
+                    if (context.TenantKey != null) subject = InjectTenantModel(context, subject, property);
                 }
             }
             return subject;
@@ -38,25 +37,7 @@ namespace BA.MultiMVC.Framework.Core
             return typeof (ITenantModel).IsAssignableFrom(property.PropertyType);
         }
 
-       
-
-        private static T ConfigureDomainFactory(string tenantKey, T controller)
-        {
-            var domainFactoryPropertyInfo = controller.GetType().GetProperty("DomainFactory");
-            if (domainFactoryPropertyInfo !=null)
-            {
-                var domainFactory = domainFactoryPropertyInfo.GetValue(controller, null) as TenantFactory;
-                if (domainFactory!=null)
-                {
-                    SetClientNameOnDomainFactory(tenantKey, domainFactory);
-                }
-            }
-            return controller;
-
-        }
-
-
-        private static T InjectService(TenantContext context, T obj, PropertyInfo property)
+        private static ITenantModel InjectTenantModel(TenantContext context, ITenantModel obj, PropertyInfo property)
         {
             if (IsATenantModelProperty(property))
             {
@@ -68,7 +49,7 @@ namespace BA.MultiMVC.Framework.Core
                     if (pluginService != null)
                     {
                         property.SetValue(obj, pluginService, null);
-                        Configurator<ITenantModel>.InjectModelNamedInstance(context, pluginService);
+                        InjectTenantModelNamedInstance(context, pluginService);
                     }
                 }
                 catch (StructureMapException)
@@ -81,13 +62,7 @@ namespace BA.MultiMVC.Framework.Core
             return obj;
         }
 
-        private static void SetClientNameOnDomainFactory(string tenantKey, TenantFactory domainFactory)
-        {
-            var domainFactoryInfrastructureProperty =
-                domainFactory.GetType().GetProperty("TenantKey");
-
-            domainFactoryInfrastructureProperty.SetValue(domainFactory, tenantKey,null);
-        }
+      
 
     }
 }

@@ -1,13 +1,10 @@
 ﻿using System;
-using BA.MultiMVC.Framework.Core;
-using BA.MultiMVC.Framework.Helpers;
 using StructureMap;
 
 namespace BA.MultiMVC.Framework.Core
 {
     public  class TenantFactory
     {
-
         public TenantFactory(TenantContext context)
         {
             Context  = context;
@@ -18,9 +15,6 @@ namespace BA.MultiMVC.Framework.Core
             get;
             set;
         }
-
-       
-       
 
         /// <summary>
         /// Create a new Service.
@@ -48,9 +42,9 @@ namespace BA.MultiMVC.Framework.Core
                 serviceInstance = (ITenantModel)ObjectFactory.GetInstance(T);
             }
             
-            serviceInstance = Configurator<ITenantModel>.InjectModelNamedInstance(Context, serviceInstance);
+            serviceInstance = Configurator.InjectTenantModelNamedInstance(Context, serviceInstance);
 
-            Configurator<ITenantModel>.SetContextOnObjectTree(serviceInstance,this.Context);
+            Configurator.SetContextOnObjectTree(serviceInstance,this.Context);
 
             return serviceInstance;
         }
