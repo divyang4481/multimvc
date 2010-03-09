@@ -19,27 +19,8 @@ namespace BA.MultiMVC.Framework.Core
             set;
         }
 
-        public T CreateRepository<T>() where T : IRepository
-        {
-            return (T)CreateRepository(typeof(T));
-        }
-
-        public IRepository CreateRepository(Type T)
-        {
-            IRepository repInstance;
-            var repositoryName = Context.TenantKey + T.GetName().Remove(0, 1).Replace("Repository", "");
-            try
-            {
-                repInstance = (IRepository)ObjectFactory.GetNamedInstance(typeof(IRepository), repositoryName);
-            }
-            catch (StructureMapException)
-            {
-                repInstance = (IRepository)ObjectFactory.GetInstance(T);
-            }
-
-            repInstance.ConnectionString = Context.ConnectionString;
-            return repInstance;
-        }
+       
+       
 
         /// <summary>
         /// Create a new Service.
@@ -49,27 +30,27 @@ namespace BA.MultiMVC.Framework.Core
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public T CreateService<T>() where T : IService
+        public T CreateService<T>() where T : ITenantModel
         {
             return (T)CreateService(typeof(T));
         }
 
-        public IService CreateService(Type T)
+        public ITenantModel CreateService(Type T)
         {
-            IService serviceInstance;
-            var serviceName = Context.TenantKey + T.GetName().Remove(0, 1).Replace("Service", "");
+            ITenantModel serviceInstance;
+            var serviceName = Context.TenantKey + T.GetName().Remove(0, 1);
             try
             {
-                serviceInstance = (IService)ObjectFactory.GetNamedInstance(typeof(IService), serviceName);
+                serviceInstance = (ITenantModel)ObjectFactory.GetNamedInstance(typeof(ITenantModel), serviceName);
             }
             catch (StructureMapException)
             {
-                serviceInstance = (IService)ObjectFactory.GetInstance(T);
+                serviceInstance = (ITenantModel)ObjectFactory.GetInstance(T);
             }
             
-            serviceInstance = Configurator<IService>.InjectNamedInstanceOfRepositoriesAndServicesIntoSubject(Context, serviceInstance);
+            serviceInstance = Configurator<ITenantModel>.InjectModelNamedInstance(Context, serviceInstance);
 
-            Configurator<IService>.SetContextOnObjectTree(serviceInstance,this.Context);
+            Configurator<ITenantModel>.SetContextOnObjectTree(serviceInstance,this.Context);
 
             return serviceInstance;
         }

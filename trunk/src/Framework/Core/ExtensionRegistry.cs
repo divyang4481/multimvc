@@ -13,9 +13,7 @@ namespace BA.MultiMVC.Framework.Core
                      {
                          o.AssembliesFromPath(path);
                          o.AddAllTypesOf<BaseController>().NameBy(type => type.Name.Replace("Controller", ""));
-                         o.AddAllTypesOf<IRepository>().NameBy(type => type.Name.Replace("Repository", ""));
-                         o.AddAllTypesOf<IService>().NameBy(type => type.Name.Replace("Service", ""));
-                         o.AddAllTypesOf<TenantFactory>().NameBy(type => type.Name.Replace("SaasFactory",""));
+                         o.AddAllTypesOf<ITenantModel>().NameBy(type => type.Name);
                          o.AddAllTypesOf<IModel>().NameBy(type=> type.Name);
                      });
         }

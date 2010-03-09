@@ -2,6 +2,7 @@
 using BA.MultiMVC.Framework.Ressources;
 using BA.MultiTenantMVC.Sample.Models.Infrastructure.Linq;
 using System.Linq;
+using BA.MultiMVC.Framework.Core;
 
 namespace BA.MultiTenantMVC.Sample.Models.Infrastructure
 {
@@ -30,16 +31,16 @@ namespace BA.MultiTenantMVC.Sample.Models.Infrastructure
 
         #endregion
 
-        #region IRepository Members
+        #region ITenantModel Members
 
-        private string _connectionString;
-        public string ConnectionString 
+        private TenantContext _context;
+        public BA.MultiMVC.Framework.Core.TenantContext Context
         {
-            get { return _connectionString; }
-            set
-            {
-               _connectionString = value;
-               _db = new DBDataContext(_connectionString);
+            get { return _context; }
+            set 
+            { 
+                _context = value;
+                _db = new DBDataContext(_context.ConnectionString);
             }
         }
 

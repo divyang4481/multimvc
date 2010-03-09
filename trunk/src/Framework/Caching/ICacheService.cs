@@ -2,7 +2,7 @@
 
 namespace BA.MultiMVC.Framework.Caching
 {
-    public interface ICacheService:IService
+    public interface ICacheService:ITenantModel
     {
         object GetObject(string key);
 

@@ -54,7 +54,7 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Core
         public void ScanControllersAndRepositoriesFromPath_WithRootPath_ShouldRegister_AtLeastOneDomainFactory()
         {
             bool check = false;
-            foreach (var instance in ObjectFactory.Model.InstancesOf<IRepository>())
+            foreach (var instance in ObjectFactory.Model.InstancesOf<ITenantModel>())
             {
                 check = true;
                 Console.WriteLine(instance.Name + " is " + instance.ConcreteType.Name);
@@ -66,7 +66,7 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Core
         public void ScanControllersAndRepositoriesFromPath_WithRootPath_ShouldRegister_AtLeastOneRepository()
         {
             bool check = false;
-            foreach (var instance in ObjectFactory.Model.InstancesOf<IRepository>())
+            foreach (var instance in ObjectFactory.Model.InstancesOf<ITenantModel>())
             {
                 check = true;
                 Console.WriteLine(instance.Name + " is " + instance.ConcreteType.Name);

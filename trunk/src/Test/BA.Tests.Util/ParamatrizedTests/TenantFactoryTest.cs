@@ -18,7 +18,7 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
         public void CreateRepositoryAssertIsInstanceOfType(Type requestedType, Type expectedType)
         {
             //Act
-            var result = _tenantFactory.CreateRepository(requestedType);
+            var result = _tenantFactory.CreateService(requestedType);
 
             //Assert
             Assert.IsInstanceOfType(expectedType,result);
@@ -27,7 +27,7 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
         public void CreateRepositoryAssertIsNotNull(Type requestedType)
         {
             //Act
-            var result = _tenantFactory.CreateRepository(requestedType);
+            var result = _tenantFactory.CreateService(requestedType);
 
             //Assert
             Assert.IsNotNull(result);
@@ -64,7 +64,7 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
         {
             //Act
             var service = _tenantFactory.CreateService(requestedType);
-            var repositoryProperties = service.FindProperties(typeof(IRepository));
+            var repositoryProperties = service.FindProperties(typeof(ITenantModel));
             var result = repositoryProperties[0].GetValue(service, null);
 
             //Assert
@@ -87,13 +87,13 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
             AssertContextIsNotNullOnServiceProperties(service);
         }
 
-        private void AssertContextIsNotNullOnServiceProperties(IService service)
+        private void AssertContextIsNotNullOnServiceProperties(ITenantModel service)
         {
-            var serviceProperties = service.FindProperties(typeof(IService));
+            var serviceProperties = service.FindProperties(typeof(ITenantModel));
             //Assert
             foreach (var property in serviceProperties)
             {
-                var val = (IService)property.GetValue(service, null);
+                var val = (ITenantModel)property.GetValue(service, null);
                 Assert.IsNotNull(val.Context);
                 AssertContextIsNotNullOnServiceProperties(val);
             }

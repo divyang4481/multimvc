@@ -3,7 +3,7 @@ using BA.MultiMVC.Framework.Core;
 
 namespace BA.MultiMVC.Framework.Ressources
 {
-    public interface IRessourceProviderService:IService
+    public interface IRessourceProviderService:ITenantModel
     {
         IDictionary<string, string> GetRessources();
     }

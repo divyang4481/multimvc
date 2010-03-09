@@ -26,6 +26,15 @@ namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Infrastructure
 
         #endregion
 
-        public string ConnectionString { get; set; }
+
+
+        #region ITenantModel Members
+
+        public TenantContext Context
+        {
+            get; set;
+        }
+
+        #endregion
     }
 }
