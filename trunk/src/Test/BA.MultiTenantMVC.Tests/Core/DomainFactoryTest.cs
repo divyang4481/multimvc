@@ -5,6 +5,7 @@ using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Domain;
 using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Domain;
 using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Infrastructure;
 using BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests;
+using BA.MultiMVC.Framework.Ressources;
 using NUnit.Framework;
 
 
@@ -85,6 +86,24 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Core
             var parametrizedTest = CreateTenantFactoryTest("Default");
             //Act & Assert
             parametrizedTest.CreateServiceAssertContextIsNotNull(typeof(IMembershipService));
+        }
+
+        [Test]
+        public void CreateRessourceProviderService_ForDefault_ContextIsNotNullOnCacheService()
+        {
+            //Arrenge
+            var parametrizedTest = CreateTenantFactoryTest("Default");
+            //Act & Assert
+            parametrizedTest.CreateServiceAssertContextIsNotNullOnServiceProperties(typeof(IRessourceProviderService));
+        }
+
+        [Test]
+        public void CreateRessourceProviderService_ForContoso_ContextIsNotNullOnCacheService()
+        {
+            //Arrenge
+            var parametrizedTest = CreateTenantFactoryTest("Contoso");
+            //Act & Assert
+            parametrizedTest.CreateServiceAssertContextIsNotNullOnServiceProperties(typeof(IRessourceProviderService));
         }
             
 

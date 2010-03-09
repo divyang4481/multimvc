@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Reflection;
 using BA.MultiMVC.Framework.Core;
+using BA.MultiMVC.Framework.Helpers;
 using NUnit.Framework;
 
 namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
@@ -61,18 +64,12 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
         {
             //Act
             var service = _tenantFactory.CreateService(requestedType);
-            Object result=null;
-            var properties = service.GetType().GetProperties();
-            foreach (var property in properties)
-            {
-                if (property.Name.IndexOf("Repository") > -1)
-                    result = property.GetValue(service, null);
-            }
+            var repositoryProperties = service.FindProperties(typeof(IRepository));
+            var result = repositoryProperties[0].GetValue(service, null);
 
             //Assert
             Assert.IsInstanceOfType(expectedType,result);
         }
-
 
         public void CreateServiceAssertContextIsNotNull(Type requestedType)
         {
@@ -81,6 +78,25 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
             var subject = service.Context;
             //Assert
             Assert.IsNotNull(subject);
+        }
+
+        public void CreateServiceAssertContextIsNotNullOnServiceProperties(Type requestedType)
+        {
+            //Act
+            var service = _tenantFactory.CreateService(requestedType);
+            AssertContextIsNotNullOnServiceProperties(service);
+        }
+
+        private void AssertContextIsNotNullOnServiceProperties(IService service)
+        {
+            var serviceProperties = service.FindProperties(typeof(IService));
+            //Assert
+            foreach (var property in serviceProperties)
+            {
+                var val = (IService)property.GetValue(service, null);
+                Assert.IsNotNull(val.Context);
+                AssertContextIsNotNullOnServiceProperties(val);
+            }
         }
     }
 }

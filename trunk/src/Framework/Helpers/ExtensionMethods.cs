@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Web.Mvc;
 using Castle.Components.Validator;
 using System.Collections.Specialized;
@@ -91,6 +92,20 @@ namespace BA.MultiMVC.Framework.Helpers
                 },
                 null
                 );
+        }
+
+        public static IList<PropertyInfo> FindProperties(this object subject, Type filter)
+        {
+            Object result = null;
+            var ret = new System.Collections.Generic.List<PropertyInfo>();
+            var properties = subject.GetType().GetProperties();
+            foreach (var property in properties)
+            {
+                Type t = property.PropertyType;
+                if (filter.IsAssignableFrom(t))
+                    ret.Add(property);
+            }
+            return ret;
         }
      
     }
