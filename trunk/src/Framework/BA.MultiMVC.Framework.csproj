@@ -76,7 +76,6 @@
     <Compile Include="Culture\CultureController.cs" />
     <Compile Include="Helpers\ApplicationHelpers.cs" />
     <Compile Include="Core\Configurator.cs" />
-    <Compile Include="Core\IModel.cs" />
     <Compile Include="Core\IService.cs" />
     <Compile Include="Core\ExtensionControllerFactory.cs" />
     <Compile Include="Core\ExtensionRegistry.cs" />

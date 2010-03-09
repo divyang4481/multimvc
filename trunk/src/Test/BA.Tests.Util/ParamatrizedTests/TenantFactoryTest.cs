@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using BA.MultiMVC.Framework.Core;
 using BA.MultiMVC.Framework.Helpers;
 using NUnit.Framework;
 
@@ -18,7 +15,7 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
         public void CreateRepositoryAssertIsInstanceOfType(Type requestedType, Type expectedType)
         {
             //Act
-            var result = _tenantFactory.CreateService(requestedType);
+            var result = _tenantFactory.Create(requestedType);
 
             //Assert
             Assert.IsInstanceOfType(expectedType,result);
@@ -27,7 +24,7 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
         public void CreateRepositoryAssertIsNotNull(Type requestedType)
         {
             //Act
-            var result = _tenantFactory.CreateService(requestedType);
+            var result = _tenantFactory.Create(requestedType);
 
             //Assert
             Assert.IsNotNull(result);
@@ -36,7 +33,7 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
         public void CreateServiceAssertIsInstanceOfType(Type requestedType, Type expectedType)
         {
             //Act
-            var result = _tenantFactory.CreateService(requestedType);
+            var result = _tenantFactory.Create(requestedType);
 
             //Assert
             Assert.IsInstanceOfType(expectedType ,result);
@@ -45,7 +42,7 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
         public void CreateServiceAssertIsNotNull(Type requestedType)
         {
             //Act
-            var result = _tenantFactory.CreateService(requestedType);
+            var result = _tenantFactory.Create(requestedType);
 
             //Assert
             Assert.IsNotNull(result);
@@ -54,7 +51,7 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
         public void CreateModelAssertIsInstanceOfType(Type requestedType, Type expectedType)
         {
             //Act
-            var result = _tenantFactory.CreateModel(requestedType);
+            var result = _tenantFactory.Create(requestedType);
 
             //Assert
             Assert.IsInstanceOfType(expectedType, result);
@@ -63,7 +60,7 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
         public void CreateServiceAssertRepositoryIsInstanceOfType(Type requestedType, Type expectedType)
         {
             //Act
-            var service = _tenantFactory.CreateService(requestedType);
+            var service = _tenantFactory.Create(requestedType);
             var repositoryProperties = service.FindProperties(typeof(ITenantModel));
             var result = repositoryProperties[0].GetValue(service, null);
 
@@ -74,7 +71,7 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
         public void CreateServiceAssertContextIsNotNull(Type requestedType)
         {
             //Act
-            var service = _tenantFactory.CreateService(requestedType);
+            var service = _tenantFactory.Create(requestedType);
             var subject = service.Context;
             //Assert
             Assert.IsNotNull(subject);
@@ -83,7 +80,7 @@ namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
         public void CreateServiceAssertContextIsNotNullOnServiceProperties(Type requestedType)
         {
             //Act
-            var service = _tenantFactory.CreateService(requestedType);
+            var service = _tenantFactory.Create(requestedType);
             AssertContextIsNotNullOnServiceProperties(service);
         }
 

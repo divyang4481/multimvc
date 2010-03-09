@@ -24,51 +24,38 @@ namespace BA.MultiMVC.Framework.Core
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public T CreateService<T>() where T : ITenantModel
+        public T Create<T>() where T : ITenantModel
         {
-            return (T)CreateService(typeof(T));
+            return (T)Create(typeof(T));
         }
 
-        public ITenantModel CreateService(Type T)
+        public ITenantModel Create(Type T)
         {
-            ITenantModel serviceInstance;
-            var serviceName = Context.TenantKey + T.GetName().Remove(0, 1);
+            ITenantModel modelInstance;
+            string tenantModelFullName = GetTenantModelFullName(T);
             try
             {
-                serviceInstance = (ITenantModel)ObjectFactory.GetNamedInstance(typeof(ITenantModel), serviceName);
+                modelInstance = (ITenantModel)ObjectFactory.GetNamedInstance(typeof(ITenantModel), tenantModelFullName);
             }
             catch (StructureMapException)
             {
-                serviceInstance = (ITenantModel)ObjectFactory.GetInstance(T);
+                modelInstance = (ITenantModel)ObjectFactory.GetInstance(T);
             }
             
-            serviceInstance = Configurator.InjectTenantModelNamedInstance(Context, serviceInstance);
+            modelInstance = Configurator.InjectTenantModelNamedInstance(Context, modelInstance);
 
-            Configurator.SetContextOnObjectTree(serviceInstance,this.Context);
+            Configurator.SetContextOnObjectTree(modelInstance,this.Context);
 
-            return serviceInstance;
-        }
-
-       
-
-        public T CreateModel<T>() where T : IModel
-        {
-            return (T)CreateModel(typeof(T));
-        }
-
-        public IModel CreateModel(Type T)
-        {
-            IModel modelInstance;
-            var modelName = Context.TenantKey + T.GetName();
-            try
-            {
-                modelInstance = (IModel)ObjectFactory.GetNamedInstance(typeof(IModel), modelName);
-            }
-            catch (StructureMapException)
-            {
-                modelInstance = (IModel)ObjectFactory.GetInstance(T);
-            }
             return modelInstance;
+        }
+
+        private string GetTenantModelFullName(Type T)
+        {
+
+            if (T.GetName().StartsWith("I"))
+                return Context.TenantKey + T.GetName().Remove(0, 1);
+
+            return Context.TenantKey + T.GetName();
         }
     }
 }

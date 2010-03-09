@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using StructureMap;
 using StructureMap.Configuration.DSL;
 
 namespace BA.MultiMVC.Framework.Core
@@ -14,7 +15,6 @@ namespace BA.MultiMVC.Framework.Core
                          o.AssembliesFromPath(path);
                          o.AddAllTypesOf<BaseController>().NameBy(type => type.Name.Replace("Controller", ""));
                          o.AddAllTypesOf<ITenantModel>().NameBy(type => type.Name);
-                         o.AddAllTypesOf<IModel>().NameBy(type=> type.Name);
                      });
         }
 
