@@ -7,20 +7,22 @@ namespace BA.MultiMVC.Framework.IntegrationTests.Caching
     [TestFixture]
     public class DefaultCacheServiceTest
     {
-        const string key = "key";
-        const string expected = "Expected object";
+        const string Key = "Key";
+        const string Expected = "Expected object";
+        const string TenantName = "DefaultTenant";
+        private const string LanguageCode = "fr";
 
         [Test]
         public void Add_WithSameContext_ObjectInCacheShouldBeRetrieved()
         {
             //Arrange
-            var subject = addToCache(key, expected);
+            var subject = AddToCache(Key, Expected);
 
             //Act
-            var result = subject.GetObject(key);
+            var result = subject.GetObject(Key);
 
             //Assert
-            Assert.AreEqual(expected, result);
+            Assert.AreEqual(Expected, result);
 
         }
 
@@ -28,20 +30,33 @@ namespace BA.MultiMVC.Framework.IntegrationTests.Caching
         public void Add_WithDifferentTenant_ObjectInCacheShouldNotBeRetrieved()
         {
             //Arrange
-            var subject = addToCache(key, expected);
+            var subject = AddToCache(Key, Expected);
 
             //Act
-            subject.Context = new TenantContext("DifferentTenant", "fr");
-            var result = subject.GetObject(key);
+            subject.Context = new TenantContext("DifferentTenant", LanguageCode);
+            var result = subject.GetObject(Key);
+            
+            //Assert
+            Assert.IsNull(result);
+        }
+
+        [Test]
+        public void Add_WithDifferentLanguage_ObjectInCacheShouldNotBeRetrieved()
+        {
+            //Arrange
+            var subject = AddToCache(Key, Expected);
+
+            //Act
+            subject.Context = new TenantContext(TenantName, "nl");
+            var result = subject.GetObject(Key);
 
             //Assert
             Assert.IsNull(result);
-
         }
 
-        private static DefaultCacheService addToCache(string key, string expected)
+        private static DefaultCacheService AddToCache(string key, string expected)
         {
-            var subject = new DefaultCacheService() { Context = new TenantContext("testTenant", "fr") };
+            var subject = new DefaultCacheService { Context = new TenantContext(TenantName, LanguageCode) };
             subject.Add(key, expected);
             return subject;
         }

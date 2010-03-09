@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Web;
 
 namespace BA.MultiMVC.Framework.Caching
@@ -15,14 +12,15 @@ namespace BA.MultiMVC.Framework.Caching
 
         public object GetObject(string key)
         {
-            return HttpRuntime.Cache[key];
+
+            return HttpRuntime.Cache[ConstructFullKeyName(key)];
         }
 
         public void Add(string key, object o)
         {
             DateTime expirationTime = DateTime.Now.AddSeconds(CacheTimeSeconds);
             HttpRuntime.Cache.Add(
-                key,
+                ConstructFullKeyName(key),
                 o,
                 null,
                 DateTime.Now.AddSeconds(CacheTimeSeconds),
@@ -32,16 +30,29 @@ namespace BA.MultiMVC.Framework.Caching
                 );
         }
 
+        public virtual string KeyPrefix
+        {
+            get
+            {
+                return Context.TenantKey + "_" + Context.Language; 
+            }
+        }
+
         public int CacheTimeSeconds
         {
             get;
             set;
         }
 
-        public BA.MultiMVC.Framework.Core.TenantContext Context
+        public Core.TenantContext Context
         {
             get;
             set;
+        }
+
+        private string ConstructFullKeyName(string keySuffix)
+        {
+            return KeyPrefix + "_" + keySuffix;
         }
     }
 }
