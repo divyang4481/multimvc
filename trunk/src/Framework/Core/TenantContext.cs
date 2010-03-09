@@ -7,7 +7,6 @@ namespace BA.MultiMVC.Framework.Core
 {
     public class TenantContext
     {
-       private IDictionary<string,string> _ressources;
        private string _connectionString;
 
        public TenantContext(string tenantKey, string language)
@@ -31,19 +30,7 @@ namespace BA.MultiMVC.Framework.Core
                 _connectionString = value;
             }
         }
-       public IDictionary<string,string> Ressources
-       {
-            get
-            {
-                if (_ressources == null)
-                    _ressources = GetRessources();
-                return _ressources;
-            }
-            set
-            {
-                _ressources = value;
-            }
-        }
+
 
        protected virtual string GetConnectionString()
        {

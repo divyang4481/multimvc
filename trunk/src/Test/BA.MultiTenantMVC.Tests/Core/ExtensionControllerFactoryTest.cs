@@ -1,9 +1,9 @@
 ﻿using System;
-using BA.MultiMVC.Framework.Core.MultiMVC.Sample;
 using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Controllers;
 using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Contoso.Controllers;
 using BA.MultiMVC.Framework.Core.MultiMVC.Test.Util.Stubs;
 using BA.MultiMVC.Framework.Core;
+using BA.MultiMVC.Framework.Ressources;
 using NUnit.Framework;
 
 namespace BA.MultiTenantMVC.Framework.UnitTests.Core
@@ -17,7 +17,7 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Core
         [TestFixtureSetUp]
         public void Initialize()
         {
-            Bootstrapper.ConfigureStructureMap(".");
+            BootstrapperForTest.ConfigureStructureMap(".");
         }
 
         [Test]
@@ -55,6 +55,16 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Core
 
             //Assert
             Assert.IsNotNull(((BaseController)result).TenantContext);
+
+        }
+
+        [Test]
+        public void GetControllerInstance_ForHomeControllerAndDefaultTenant_RessourcesIsNotNull()
+        {
+            var result = ExtensionControllerFactoryCreateInstance(typeof(HomeController), "Default");
+
+            //Assert
+            Assert.IsNotNull(((BaseController)result).Ressources);
 
         }
 

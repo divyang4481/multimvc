@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using BA.MultiMVC.Framework.Core.MultiMVC.Sample;
 using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Contoso.Controllers;
 using BA.MultiMVC.Framework.Core;
 using NUnit.Framework;
@@ -19,7 +18,7 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Core
         [TestFixtureSetUp]
         public void Initialize()
         {
-            Bootstrapper.ConfigureStructureMap(".");
+            BootstrapperForTest.ConfigureStructureMap(".");
         }
 
         [Test]

@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
-using BA.MultiMVC.Framework.Core;
 using BA.MultiMVC.Framework.Helpers;
 using StructureMap;
 using System.Web.Routing;
+using BA.MultiMVC.Framework.Ressources;
 
 
 namespace BA.MultiMVC.Framework.Core
@@ -17,7 +18,8 @@ namespace BA.MultiMVC.Framework.Core
             if (RequestContext != null)
             {
                 var tenantContext = GetTenantContext(RequestContext);
-                return GetControllerInstance(tenantContext, controllerType);
+                var tenantResources = GetTenantResources(tenantContext);
+                return GetControllerInstance(tenantContext, tenantResources ,controllerType);
 
             }
             return null;
@@ -30,17 +32,24 @@ namespace BA.MultiMVC.Framework.Core
             return new TenantContext(tenantKey, language);
         }
 
+        protected virtual IDictionary<string,string> GetTenantResources(TenantContext context)
+        {
+            var factory = new TenantFactory(context);
+            var resourceProvider = factory.Create<IRessourceProviderService>();
+            return resourceProvider.GetRessources();
+        }
         
 
-        protected virtual IController GetControllerInstance(TenantContext tenantContext, Type controllerType)
+        protected virtual IController GetControllerInstance(TenantContext context,IDictionary<string,string> resources, Type controllerType)
         {
             if (controllerType==null)
                 return null;
 
-            var controller = CreateControllerExtension(tenantContext.TenantKey, controllerType)
+            var controller = CreateControllerExtension(context.TenantKey, controllerType)
                              ?? base.GetControllerInstance(controllerType) as BaseController;
                                               
-            controller.TenantContext = tenantContext;
+            controller.TenantContext = context;
+            controller.Ressources = resources;
             return controller;
         }
         private static BaseController CreateControllerExtension(string tenantKey, Type controllerType)

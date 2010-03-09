@@ -1,5 +1,4 @@
 ﻿using BA.MultiMVC.Framework.Core;
-using BA.MultiMVC.Framework.Core.MultiMVC.Sample;
 using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Contoso.Infrastructure;
 using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Domain;
 using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Domain;
@@ -21,7 +20,7 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Core
         [TestFixtureSetUp]
         public void Initialize()
         {
-            Bootstrapper.ConfigureStructureMap(".");
+            BootstrapperForTest.ConfigureStructureMap(".");
         }
 
         [Test]
@@ -154,7 +153,6 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Core
                               {
                                   TenantKey = tenantKey,
                                   Language = "en",
-                                  Ressources = null,
                                   ConnectionString = "dummy"
                               };
             var factory = new DomainFactory(context);
