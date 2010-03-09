@@ -1,5 +1,6 @@
 ﻿using System;
 using BA.MultiMVC.Framework.Core;
+using BA.MultiMVC.Framework.Helpers;
 using StructureMap;
 
 namespace BA.MultiMVC.Framework.Core
@@ -65,9 +66,15 @@ namespace BA.MultiMVC.Framework.Core
             {
                 serviceInstance = (IService)ObjectFactory.GetInstance(T);
             }
-            serviceInstance.Context = Context;
-            return Configurator<IService>.InjectNamedInstanceOfRepositoriesAndServicesIntoSubject(Context, serviceInstance);
+            
+            serviceInstance = Configurator<IService>.InjectNamedInstanceOfRepositoriesAndServicesIntoSubject(Context, serviceInstance);
+
+            Configurator<IService>.SetContextOnObjectTree(serviceInstance,this.Context);
+
+            return serviceInstance;
         }
+
+       
 
         public T CreateModel<T>() where T : IModel
         {

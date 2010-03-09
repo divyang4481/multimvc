@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using BA.MultiMVC.Framework.Core;
+using BA.MultiMVC.Framework.Helpers;
 using StructureMap;
 
 namespace BA.MultiMVC.Framework.Core
@@ -26,6 +27,18 @@ namespace BA.MultiMVC.Framework.Core
                 }
             }
             return subject;
+        }
+
+        public static void SetContextOnObjectTree(IService serviceInstance, TenantContext context)
+        {
+            serviceInstance.Context = context;
+            var serviceProperties = serviceInstance.FindProperties(typeof(IService));
+            foreach (var property in serviceProperties)
+            {
+                var childServiceInstance = ((IService)property.GetValue(serviceInstance, null));
+                childServiceInstance.Context = context;
+                SetContextOnObjectTree(childServiceInstance,context);
+            }
         }
 
         private static T InjectDomainFactory(string tenantKey, T controller)
