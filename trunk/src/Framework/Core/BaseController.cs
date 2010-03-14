@@ -18,24 +18,24 @@ namespace BA.MultiMVC.Framework.Core
 
         protected void AddModelErrorsToForm(NameValueCollection formCollection, ErrorSummary errorsummary)
         {
-            ModelState.AddModelErrors(errorsummary, Ressources, formCollection);
+            ModelState.AddModelErrors(errorsummary, Ressources, formCollection); 
+            
+            
         }
 
-        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        protected override void OnActionExecuted(ActionExecutedContext filterContext)
         {
-
-            filterContext.Controller.ViewData["language"] = TenantContext. Language;
-            filterContext.Controller.ViewData["tenantKey"] = TenantContext.TenantKey;
-
             if (ViewData.Model == null)
                 ViewData.Model = new BaseViewModel();
 
             var vM = ViewData.Model as BaseViewModel;
-            if (vM !=null)
+            if (vM != null)
                 vM.Resources = Ressources;
 
-            base.OnActionExecuting(filterContext);
+            base.OnActionExecuted(filterContext);
         }
+
+
 
         #endregion Methods
     }

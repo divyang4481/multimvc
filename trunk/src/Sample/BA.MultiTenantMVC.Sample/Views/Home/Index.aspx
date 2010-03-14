@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<BA.MultiMVC.Framework.Core.BaseViewModel>" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<HomeVM>" %>
+<%@ Import Namespace="BA.MultiTenantMVC.Sample.Models.ViewModel"%>
 
 <asp:Content ID="indexTitle" ContentPlaceHolderID="TitleContent" runat="server">
     <%= Model.Resources["Home.Title"] %>

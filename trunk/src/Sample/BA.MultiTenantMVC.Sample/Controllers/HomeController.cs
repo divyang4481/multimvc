@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using BA.MultiMVC.Framework.Core;
+using BA.MultiTenantMVC.Sample.Models.ViewModel;
 
 namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Controllers
 {
@@ -8,9 +9,10 @@ namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Controllers
     {
         public virtual ActionResult Index()
         {
-            ViewData["Message"] = "Welcome to ASP.NET MVC on Default site!";
+            var vm = new HomeVM();
+            vm.Message = "Welcome to ASP.NET MVC on Default site!";
 
-            return View();
+            return View(vm);
         }
 
         public virtual ActionResult CheckForLanguage(string client)

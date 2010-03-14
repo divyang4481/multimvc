@@ -84,6 +84,7 @@
     <Compile Include="Models\Infrastructure\MembershipService.cs" />
     <Compile Include="Models\Infrastructure\RessourceRepository.cs" />
     <Compile Include="Models\Infrastructure\UserRepository.cs" />
+    <Compile Include="Models\ViewModel\HomeVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
