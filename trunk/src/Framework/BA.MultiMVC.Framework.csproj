@@ -71,6 +71,7 @@
     <Compile Include="Caching\DefaultCacheService.cs" />
     <Compile Include="Caching\ICacheService.cs" />
     <Compile Include="Core\BaseController.cs" />
+    <Compile Include="Core\BaseViewModel.cs" />
     <Compile Include="Core\TenantContext.cs" />
     <Compile Include="Core\TenantFactory.cs" />
     <Compile Include="Culture\CultureController.cs" />

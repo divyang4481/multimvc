@@ -26,7 +26,13 @@ namespace BA.MultiMVC.Framework.Core
 
             filterContext.Controller.ViewData["language"] = TenantContext. Language;
             filterContext.Controller.ViewData["tenantKey"] = TenantContext.TenantKey;
-            filterContext.Controller.ViewData["ressources"] = Ressources;
+
+            if (ViewData.Model == null)
+                ViewData.Model = new BaseViewModel();
+
+            var vM = ViewData.Model as BaseViewModel;
+            if (vM !=null)
+                vM.Resources = Ressources;
 
             base.OnActionExecuting(filterContext);
         }
