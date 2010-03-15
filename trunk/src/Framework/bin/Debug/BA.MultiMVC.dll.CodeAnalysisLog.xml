@@ -4,88 +4,88 @@
  <Namespaces>
   <Namespace Name="BA.MultiMVC.Core">
    <Messages>
-    <Message Id="MVC" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message Id="MVC" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="85" Level="Error">Correct the casing of 'MVC' in namespace name 'BA.MultiMVC.Core' by changing it to 'Mvc'.</Issue>
     </Message>
-    <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Multi' in namespace name 'BA.MultiMVC.Core'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="BA.MultiMVC.Helpers">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'BA.MultiMVC.Helpers' with another namespace.</Issue>
     </Message>
-    <Message Id="MVC" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message Id="MVC" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="85" Level="Error">Correct the casing of 'MVC' in namespace name 'BA.MultiMVC.Helpers' by changing it to 'Mvc'.</Issue>
     </Message>
-    <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Multi' in namespace name 'BA.MultiMVC.Helpers'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="BA.MultiMVC.ParametrizedTest">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'BA.MultiMVC.ParametrizedTest' with another namespace.</Issue>
     </Message>
-    <Message Id="MVC" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message Id="MVC" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="85" Level="Error">Correct the casing of 'MVC' in namespace name 'BA.MultiMVC.ParametrizedTest' by changing it to 'Mvc'.</Issue>
     </Message>
-    <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Multi' in namespace name 'BA.MultiMVC.ParametrizedTest'.</Issue>
     </Message>
-    <Message Id="Parametrized" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message Id="Parametrized" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Parametrized' in namespace name 'BA.MultiMVC.ParametrizedTest'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="BA.MultiMVC.Ressources">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'BA.MultiMVC.Ressources' with another namespace.</Issue>
     </Message>
-    <Message Id="MVC" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message Id="MVC" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="85" Level="Error">Correct the casing of 'MVC' in namespace name 'BA.MultiMVC.Ressources' by changing it to 'Mvc'.</Issue>
     </Message>
-    <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Multi' in namespace name 'BA.MultiMVC.Ressources'.</Issue>
     </Message>
-    <Message Id="Ressources" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message Id="Ressources" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Ressources' in namespace name 'BA.MultiMVC.Ressources'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="BA.MVC.MultiTenant.Core">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'BA.MVC.MultiTenant.Core' with another namespace.</Issue>
     </Message>
-    <Message Id="MVC" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message Id="MVC" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="85" Level="Error">Correct the casing of 'MVC' in namespace name 'BA.MVC.MultiTenant.Core' by changing it to 'Mvc'.</Issue>
     </Message>
-    <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+    <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Multi' in namespace name 'BA.MVC.MultiTenant.Core'.</Issue>
     </Message>
    </Messages>
   </Namespace>
  </Namespaces>
  <Targets>
-  <Target Name="C:\Dev\MultiMVC\src\Framework\bin\Debug\BA.MultiMVC.dll">
+  <Target Name="C:\Dev\MultiMVC\multimvc\src\Framework\bin\Debug\BA.MultiMVC.dll">
    <Modules>
     <Module Name="ba.multimvc.dll">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'BA.MultiMVC.dll' with a strong name key.</Issue>
       </Message>
-      <Message Id="MVC" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+      <Message Id="MVC" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
        <Issue Name="Assembly" Certainty="85" Level="Error">Correct the casing of 'MVC' in assembly name 'BA.MultiMVC.dll' by changing it to 'Mvc'.</Issue>
       </Message>
-      <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+      <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
        <Issue Name="Assembly" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Multi' in assembly name 'BA.MultiMVC.dll'.</Issue>
       </Message>
-      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="NonBreaking">
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="NonBreaking">
        <Issue Certainty="95" Level="Error">Mark 'BA.MultiMVC.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
       </Message>
      </Messages>
@@ -96,8 +96,8 @@
          <Members>
           <Member Name="#AddModelErrorsToForm(System.Collections.Specialized.NameValueCollection,Castle.Components.Validator.ErrorSummary)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message Id="errorsummary" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Dev\MultiMVC\src\Framework\Core" File="BaseController.cs" Line="20">In method 'BaseController.AddModelErrorsToForm(NameValueCollection, ErrorSummary)', correct the spelling of 'errorsummary' in parameter name 'errorsummary' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="errorsummary" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="BaseController.cs" Line="20">In method 'BaseController.AddModelErrorsToForm(NameValueCollection, ErrorSummary)', correct the spelling of 'errorsummary' in parameter name 'errorsummary' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -105,47 +105,47 @@
         </Type>
         <Type Name="Configurator`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Configurator" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+          <Message Id="Configurator" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Configurator' in type name 'Configurator&lt;T&gt;'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#InjectDomainFactory(System.String,!0)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="ex" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Warning" Path="C:\Dev\MultiMVC\src\Framework\Core" File="Configurator.cs" Line="45">'Configurator&lt;T&gt;.InjectDomainFactory(string, T)' declares a variable, 'ex', of type 'StructureMapException', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            <Message Id="ex" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="Configurator.cs" Line="45">'Configurator&lt;T&gt;.InjectDomainFactory(string, T)' declares a variable, 'ex', of type 'StructureMapException', which is never used or is only assigned to. Use this variable or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#InjectDomainFactoryNamedInstanceIntoSubject(System.String,!0)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareStaticMembersOnGenericTypes" Category="Microsoft.Design" CheckId="CA1000" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Core" File="Configurator.cs" Line="10">Remove 'Configurator&lt;T&gt;.InjectDomainFactoryNamedInstanceIntoSubject(string, T)' from 'Configurator&lt;T&gt;' or make it an instance member.</Issue>
+            <Message TypeName="DoNotDeclareStaticMembersOnGenericTypes" Category="Microsoft.Design" CheckId="CA1000" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="Configurator.cs" Line="10">Remove 'Configurator&lt;T&gt;.InjectDomainFactoryNamedInstanceIntoSubject(string, T)' from 'Configurator&lt;T&gt;' or make it an instance member.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#InjectNamedInstanceOfRepositoriesAndServicesIntoSubject(BA.MVC.MultiTenant.Core.TenantContext,!0)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareStaticMembersOnGenericTypes" Category="Microsoft.Design" CheckId="CA1000" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Core" File="Configurator.cs" Line="15">Remove 'Configurator&lt;T&gt;.InjectNamedInstanceOfRepositoriesAndServicesIntoSubject(TenantContext, T)' from 'Configurator&lt;T&gt;' or make it an instance member.</Issue>
+            <Message TypeName="DoNotDeclareStaticMembersOnGenericTypes" Category="Microsoft.Design" CheckId="CA1000" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="Configurator.cs" Line="15">Remove 'Configurator&lt;T&gt;.InjectNamedInstanceOfRepositoriesAndServicesIntoSubject(TenantContext, T)' from 'Configurator&lt;T&gt;' or make it an instance member.</Issue>
             </Message>
-            <Message Id="System.String.IndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Core" File="Configurator.cs" Line="19">'Configurator&lt;T&gt;.InjectNamedInstanceOfRepositoriesAndServicesIntoSubject(TenantContext, T)' makes a call to 'string.IndexOf(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.IndexOf(string, StringComparison)'.</Issue>
-             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Core" File="Configurator.cs" Line="23">'Configurator&lt;T&gt;.InjectNamedInstanceOfRepositoriesAndServicesIntoSubject(TenantContext, T)' makes a call to 'string.IndexOf(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.IndexOf(string, StringComparison)'.</Issue>
+            <Message Id="System.String.IndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="Configurator.cs" Line="19">'Configurator&lt;T&gt;.InjectNamedInstanceOfRepositoriesAndServicesIntoSubject(TenantContext, T)' makes a call to 'string.IndexOf(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.IndexOf(string, StringComparison)'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="Configurator.cs" Line="23">'Configurator&lt;T&gt;.InjectNamedInstanceOfRepositoriesAndServicesIntoSubject(TenantContext, T)' makes a call to 'string.IndexOf(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.IndexOf(string, StringComparison)'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#InjectRepository(BA.MVC.MultiTenant.Core.TenantContext,!0,System.Reflection.PropertyInfo)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.String.IndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Core" File="Configurator.cs" Line="72">'Configurator&lt;T&gt;.InjectRepository(TenantContext, T, PropertyInfo)' makes a call to 'string.IndexOf(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.IndexOf(string, StringComparison)'.</Issue>
+            <Message Id="System.String.IndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="Configurator.cs" Line="72">'Configurator&lt;T&gt;.InjectRepository(TenantContext, T, PropertyInfo)' makes a call to 'string.IndexOf(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.IndexOf(string, StringComparison)'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#InjectService(BA.MVC.MultiTenant.Core.TenantContext,!0,System.Reflection.PropertyInfo)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.String.IndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Core" File="Configurator.cs" Line="98">'Configurator&lt;T&gt;.InjectService(TenantContext, T, PropertyInfo)' makes a call to 'string.IndexOf(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.IndexOf(string, StringComparison)'.</Issue>
+            <Message Id="System.String.IndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="Configurator.cs" Line="98">'Configurator&lt;T&gt;.InjectService(TenantContext, T, PropertyInfo)' makes a call to 'string.IndexOf(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.IndexOf(string, StringComparison)'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -153,14 +153,14 @@
         </Type>
         <Type Name="IModel" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+          <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
            <Issue Certainty="90" Level="Warning">Define a custom attribute to replace 'IModel'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="IService" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+          <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
            <Issue Certainty="90" Level="Warning">Define a custom attribute to replace 'IService'.</Issue>
           </Message>
          </Messages>
@@ -169,52 +169,52 @@
          <Members>
           <Member Name="#CreateModel(System.Type)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="T" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantFactory.cs" Line="77">In member 'TenantFactory.CreateModel(Type)', correct the casing of 'T' in parameter name 'T' by changing it to 't'.</Issue>
+            <Message Id="T" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantFactory.cs" Line="77">In member 'TenantFactory.CreateModel(Type)', correct the casing of 'T' in parameter name 'T' by changing it to 't'.</Issue>
             </Message>
-            <Message Id="T" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantFactory.cs" Line="77">In method 'TenantFactory.CreateModel(Type)', consider providing a more meaningful name than parameter name 'T'.</Issue>
+            <Message Id="T" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantFactory.cs" Line="77">In method 'TenantFactory.CreateModel(Type)', consider providing a more meaningful name than parameter name 'T'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CreateModel`1()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantFactory.cs" Line="72">Consider a design where 'TenantFactory.CreateModel&lt;T&gt;()' doesn't require explicit type parameter 'T' in any call to it.</Issue>
+            <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantFactory.cs" Line="72">Consider a design where 'TenantFactory.CreateModel&lt;T&gt;()' doesn't require explicit type parameter 'T' in any call to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CreateRepository(System.Type)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="T" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantFactory.cs" Line="27">In member 'TenantFactory.CreateRepository(Type)', correct the casing of 'T' in parameter name 'T' by changing it to 't'.</Issue>
+            <Message Id="T" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantFactory.cs" Line="27">In member 'TenantFactory.CreateRepository(Type)', correct the casing of 'T' in parameter name 'T' by changing it to 't'.</Issue>
             </Message>
-            <Message Id="T" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantFactory.cs" Line="27">In method 'TenantFactory.CreateRepository(Type)', consider providing a more meaningful name than parameter name 'T'.</Issue>
+            <Message Id="T" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantFactory.cs" Line="27">In method 'TenantFactory.CreateRepository(Type)', consider providing a more meaningful name than parameter name 'T'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CreateRepository`1()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantFactory.cs" Line="22">Consider a design where 'TenantFactory.CreateRepository&lt;T&gt;()' doesn't require explicit type parameter 'T' in any call to it.</Issue>
+            <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantFactory.cs" Line="22">Consider a design where 'TenantFactory.CreateRepository&lt;T&gt;()' doesn't require explicit type parameter 'T' in any call to it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CreateService(System.Type)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="T" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantFactory.cs" Line="57">In member 'TenantFactory.CreateService(Type)', correct the casing of 'T' in parameter name 'T' by changing it to 't'.</Issue>
+            <Message Id="T" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantFactory.cs" Line="57">In member 'TenantFactory.CreateService(Type)', correct the casing of 'T' in parameter name 'T' by changing it to 't'.</Issue>
             </Message>
-            <Message Id="T" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantFactory.cs" Line="57">In method 'TenantFactory.CreateService(Type)', consider providing a more meaningful name than parameter name 'T'.</Issue>
+            <Message Id="T" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantFactory.cs" Line="57">In method 'TenantFactory.CreateService(Type)', consider providing a more meaningful name than parameter name 'T'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CreateService`1()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantFactory.cs" Line="52">Consider a design where 'TenantFactory.CreateService&lt;T&gt;()' doesn't require explicit type parameter 'T' in any call to it.</Issue>
+            <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantFactory.cs" Line="52">Consider a design where 'TenantFactory.CreateService&lt;T&gt;()' doesn't require explicit type parameter 'T' in any call to it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -226,15 +226,15 @@
        <Types>
         <Type Name="ApplicationHelpers" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+          <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
            <Issue Certainty="90" Level="Error">Remove the public constructors from 'ApplicationHelpers'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#ConfigureRoutes(System.Web.Routing.RouteCollection,System.String,System.String,System.String,System.String,System.Boolean)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="IIS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Helpers" File="ApplicationHelpers.cs" Line="17">In member 'ApplicationHelpers.ConfigureRoutes(RouteCollection, string, string, string, string, bool)', correct the casing of 'IIS' in parameter name 'IIS6CompatibilityMode' by changing it to 'iis'.</Issue>
+            <Message Id="IIS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Helpers" File="ApplicationHelpers.cs" Line="17">In member 'ApplicationHelpers.ConfigureRoutes(RouteCollection, string, string, string, string, bool)', correct the casing of 'IIS' in parameter name 'IIS6CompatibilityMode' by changing it to 'iis'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -244,31 +244,31 @@
          <Members>
           <Member Name="#AddModelErrors(System.Web.Mvc.ModelStateDictionary,Castle.Components.Validator.ErrorSummary,BA.MultiMVC.Ressources.IRessourceDictionary,System.Collections.Specialized.NameValueCollection)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Helpers" File="ExtensionMethods.cs" Line="38">'ExtensionMethods.AddModelErrors(this ModelStateDictionary, ErrorSummary, IRessourceDictionary, NameValueCollection)' creates an exception of type 'ApplicationException', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Helpers" File="ExtensionMethods.cs" Line="38">'ExtensionMethods.AddModelErrors(this ModelStateDictionary, ErrorSummary, IRessourceDictionary, NameValueCollection)' creates an exception of type 'ApplicationException', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
             </Message>
-            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Helpers" File="ExtensionMethods.cs" Line="38">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'ExtensionMethods.AddModelErrors(this ModelStateDictionary, ErrorSummary, IRessourceDictionary, NameValueCollection)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Helpers" File="ExtensionMethods.cs" Line="38">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'ExtensionMethods.AddModelErrors(this ModelStateDictionary, ErrorSummary, IRessourceDictionary, NameValueCollection)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetLanguage(System.Web.Routing.RequestContext,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Helpers" File="ExtensionMethods.cs" Line="61">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'ExtensionMethods.GetLanguage(this RequestContext, string)' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Helpers" File="ExtensionMethods.cs" Line="61">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'ExtensionMethods.GetLanguage(this RequestContext, string)' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ToCamelCased(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Dev\MultiMVC\src\Framework\Helpers" File="ExtensionMethods.cs" Line="75">In method 'ExtensionMethods.ToCamelCased(this string)', consider providing a more meaningful name than parameter name 's'.</Issue>
+            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Helpers" File="ExtensionMethods.cs" Line="75">In method 'ExtensionMethods.ToCamelCased(this string)', consider providing a more meaningful name than parameter name 's'.</Issue>
             </Message>
-            <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Helpers" File="ExtensionMethods.cs" Line="76">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'ExtensionMethods.ToCamelCased(this string)' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Helpers" File="ExtensionMethods.cs" Line="76">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'ExtensionMethods.ToCamelCased(this string)' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message Id="System.String.ToUpper" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Helpers" File="ExtensionMethods.cs" Line="78">Because the behavior of 'string.ToUpper()' could vary based on the current user's locale settings, replace this call in 'ExtensionMethods.ToCamelCased(this string)' with a call to 'string.ToUpper(CultureInfo)'. If the result of 'string.ToUpper(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            <Message Id="System.String.ToUpper" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Helpers" File="ExtensionMethods.cs" Line="78">Because the behavior of 'string.ToUpper()' could vary based on the current user's locale settings, replace this call in 'ExtensionMethods.ToCamelCased(this string)' with a call to 'string.ToUpper(CultureInfo)'. If the result of 'string.ToUpper(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -282,8 +282,8 @@
          <Members>
           <Member Name="#CreateServiceAssertRepositoryIsInstanceOfType(System.Type,System.Type)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.String.IndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\ParametrizedTest" File="TenantFactoryTest.cs" Line="68">'TenantFactoryTest.CreateServiceAssertRepositoryIsInstanceOfType(Type, Type)' makes a call to 'string.IndexOf(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.IndexOf(string, StringComparison)'.</Issue>
+            <Message Id="System.String.IndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\ParametrizedTest" File="TenantFactoryTest.cs" Line="68">'TenantFactoryTest.CreateServiceAssertRepositoryIsInstanceOfType(Type, Type)' makes a call to 'string.IndexOf(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.IndexOf(string, StringComparison)'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -295,17 +295,17 @@
        <Types>
         <Type Name="IRessourceDictionary" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Ressource" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+          <Message Id="Ressource" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Ressource' in type name 'IRessourceDictionary'.</Issue>
           </Message>
-          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
            <Issue Name="TypeNoAlternate" Certainty="95" Level="CriticalError">Rename type name 'IRessourceDictionary' so that it does not end in 'Dictionary'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#ToSelectListItemList(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
              <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning">In method 'IRessourceDictionary.ToSelectListItemList(string)', consider providing a more meaningful name than parameter name 'p'.</Issue>
             </Message>
            </Messages>
@@ -314,21 +314,21 @@
         </Type>
         <Type Name="IRessourceProvider" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Ressource" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+          <Message Id="Ressource" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Ressource' in type name 'IRessourceProvider'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="RessourceDictionary" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Ressource" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+          <Message Id="Ressource" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Ressource' in type name 'RessourceDictionary'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#ToSelectListItemList(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
+            <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="Error">In member 'RessourceDictionary.ToSelectListItemList(string)', change parameter name 'selectedValue' to 'p' in order to match the identifier as it has been declared in 'IRessourceDictionary.ToSelectListItemList(string)'.</Issue>
             </Message>
            </Messages>
@@ -343,38 +343,38 @@
          <Members>
           <Member Name="#ConnectionString" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="PropertyNamesShouldNotMatchGetMethods" Category="Microsoft.Naming" CheckId="CA1721" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="NonBreaking">
-             <Issue Name="SameType" Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantContext.cs" Line="24">The property name 'TenantContext.ConnectionString' is confusing given the existence of method 'TenantContext.GetConnectionString()'. Rename or remove one of these members.</Issue>
+            <Message TypeName="PropertyNamesShouldNotMatchGetMethods" Category="Microsoft.Naming" CheckId="CA1721" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="NonBreaking">
+             <Issue Name="SameType" Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantContext.cs" Line="24">The property name 'TenantContext.ConnectionString' is confusing given the existence of method 'TenantContext.GetConnectionString()'. Rename or remove one of these members.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetConnectionString()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantContext.cs" Line="60">'TenantContext.GetConnectionString()' creates an exception of type 'ApplicationException', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantContext.cs" Line="60">'TenantContext.GetConnectionString()' creates an exception of type 'ApplicationException', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
             </Message>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantContext.cs" Line="49">Change 'TenantContext.GetConnectionString()' to a property if appropriate.</Issue>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantContext.cs" Line="49">Change 'TenantContext.GetConnectionString()' to a property if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetRessources()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message Id="Ressources" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantContext.cs" Line="65">Correct the spelling of 'Ressources' in member name 'TenantContext.GetRessources()' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="Ressources" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantContext.cs" Line="65">Correct the spelling of 'Ressources' in member name 'TenantContext.GetRessources()' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantContext.cs" Line="65">Change 'TenantContext.GetRessources()' to a property if appropriate.</Issue>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantContext.cs" Line="65">Change 'TenantContext.GetRessources()' to a property if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Ressources" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Ressources" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantContext.cs" Line="37">Correct the spelling of 'Ressources' in member name 'TenantContext.Ressources' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="Ressources" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantContext.cs" Line="37">Correct the spelling of 'Ressources' in member name 'TenantContext.Ressources' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message TypeName="PropertyNamesShouldNotMatchGetMethods" Category="Microsoft.Naming" CheckId="CA1721" Status="Active" Created="2010-02-22 19:37:05Z" FixCategory="NonBreaking">
-             <Issue Name="SameType" Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\src\Framework\Core" File="TenantContext.cs" Line="37">The property name 'TenantContext.Ressources' is confusing given the existence of method 'TenantContext.GetRessources()'. Rename or remove one of these members.</Issue>
+            <Message TypeName="PropertyNamesShouldNotMatchGetMethods" Category="Microsoft.Naming" CheckId="CA1721" Status="Active" Created="2010-02-22 20:34:26Z" FixCategory="NonBreaking">
+             <Issue Name="SameType" Certainty="95" Level="Error" Path="C:\Dev\MultiMVC\multimvc\src\Framework\Core" File="TenantContext.cs" Line="37">The property name 'TenantContext.Ressources' is confusing given the existence of method 'TenantContext.GetRessources()'. Rename or remove one of these members.</Issue>
             </Message>
            </Messages>
           </Member>

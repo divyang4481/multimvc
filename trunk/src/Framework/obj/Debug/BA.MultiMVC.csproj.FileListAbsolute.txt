@@ -5,3 +5,10 @@ C:\Dev\MultiMVC\src\Framework\bin\Debug\BA.MultiMVC.dll.CodeAnalysisLog.xml
 C:\Dev\MultiMVC\src\Framework\bin\Debug\BA.MultiMVC.dll.lastcodeanalysissucceeded
 C:\Dev\MultiMVC\src\Framework\obj\Debug\BA.MultiMVC.dll
 C:\Dev\MultiMVC\src\Framework\obj\Debug\BA.MultiMVC.pdb
+C:\Dev\MultiMVC\multimvc\src\Framework\bin\Debug\BA.MultiMVC.dll
+C:\Dev\MultiMVC\multimvc\src\Framework\bin\Debug\BA.MultiMVC.pdb
+C:\Dev\MultiMVC\multimvc\src\Framework\bin\Debug\BA.MultiMVC.dll.CodeAnalysisLog.xml
+C:\Dev\MultiMVC\multimvc\src\Framework\bin\Debug\BA.MultiMVC.dll.lastcodeanalysissucceeded
+C:\Dev\MultiMVC\multimvc\src\Framework\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\MultiMVC\multimvc\src\Framework\obj\Debug\BA.MultiMVC.dll
+C:\Dev\MultiMVC\multimvc\src\Framework\obj\Debug\BA.MultiMVC.pdb
