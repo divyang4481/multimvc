@@ -14,6 +14,7 @@ namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Contoso.Controll
             vm.Message = "Welcome to ASP.NET MVC on Adventureworks site!";
 
             return View(vm);
+
         }
     }
 }
