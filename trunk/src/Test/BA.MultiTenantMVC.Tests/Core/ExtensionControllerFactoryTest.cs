@@ -1,6 +1,6 @@
 ﻿using System;
 using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Controllers;
-using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Contoso.Controllers;
+using BA.MultiTenantMVC.Sample.Extensions.Contoso.Controllers;
 using BA.MultiMVC.Framework.Core.MultiMVC.Test.Util.Stubs;
 using BA.MultiMVC.Framework.Core;
 using BA.MultiMVC.Framework.Ressources;
