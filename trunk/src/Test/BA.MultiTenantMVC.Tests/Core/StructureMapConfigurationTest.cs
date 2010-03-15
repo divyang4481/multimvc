@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using BA.MultiMVC.Framework.Core.MultiMVC.Sample;
-using BA.MultiTenantMVC.Sample.Extensions.Contoso.Controllers;
 using BA.MultiMVC.Framework.Core;
+using BA.MultiMVC.Sample.Extensions.Contoso.Controllers;
 using NUnit.Framework;
 using StructureMap;
 

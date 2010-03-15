@@ -1,10 +1,10 @@
 ﻿using BA.MultiMVC.Framework.Core;
-using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Contoso.Infrastructure;
-using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Domain;
 using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Domain;
 using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Infrastructure;
 using BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests;
 using BA.MultiMVC.Framework.Ressources;
+using BA.MultiMVC.Sample.Extensions.Contoso.Model.Domain;
+using BA.MultiMVC.Sample.Extensions.Contoso.Model.Infrasturcture;
 using NUnit.Framework;
 
 
