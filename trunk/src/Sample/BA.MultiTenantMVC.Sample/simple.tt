@@ -1,0 +1,10 @@
+﻿<#@ template language="c#v3.5" #>
+<#@ assembly name="System.web.Mvc.DLL" #>
+<#@ import namespace="System.Web.Mvc" #>
+
+public class Test
+{
+	<#for (int i=0; i <5; i++) {#>
+	 public int Prop<#=i#> {get;set;}
+	<# } #>
+}
