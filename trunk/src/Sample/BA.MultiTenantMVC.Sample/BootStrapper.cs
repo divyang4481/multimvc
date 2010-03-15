@@ -5,6 +5,8 @@ using BA.MultiMVC.Framework.Ressources;
 using StructureMap;
 using BA.MultiTenantMVC.Sample.Models.Infrastructure;
 using BA.MultiMVC.Framework.Caching;
+using System.IO;
+using System.Text;
 
 namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample
 {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using BA.MultiMVC.Framework.Core.MultiMVC.Sample;
 using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Contoso.Controllers;
 using BA.MultiMVC.Framework.Core;
 using NUnit.Framework;
@@ -18,7 +19,7 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Core
         [TestFixtureSetUp]
         public void Initialize()
         {
-            BootstrapperForTest.ConfigureStructureMap(".");
+            Bootstrapper.ConfigureStructureMap(Configuration.ExtensionPath);
         }
 
         [Test]
@@ -32,7 +33,7 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Core
         {
             var result = ObjectFactory.GetNamedInstance(typeof(BaseController), "ContosoHome");
 
-            Assert.IsInstanceOfType(typeof(ContosoHomeController),result);
+            Assert.AreEqual(typeof(ContosoHomeController).FullName , result.GetType().FullName);
         }
 
  

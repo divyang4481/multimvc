@@ -5,7 +5,6 @@ using BA.MultiMVC.Framework.Core;
 using BA.MultiMVC.Framework.Ressources;
 using BA.MultiTenantMVC.Framework.UnitTests.Ressources;
 using StructureMap;
-using BA.MultiTenantMVC.Sample.Models.Infrastructure;
 using BA.MultiMVC.Framework.Caching;
 
 namespace BA.MultiTenantMVC.Framework.UnitTests

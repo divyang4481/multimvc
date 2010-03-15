@@ -73,6 +73,6 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>xcopy  "$(TargetPath)" "$(SolutionDir)..\src\Sample\BA.MultiTenantMVC.Sample\Extensions\"  /y</PostBuildEvent>
+    <PostBuildEvent>xcopy  "$(TargetPath)" "$(SolutionDir)..\src\Sample\BA.MultiTenantMVC.Sample\Extensions\Contoso\Bin"  /y</PostBuildEvent>
   </PropertyGroup>
 </Project>

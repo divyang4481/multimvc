@@ -20,7 +20,7 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Core
         [TestFixtureSetUp]
         public void Initialize()
         {
-            BootstrapperForTest.ConfigureStructureMap(".");
+            BootstrapperForTest.ConfigureStructureMap(Configuration.ExtensionPath);
         }
 
         [Test]

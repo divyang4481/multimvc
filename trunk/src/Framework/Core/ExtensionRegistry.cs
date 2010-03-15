@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.IO;
+using System.Web.Mvc;
 using StructureMap;
 using StructureMap.Configuration.DSL;
 
@@ -10,12 +11,17 @@ namespace BA.MultiMVC.Framework.Core
 
         protected void ScanControllersAndRepositoriesFromPath(string path)
         {
-            Scan(o =>
+            var extensions = new Extensions(path);
+            var binDirs =extensions.GetBinDirectories();
+            foreach(var dir in binDirs)
+            {
+                Scan(o =>
                      {
-                         o.AssembliesFromPath(path);
+                         o.AssembliesFromPath(dir.FullName);
                          o.AddAllTypesOf<BaseController>().NameBy(type => type.Name.Replace("Controller", ""));
                          o.AddAllTypesOf<ITenantModel>().NameBy(type => type.Name);
                      });
+            }
         }
 
         #endregion Methods
