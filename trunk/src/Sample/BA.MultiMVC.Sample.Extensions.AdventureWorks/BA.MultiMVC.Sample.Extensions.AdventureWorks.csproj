@@ -60,6 +60,14 @@
       <Name>BA.MultiMVC.Sample</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -69,6 +77,8 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>xcopy  "$(TargetPath)" "$(SolutionDir)..\src\Sample\BA.MultiTenantMVC.Sample\Extensions\AdventureWorks\Bin"  /y</PostBuildEvent>
+    <PostBuildEvent>xcopy  "$(TargetPath)" "$(SolutionDir)..\src\Sample\BA.MultiTenantMVC.Sample\Extensions\AdventureWorks\Bin"  /y
+xcopy "$(ProjectDir)Views" "$(SolutionDir)..\src\Sample\BA.MultiTenantMVC.Sample\Extensions\AdventureWorks\Views"  /y /e
+xcopy "$(ProjectDir)Content" "$(SolutionDir)..\src\Sample\BA.MultiTenantMVC.Sample\Extensions\AdventureWorks\Content"  /y /e</PostBuildEvent>
   </PropertyGroup>
 </Project>
