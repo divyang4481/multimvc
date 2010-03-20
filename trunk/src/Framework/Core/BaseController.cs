@@ -10,7 +10,7 @@ namespace BA.MultiMVC.Framework.Core
     {
         #region Properties
 
-        public TenantContext TenantContext { get; set; }
+        public TenantContext Context { get; set; }
         public IDictionary<string, string> Ressources { get; set; }
         #endregion Properties
 
@@ -30,7 +30,10 @@ namespace BA.MultiMVC.Framework.Core
 
             var vM = ViewData.Model as BaseViewModel;
             if (vM != null)
+            {
                 vM.Resources = Ressources;
+                vM.Context = Context;
+            }
 
             base.OnActionExecuted(filterContext);
         }

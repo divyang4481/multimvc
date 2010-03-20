@@ -45,7 +45,7 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Core
             var result = ExtensionControllerFactoryCreateInstance(typeof(HomeController), "contoso");
 
             //Assert
-            Assert.AreEqual("Contoso", ((BaseController)result).TenantContext.TenantKey);
+            Assert.AreEqual("Contoso", ((BaseController)result).Context.TenantKey);
         }
 
         [Test]
@@ -54,7 +54,7 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Core
             var result = ExtensionControllerFactoryCreateInstance(typeof(HomeController), "Default");
 
             //Assert
-            Assert.IsNotNull(((BaseController)result).TenantContext);
+            Assert.IsNotNull(((BaseController)result).Context);
 
         }
 

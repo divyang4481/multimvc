@@ -27,8 +27,8 @@ namespace BA.MultiMVC.Framework.Core
 
         protected virtual TenantContext GetTenantContext(RequestContext request)
         {
-            var tenantKey = request.GetTenantKey("default");
-            var language = request.GetLanguage("en");
+            var tenantKey = request.RouteData.GetTenantKey();
+            var language = request.RouteData.GetLanguage();
             return new TenantContext(tenantKey, language);
         }
 
@@ -48,7 +48,7 @@ namespace BA.MultiMVC.Framework.Core
             var controller = CreateControllerExtension(context.TenantKey, controllerType)
                              ?? base.GetControllerInstance(controllerType) as BaseController;
                                               
-            controller.TenantContext = context;
+            controller.Context = context;
             controller.Ressources = resources;
             return controller;
         }

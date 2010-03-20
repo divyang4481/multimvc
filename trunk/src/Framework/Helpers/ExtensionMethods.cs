@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Web;
 using System.Web.Mvc;
 using Castle.Components.Validator;
 using System.Collections.Specialized;
 using System.Web.Routing;
 using System.Web.Mvc.Html;
+using System.IO;
 
 namespace BA.MultiMVC.Framework.Helpers
 {
@@ -56,20 +58,16 @@ namespace BA.MultiMVC.Framework.Helpers
             return originalValue;
         }
 
-        public static string GetLanguage(this RequestContext request, string defaultValue)
+        public static string GetLanguage(this RouteData routeData)
         {
-                if (request.RouteData.Values.ContainsKey("language"))
-                    return request.RouteData.Values["language"].ToString().ToLower();
-
-                return defaultValue;
+            const string defaultValue = "en";
+            return routeData.Values.ContainsKey("language") ? routeData.Values["language"].ToString().ToLower() : defaultValue;
         }
 
-        public static string GetTenantKey(this RequestContext request, string defaultValue)
+        public static string GetTenantKey(this RouteData routeData)
         {
-            if (request.RouteData.Values.ContainsKey("tenantKey"))
-                return  request.RouteData.Values["tenantKey"].ToString().ToCamelCased();
-
-            return defaultValue;
+            const string defaultValue = "Default";
+            return routeData.Values.ContainsKey("tenantKey") ? routeData.Values["tenantKey"].ToString().ToCamelCased() : defaultValue;
         }
 
         public static string ToCamelCased(this string s)
@@ -92,6 +90,16 @@ namespace BA.MultiMVC.Framework.Helpers
                 },
                 null
                 );
+        }
+
+        public static string ContentPath(this HtmlHelper h, string contentName)
+        {
+            var tenantKey = h.ViewContext.RouteData.GetTenantKey();
+            var extensionContentUrl = "../../Extensions/" + tenantKey + "/Content/" + contentName;
+            var defaultContentUrl = "../../Content/" + contentName;
+            var extensionPath = HttpContext.Current.Server.MapPath(extensionContentUrl);
+
+            return File.Exists(extensionPath) ? extensionContentUrl : defaultContentUrl;
         }
 
         public static IList<PropertyInfo> FindProperties(this object subject, Type filter)
