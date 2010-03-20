@@ -85,7 +85,7 @@
     <Compile Include="Models\Infrastructure\RessourceRepository.cs" />
     <Compile Include="Models\Infrastructure\UserRepository.cs" />
     <Compile Include="Models\ViewModel\HomeVM.cs" />
-    <Compile Include="Models\ViewModel\MultiViewPage.cs">
+    <Compile Include="Views\Home\IndexView.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
