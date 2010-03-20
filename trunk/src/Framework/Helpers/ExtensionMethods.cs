@@ -78,29 +78,7 @@ namespace BA.MultiMVC.Framework.Helpers
             return camelCased;
         }
 
-        public static string LanguageActionLink(this HtmlHelper h, string languageCode, string linkText)
-        {
-            return h.ActionLink(
-                linkText, "SetLanguage", "Culture",
-                new
-                {
-                    newLanguage = languageCode,
-                    actionName = h.ViewContext.RouteData.Values["action"],
-                    controllerName = h.ViewContext.RouteData.Values["controller"]
-                },
-                null
-                );
-        }
-
-        public static string ContentPath(this HtmlHelper h, string contentName)
-        {
-            var tenantKey = h.ViewContext.RouteData.GetTenantKey();
-            var extensionContentUrl = "/Extensions/" + tenantKey + "/Content/" + contentName;
-            var defaultContentUrl = "/Content/" + contentName;
-            var extensionPath = h.ViewContext.HttpContext.Server.MapPath(extensionContentUrl);
-
-            return File.Exists(extensionPath) ? extensionContentUrl : defaultContentUrl;
-        }
+        
 
         public static IList<PropertyInfo> FindProperties(this object subject, Type filter)
         {

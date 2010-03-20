@@ -82,6 +82,7 @@
     <Compile Include="Core\ExtensionRegistry.cs" />
     <Compile Include="Helpers\ExtensionMethods.cs" />
     <Compile Include="Core\Extensions.cs" />
+    <Compile Include="Helpers\HtmlHelperExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\StructureMapControllerFactory.cs" />
     <Compile Include="Ressources\IRessourceProviderService.cs" />
