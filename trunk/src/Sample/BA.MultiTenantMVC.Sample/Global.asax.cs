@@ -1,5 +1,7 @@
-﻿using System.Web.Routing;
+﻿using System.Web.Mvc;
+using System.Web.Routing;
 using BA.MultiMVC.Framework.Ressources;
+using BA.MultiMVC.Framework.ViewEngine;
 
 namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample
 {
@@ -20,9 +22,17 @@ namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample
                 );
         }
 
+        public static void RegisterViewEngines(ViewEngineCollection viewEngines)  
+        {  
+            viewEngines.Clear();  
+            viewEngines.Add(new MultiWebFormViewEngine());  
+        }  
+
+
         protected void Application_Start()
         {
             RegisterRoutes(RouteTable.Routes);
+            RegisterViewEngines(ViewEngines.Engines);
             Bootstrapper.ConfigureStructureMap(Bootstrapper.ExtensionPath);
             ApplicationHelpers.ApplicationStart();
         }

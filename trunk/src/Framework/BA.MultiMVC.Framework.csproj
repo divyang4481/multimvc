@@ -88,6 +88,9 @@
     <Compile Include="Ressources\IRessourceProviderService.cs" />
     <Compile Include="Ressources\IRessourceRepository.cs" />
     <Compile Include="Ressources\RessourceProviderService.cs" />
+    <Compile Include="ViewEngine\BuildManagerWrapper.cs" />
+    <Compile Include="ViewEngine\MultiVirtualPathProviderViewEngine.cs" />
+    <Compile Include="ViewEngine\MultiWebFormViewEngine.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Theming\" />

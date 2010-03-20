@@ -47,10 +47,15 @@ namespace BA.MultiMVC.Framework.Core
 
             var controller = CreateControllerExtension(context.TenantKey, controllerType)
                              ?? base.GetControllerInstance(controllerType) as BaseController;
-                                              
-            controller.Context = context;
-            controller.Ressources = resources;
-            return controller;
+
+            if (controller != null)
+            {
+                controller.Context = context;
+                controller.Ressources = resources;
+                return controller;
+            }
+
+            return null;
         }
         private static BaseController CreateControllerExtension(string tenantKey, Type controllerType)
         {

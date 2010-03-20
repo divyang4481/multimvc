@@ -94,6 +94,7 @@
       <DependentUpon>MultiMVCSampleDB.mdf</DependentUpon>
     </Content>
     <Content Include="Default.aspx" />
+    <Content Include="Extensions\AdventureWorks\Views\Home\Index.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />
@@ -143,7 +144,6 @@
   <ItemGroup>
     <Folder Include="Extensions\AdventureWorks\Bin\" />
     <Folder Include="Extensions\AdventureWorks\Content\" />
-    <Folder Include="Extensions\AdventureWorks\Views\" />
     <Folder Include="Extensions\Contoso\Bin\" />
     <Folder Include="Extensions\Contoso\Content\" />
     <Folder Include="Extensions\Contoso\Views\" />
