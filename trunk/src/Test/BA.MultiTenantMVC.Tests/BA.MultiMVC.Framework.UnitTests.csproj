@@ -60,10 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BootStrapperForTest.cs" />
-    <Compile Include="Configuration.cs" />
     <Compile Include="Core\DomainFactoryTest.cs" />
     <Compile Include="Core\ExtensionControllerFactoryTest.cs" />
-    <Compile Include="Core\ExtensionTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\StructureMapConfigurationTest.cs" />
     <Compile Include="Ressources\RessourceProviderServiceTest.cs" />
@@ -76,6 +74,10 @@
     <ProjectReference Include="..\..\Framework\BA.MultiMVC.Framework.csproj">
       <Project>{A26E06A2-3468-4DD0-9E7C-7155C7807E84}</Project>
       <Name>BA.MultiMVC.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sample\BA.MultiMVC.Sample.Extensions.AdventureWorks\BA.MultiMVC.Sample.Extensions.AdventureWorks.csproj">
+      <Project>{FE445352-4A3F-455E-A42D-BED48E851F99}</Project>
+      <Name>BA.MultiMVC.Sample.Extensions.AdventureWorks</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Sample\BA.MultiMVC.Sample.Extensions.Contoso\BA.MultiMVC.Sample.Extensions.Contoso.csproj">
       <Project>{DA248D1F-2DF3-4E38-9011-0E35687E5CF7}</Project>

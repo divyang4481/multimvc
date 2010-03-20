@@ -26,7 +26,7 @@ namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample
         {
             get
             {
-                return HttpContext.Current.Server.MapPath("~/Extensions");
+                return HttpContext.Current.Server.MapPath("~/Bin");
             }
         }
         #endregion Methods

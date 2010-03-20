@@ -11,17 +11,15 @@ namespace BA.MultiMVC.Framework.Core
 
         protected void ScanControllersAndRepositoriesFromPath(string path)
         {
-            var extensions = new Extensions(path);
-            var binDirs =extensions.GetBinDirectories();
-            foreach(var dir in binDirs)
-            {
+
+            
                 Scan(o =>
                      {
-                         o.AssembliesFromPath(dir.FullName);
+                         o.AssembliesFromPath(path);
                          o.AddAllTypesOf<BaseController>().NameBy(type => type.Name.Replace("Controller", ""));
                          o.AddAllTypesOf<ITenantModel>().NameBy(type => type.Name);
                      });
-            }
+            
         }
 
         #endregion Methods
