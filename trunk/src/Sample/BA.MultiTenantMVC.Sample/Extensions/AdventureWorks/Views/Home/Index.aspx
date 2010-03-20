@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="BA.MultiTenantMVC.Sample.Views.Home.IndexView" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="BA.MultiMVC.Sample.Extensions.AdventureWorks.Views.Home.IndexView" %>
 <%@ Import Namespace="BA.MultiTenantMVC.Sample.Models.ViewModel"%>
 
 <asp:Content ID="indexTitle" ContentPlaceHolderID="TitleContent" runat="server">
@@ -11,5 +11,8 @@
     <p>
         This is the substitute view
         To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+    </p>
+    <p>
+        Your username is: <%= Model.UserName %>
     </p>
 </asp:Content>

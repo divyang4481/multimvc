@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using System.Web.UI.WebControls;
 using BA.MultiMVC.Framework.Core;
 using BA.MultiTenantMVC.Sample.Models.ViewModel;
 
@@ -7,12 +8,19 @@ namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Controllers
     [HandleError]
     public class HomeController : BaseController
     {
+        protected virtual HomeVM HomeView
+        {
+            get
+            {
+              var view = new HomeVM();
+              view.Message = "Welcome to ASP.NET MVC on Default site!";
+              return view;
+            }
+        }
+
         public virtual ActionResult Index()
         {
-            var vm = new HomeVM();
-            vm.Message = "Welcome to ASP.NET MVC on Default site!";
-
-            return View(vm);
+            return View(HomeView);
         }
 
         public virtual ActionResult CheckForLanguage(string client)
