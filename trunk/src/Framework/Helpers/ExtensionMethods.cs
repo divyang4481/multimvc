@@ -95,9 +95,9 @@ namespace BA.MultiMVC.Framework.Helpers
         public static string ContentPath(this HtmlHelper h, string contentName)
         {
             var tenantKey = h.ViewContext.RouteData.GetTenantKey();
-            var extensionContentUrl = "../../Extensions/" + tenantKey + "/Content/" + contentName;
-            var defaultContentUrl = "../../Content/" + contentName;
-            var extensionPath = HttpContext.Current.Server.MapPath(extensionContentUrl);
+            var extensionContentUrl = "/Extensions/" + tenantKey + "/Content/" + contentName;
+            var defaultContentUrl = "/Content/" + contentName;
+            var extensionPath = h.ViewContext.HttpContext.Server.MapPath(extensionContentUrl);
 
             return File.Exists(extensionPath) ? extensionContentUrl : defaultContentUrl;
         }
