@@ -8,8 +8,8 @@
     <ProjectGuid>{FE445352-4A3F-455E-A42D-BED48E851F99}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BA.MultiMVC.Sample.Extensions.AdventureWorks</RootNamespace>
-    <AssemblyName>BA.MultiMVC.Sample.Extensions.AdventureWorks</AssemblyName>
+    <RootNamespace>BA.MultiMvc.Sample.Extensions.AdventureWorks</RootNamespace>
+    <AssemblyName>BA.MultiMvc.Sample.Extensions.AdventureWorks</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

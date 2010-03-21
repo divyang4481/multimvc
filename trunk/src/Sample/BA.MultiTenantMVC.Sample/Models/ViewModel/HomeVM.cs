@@ -1,4 +1,4 @@
-﻿using BA.MultiMVC.Framework.Core;
+﻿using BA.MultiMvc.Framework.Core;
 
 namespace BA.MultiTenantMVC.Sample.Models.ViewModel
 {

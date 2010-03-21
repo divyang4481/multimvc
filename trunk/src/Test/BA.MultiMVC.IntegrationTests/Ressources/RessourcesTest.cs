@@ -2,15 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Transactions;
-using BA.MultiMVC.Framework.IntegrationTests.Specialized;
-using BA.MultiMVC.Framework.Ressources;
+using BA.MultiMvc.Framework.IntegrationTests.Specialized;
+using BA.MultiMvc.Framework.Ressources;
 using BA.MultiTenantMVC.Sample.Models.Infrastructure;
 using NUnit.Framework;
 using BA.MultiTenantMVC.Sample.Models.Infrastructure.Linq;
-using BA.MultiMVC.Framework.Core;
-using BA.MultiMVC.Framework.IntegrationTests.Stubs;
+using BA.MultiMvc.Framework.Core;
+using BA.MultiMvc.Framework.IntegrationTests.Stubs;
 
-namespace BA.MultiMVC.IntegrationTests
+namespace BA.MultiMvc.IntegrationTests
 {
     [TestFixture]
     public class RessourcesTest

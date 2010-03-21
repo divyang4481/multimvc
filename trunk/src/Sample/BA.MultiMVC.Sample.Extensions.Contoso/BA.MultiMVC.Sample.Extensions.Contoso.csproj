@@ -8,8 +8,8 @@
     <ProjectGuid>{DA248D1F-2DF3-4E38-9011-0E35687E5CF7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BA.MultiMVC.Sample.Extensions.Contoso</RootNamespace>
-    <AssemblyName>BA.MultiMVC.Sample.Extensions.Contoso</AssemblyName>
+    <RootNamespace>BA.MultiMvc.Sample.Extensions.Contoso</RootNamespace>
+    <AssemblyName>BA.MultiMvc.Sample.Extensions.Contoso</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

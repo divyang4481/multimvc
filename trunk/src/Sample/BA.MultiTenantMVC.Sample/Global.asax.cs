@@ -1,9 +1,9 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
-using BA.MultiMVC.Framework.Ressources;
-using BA.MultiMVC.Framework.ViewEngine;
+using BA.MultiMvc.Framework.Ressources;
+using BA.MultiMvc.Framework.ViewEngine;
 
-namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample
+namespace BA.MultiMvc.Framework.Core.MultiMVC.Sample
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801

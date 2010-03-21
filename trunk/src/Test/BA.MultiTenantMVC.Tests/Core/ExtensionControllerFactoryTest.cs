@@ -1,9 +1,9 @@
 ﻿using System;
-using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Controllers;
+using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Controllers;
 
-using BA.MultiMVC.Framework.Core.MultiMVC.Test.Util.Stubs;
-using BA.MultiMVC.Framework.Core;
-using BA.MultiMVC.Sample.Extensions.Contoso.Controllers;
+using BA.MultiMvc.Framework.Core.MultiMVC.Test.Util.Stubs;
+using BA.MultiMvc.Framework.Core;
+using BA.MultiMvc.Sample.Extensions.Contoso.Controllers;
 using NUnit.Framework;
 
 namespace BA.MultiTenantMVC.Framework.UnitTests.Core

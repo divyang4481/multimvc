@@ -1,8 +1,8 @@
 ﻿using System;
-using BA.MultiMVC.Framework.Helpers;
+using BA.MultiMvc.Framework.Helpers;
 using NUnit.Framework;
 
-namespace BA.MultiMVC.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
+namespace BA.MultiMvc.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests
 {
     public class TenantFactoryTest
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BA.MultiMVC.Framework.Core
+namespace BA.MultiMvc.Framework.Core
 {
     public class BaseViewModel
     {

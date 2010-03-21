@@ -1,4 +1,4 @@
-﻿namespace BA.MultiMVC.Framework.ViewEngine
+﻿namespace BA.MultiMvc.Framework.ViewEngine
 {
     using System;
     using System.Diagnostics.CodeAnalysis;
@@ -9,7 +9,7 @@
     using System.Web.Hosting;
     using System.Web.Mvc.Resources;
     using System.Web.Mvc;
-    using BA.MultiMVC.Framework.Helpers;
+    using BA.MultiMvc.Framework.Helpers;
 
     [AspNetHostingPermission(System.Security.Permissions.SecurityAction.LinkDemand, Level = AspNetHostingPermissionLevel.Minimal)]
     [AspNetHostingPermission(System.Security.Permissions.SecurityAction.InheritanceDemand, Level = AspNetHostingPermissionLevel.Minimal)]

@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using System.Web;
 using System.Web.Mvc;
 using Castle.Components.Validator;
 using System.Collections.Specialized;
 using System.Web.Routing;
-using System.Web.Mvc.Html;
-using System.IO;
 
-namespace BA.MultiMVC.Framework.Helpers
+namespace BA.MultiMvc.Framework.Helpers
 {
     public static class ExtensionMethods
     {
@@ -82,8 +79,7 @@ namespace BA.MultiMVC.Framework.Helpers
 
         public static IList<PropertyInfo> FindProperties(this object subject, Type filter)
         {
-            Object result = null;
-            var ret = new System.Collections.Generic.List<PropertyInfo>();
+            var ret = new List<PropertyInfo>();
             var properties = subject.GetType().GetProperties();
             foreach (var property in properties)
             {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using BA.MultiMVC.Framework.Ressources;
+using BA.MultiMvc.Framework.Ressources;
 
-namespace BA.MultiMVC.Framework.Core
+namespace BA.MultiMvc.Framework.Core
 {
     public class TenantContext
     {

@@ -1,9 +1,9 @@
 ﻿using System.Web.Mvc;
 using System.Web.UI.WebControls;
-using BA.MultiMVC.Framework.Core;
+using BA.MultiMvc.Framework.Core;
 using BA.MultiTenantMVC.Sample.Models.ViewModel;
 
-namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Controllers
+namespace BA.MultiMvc.Framework.Core.MultiMVC.Sample.Controllers
 {
     [HandleError]
     public class HomeController : BaseController

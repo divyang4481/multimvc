@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Compilation;
 using System.Web.Mvc;
 
-namespace BA.MultiMVC.Framework.ViewEngine
+namespace BA.MultiMvc.Framework.ViewEngine
 {
     [AspNetHostingPermission(System.Security.Permissions.SecurityAction.LinkDemand, Level = AspNetHostingPermissionLevel.Minimal)]
     [AspNetHostingPermission(System.Security.Permissions.SecurityAction.InheritanceDemand, Level = AspNetHostingPermissionLevel.Minimal)]

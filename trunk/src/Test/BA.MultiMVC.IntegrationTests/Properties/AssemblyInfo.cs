@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BA.MultiMVC.IntegrationTests")]
+[assembly: AssemblyTitle("BA.MultiMvc.IntegrationTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Atos Origin")]
-[assembly: AssemblyProduct("BA.MultiMVC.IntegrationTests")]
+[assembly: AssemblyProduct("BA.MultiMvc.IntegrationTests")]
 [assembly: AssemblyCopyright("Copyright © Atos Origin 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

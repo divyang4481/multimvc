@@ -3,7 +3,7 @@ using System.Web.Mvc;
 using StructureMap;
 using StructureMap.Configuration.DSL;
 
-namespace BA.MultiMVC.Framework.Core
+namespace BA.MultiMvc.Framework.Core
 {
     public abstract class ExtensionRegistry : Registry
     {

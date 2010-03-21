@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Moq;
 
-namespace BA.MultiMVC.Framework.Core.MultiMVC.Test.Util
+namespace BA.MultiMvc.Framework.Core.MultiMVC.Test.Util
 {
     public static class MvcMockHelpers
     {

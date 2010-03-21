@@ -1,8 +1,8 @@
 ﻿using System.Reflection;
-using BA.MultiMVC.Framework.Helpers;
+using BA.MultiMvc.Framework.Helpers;
 using StructureMap;
 
-namespace BA.MultiMVC.Framework.Core
+namespace BA.MultiMvc.Framework.Core
 {
     public static class Configurator
     {

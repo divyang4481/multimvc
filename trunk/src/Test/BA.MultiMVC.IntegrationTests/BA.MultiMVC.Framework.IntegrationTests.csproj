@@ -8,8 +8,8 @@
     <ProjectGuid>{AA11F93B-8AA0-4CD8-8D0C-3B849CF16786}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BA.MultiMVC.Framework.IntegrationTests</RootNamespace>
-    <AssemblyName>BA.MultiMVC.Framework.IntegrationTests</AssemblyName>
+    <RootNamespace>BA.MultiMvc.Framework.IntegrationTests</RootNamespace>
+    <AssemblyName>BA.MultiMvc.Framework.IntegrationTests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

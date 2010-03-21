@@ -1,8 +1,8 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
-using BA.MultiMVC.Framework.Core;
+using BA.MultiMvc.Framework.Core;
 
-namespace BA.MultiMVC.Framework.Ressources
+namespace BA.MultiMvc.Framework.Ressources
 {
     public class ApplicationHelpers
     {

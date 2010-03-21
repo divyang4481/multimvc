@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using StructureMap;
 
-namespace BA.MultiMVC.Framework.Core
+namespace BA.MultiMvc.Framework.Core
 {
     public class StructureMapControllerFactory : DefaultControllerFactory
     {

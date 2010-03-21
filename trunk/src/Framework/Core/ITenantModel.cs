@@ -1,4 +1,4 @@
-﻿namespace BA.MultiMVC.Framework.Core
+﻿namespace BA.MultiMvc.Framework.Core
 {
     public interface ITenantModel
     {

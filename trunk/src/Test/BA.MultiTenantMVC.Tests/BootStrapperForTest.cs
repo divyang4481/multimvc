@@ -1,11 +1,11 @@
 ﻿using System.Web;
-using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Domain;
-using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Infrastructure;
-using BA.MultiMVC.Framework.Core;
-using BA.MultiMVC.Framework.Ressources;
+using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Models.Domain;
+using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Models.Infrastructure;
+using BA.MultiMvc.Framework.Core;
+using BA.MultiMvc.Framework.Ressources;
 using BA.MultiTenantMVC.Framework.UnitTests.Ressources;
 using StructureMap;
-using BA.MultiMVC.Framework.Caching;
+using BA.MultiMvc.Framework.Caching;
 
 namespace BA.MultiTenantMVC.Framework.UnitTests
 {

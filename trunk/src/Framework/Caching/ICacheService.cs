@@ -1,6 +1,6 @@
-﻿using BA.MultiMVC.Framework.Core;
+﻿using BA.MultiMvc.Framework.Core;
 
-namespace BA.MultiMVC.Framework.Caching
+namespace BA.MultiMvc.Framework.Caching
 {
     public interface ICacheService:ITenantModel
     {

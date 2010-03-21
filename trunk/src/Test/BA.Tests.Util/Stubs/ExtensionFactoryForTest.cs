@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Web.Mvc;
 using System.Web.Routing;
-using BA.MultiMVC.Framework.Core;
+using BA.MultiMvc.Framework.Core;
 
 
-namespace BA.MultiMVC.Framework.Core.MultiMVC.Test.Util.Stubs
+namespace BA.MultiMvc.Framework.Core.MultiMVC.Test.Util.Stubs
 {
 
     public class ExtensionControllerFactoryForTest : ExtensionControllerFactory

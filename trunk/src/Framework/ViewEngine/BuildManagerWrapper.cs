@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace BA.MultiMVC.Framework.ViewEngine
+namespace BA.MultiMvc.Framework.ViewEngine
 {
     using System.Collections;
     using System.Web.Compilation;

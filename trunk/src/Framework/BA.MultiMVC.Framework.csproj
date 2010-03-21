@@ -8,8 +8,8 @@
     <ProjectGuid>{A26E06A2-3468-4DD0-9E7C-7155C7807E84}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BA.MultiMVC.Framework</RootNamespace>
-    <AssemblyName>BA.MultiMVC.Framework</AssemblyName>
+    <RootNamespace>BA.MultiMvc.Framework</RootNamespace>
+    <AssemblyName>BA.MultiMvc.Framework</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

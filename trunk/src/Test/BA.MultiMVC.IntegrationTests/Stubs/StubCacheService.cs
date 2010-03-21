@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using BA.MultiMVC.Framework.Caching;
-using BA.MultiMVC.Framework.Core;
+using BA.MultiMvc.Framework.Caching;
+using BA.MultiMvc.Framework.Core;
 
-namespace BA.MultiMVC.Framework.IntegrationTests.Stubs
+namespace BA.MultiMvc.Framework.IntegrationTests.Stubs
 {
     public class StubCacheService: ICacheService 
     {

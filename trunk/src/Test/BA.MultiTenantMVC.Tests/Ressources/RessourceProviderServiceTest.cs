@@ -1,6 +1,6 @@
-using BA.MultiMVC.Framework.Caching;
-using BA.MultiMVC.Framework.Core;
-using BA.MultiMVC.Framework.Ressources;
+using BA.MultiMvc.Framework.Caching;
+using BA.MultiMvc.Framework.Core;
+using BA.MultiMvc.Framework.Ressources;
 using NUnit.Framework;
 
 namespace BA.MultiTenantMVC.Framework.UnitTests.Ressources

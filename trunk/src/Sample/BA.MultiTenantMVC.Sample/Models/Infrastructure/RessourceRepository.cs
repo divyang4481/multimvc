@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using BA.MultiMVC.Framework.Ressources;
+using BA.MultiMvc.Framework.Ressources;
 using BA.MultiTenantMVC.Sample.Models.Infrastructure.Linq;
 using System.Linq;
-using BA.MultiMVC.Framework.Core;
+using BA.MultiMvc.Framework.Core;
 
 namespace BA.MultiTenantMVC.Sample.Models.Infrastructure
 {
@@ -34,7 +34,7 @@ namespace BA.MultiTenantMVC.Sample.Models.Infrastructure
         #region ITenantModel Members
 
         private TenantContext _context;
-        public BA.MultiMVC.Framework.Core.TenantContext Context
+        public BA.MultiMvc.Framework.Core.TenantContext Context
         {
             get { return _context; }
             set 

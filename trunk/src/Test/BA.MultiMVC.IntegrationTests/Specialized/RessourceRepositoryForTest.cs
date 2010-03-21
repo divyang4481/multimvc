@@ -1,7 +1,7 @@
 ﻿using BA.MultiTenantMVC.Sample.Models.Infrastructure;
 using BA.MultiTenantMVC.Sample.Models.Infrastructure.Linq;
 
-namespace BA.MultiMVC.Framework.IntegrationTests.Specialized
+namespace BA.MultiMvc.Framework.IntegrationTests.Specialized
 {
     public class RessourceRepositoryForTest:RessourceRepository
     {

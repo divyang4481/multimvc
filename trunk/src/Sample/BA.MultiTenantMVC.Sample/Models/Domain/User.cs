@@ -1,6 +1,6 @@
-﻿using BA.MultiMVC.Framework.Core;
+﻿using BA.MultiMvc.Framework.Core;
 
-namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Domain
+namespace BA.MultiMvc.Framework.Core.MultiMVC.Sample.Models.Domain
 {
     public class User:ITenantModel
     {

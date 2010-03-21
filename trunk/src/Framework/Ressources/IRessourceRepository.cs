@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using BA.MultiMVC.Framework.Core;
+using BA.MultiMvc.Framework.Core;
 
-namespace BA.MultiMVC.Framework.Ressources
+namespace BA.MultiMvc.Framework.Ressources
 {
     public interface IRessourceRepository:ITenantModel
     {

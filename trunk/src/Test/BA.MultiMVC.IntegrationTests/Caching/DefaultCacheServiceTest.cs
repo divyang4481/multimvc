@@ -1,8 +1,8 @@
-﻿using BA.MultiMVC.Framework.Core;
+﻿using BA.MultiMvc.Framework.Core;
 using NUnit.Framework;
-using BA.MultiMVC.Framework.Caching;
+using BA.MultiMvc.Framework.Caching;
 
-namespace BA.MultiMVC.Framework.IntegrationTests.Caching
+namespace BA.MultiMvc.Framework.IntegrationTests.Caching
 {
     [TestFixture]
     public class DefaultCacheServiceTest

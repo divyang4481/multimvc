@@ -1,9 +1,9 @@
 ﻿using System.Web.Mvc;
-using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Controllers;
+using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Controllers;
 using BA.MultiTenantMVC.Sample.Models.ViewModel;
-using BA.MultiMVC.Sample.Extensions.AdventureWorks.ViewModel;
+using BA.MultiMvc.Sample.Extensions.AdventureWorks.ViewModel;
 
-namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Extensions.Contoso.Controllers
+namespace BA.MultiMvc.Framework.Core.MultiMVC.Sample.Extensions.Contoso.Controllers
 {
     [HandleError]
     public class AdventureworksHomeController : HomeController

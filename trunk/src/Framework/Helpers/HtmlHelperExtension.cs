@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 
-namespace BA.MultiMVC.Framework.Helpers
+namespace BA.MultiMvc.Framework.Helpers
 {
     public static class HtmlHelperExtension
     {

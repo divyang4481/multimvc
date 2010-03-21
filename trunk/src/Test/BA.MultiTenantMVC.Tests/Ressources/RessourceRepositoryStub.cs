@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using BA.MultiMVC.Framework.Ressources;
+using BA.MultiMvc.Framework.Ressources;
 
 namespace BA.MultiTenantMVC.Framework.UnitTests.Ressources
 {
@@ -20,7 +20,7 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Ressources
 
         #region ITenantModel Members
 
-        public BA.MultiMVC.Framework.Core.TenantContext Context
+        public BA.MultiMvc.Framework.Core.TenantContext Context
         {
             get; set;
         }

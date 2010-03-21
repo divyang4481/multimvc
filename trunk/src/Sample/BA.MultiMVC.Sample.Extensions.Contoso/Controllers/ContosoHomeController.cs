@@ -1,8 +1,8 @@
 ﻿using System.Web.Mvc;
-using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Controllers;
+using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Controllers;
 using BA.MultiTenantMVC.Sample.Models.ViewModel;
 
-namespace BA.MultiMVC.Sample.Extensions.Contoso.Controllers
+namespace BA.MultiMvc.Sample.Extensions.Contoso.Controllers
 {
     [HandleError]
     public class ContosoHomeController : HomeController

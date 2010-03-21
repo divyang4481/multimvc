@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Web.Mvc;
-using BA.MultiMVC.Framework.Helpers;
+using BA.MultiMvc.Framework.Helpers;
 using Castle.Components.Validator;
 
-namespace BA.MultiMVC.Framework.Core
+namespace BA.MultiMvc.Framework.Core
 {
     public class BaseController : Controller
     {

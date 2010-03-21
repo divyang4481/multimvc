@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="BA.MultiMVC.Sample.Extensions.AdventureWorks.Views.Home.IndexView" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="BA.MultiMvc.Sample.Extensions.AdventureWorks.Views.Home.IndexView" %>
 <%@ Import Namespace="BA.MultiTenantMVC.Sample.Models.ViewModel"%>
 
 <asp:Content ID="indexTitle" ContentPlaceHolderID="TitleContent" runat="server">

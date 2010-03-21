@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web;
 
-namespace BA.MultiMVC.Framework.Caching
+namespace BA.MultiMvc.Framework.Caching
 {
     public class DefaultCacheService:ICacheService 
     {

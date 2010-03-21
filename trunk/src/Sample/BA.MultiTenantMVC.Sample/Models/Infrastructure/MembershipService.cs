@@ -1,7 +1,7 @@
 ﻿using System;
-using BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Domain;
+using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Models.Domain;
 
-namespace BA.MultiMVC.Framework.Core.MultiMVC.Sample.Models.Infrastructure
+namespace BA.MultiMvc.Framework.Core.MultiMVC.Sample.Models.Infrastructure
 {
     public class MembershipService:IMembershipService
     {

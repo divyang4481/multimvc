@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using BA.MultiMVC.Framework.Helpers;
+using BA.MultiMvc.Framework.Helpers;
 using StructureMap;
 using System.Web.Routing;
-using BA.MultiMVC.Framework.Ressources;
+using BA.MultiMvc.Framework.Ressources;
 
 
-namespace BA.MultiMVC.Framework.Core
+namespace BA.MultiMvc.Framework.Core
 {
     public class ExtensionControllerFactory : StructureMapControllerFactory
     {
