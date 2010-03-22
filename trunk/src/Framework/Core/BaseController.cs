@@ -11,14 +11,14 @@ namespace BA.MultiMvc.Framework.Core
         #region Properties
 
         public TenantContext Context { get; set; }
-        public IDictionary<string, string> Ressources { get; set; }
+        public IDictionary<string, string> Resources { get; set; }
         #endregion Properties
 
         #region Methods
 
-        protected void AddModelErrorsToForm(NameValueCollection formCollection, ErrorSummary errorsummary)
+        protected void AddModelErrorsToForm(NameValueCollection formCollection, ErrorSummary errorSummary)
         {
-            ModelState.AddModelErrors(errorsummary, Ressources, formCollection); 
+            ModelState.AddModelErrors(errorSummary, Resources, formCollection); 
             
             
         }
@@ -31,7 +31,7 @@ namespace BA.MultiMvc.Framework.Core
             var vM = ViewData.Model as BaseViewModel;
             if (vM != null)
             {
-                vM.Resources = Ressources;
+                vM.Resources = Resources;
                 vM.Context = Context;
             }
 

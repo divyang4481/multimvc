@@ -16,12 +16,11 @@ namespace BA.MultiMvc.Framework.Caching
             return HttpRuntime.Cache[ConstructFullKeyName(key)];
         }
 
-        public void Add(string key, object o)
+        public void Add(string key, object value)
         {
-            DateTime expirationTime = DateTime.Now.AddSeconds(CacheTimeSeconds);
             HttpRuntime.Cache.Add(
                 ConstructFullKeyName(key),
-                o,
+                value,
                 null,
                 DateTime.Now.AddSeconds(CacheTimeSeconds),
                 System.Web.Caching.Cache.NoSlidingExpiration,

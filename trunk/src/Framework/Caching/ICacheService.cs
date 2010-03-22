@@ -6,6 +6,6 @@ namespace BA.MultiMvc.Framework.Caching
     {
         object GetObject(string key);
 
-        void Add(string key, object o);
+        void Add(string key, object value);
     }
 }

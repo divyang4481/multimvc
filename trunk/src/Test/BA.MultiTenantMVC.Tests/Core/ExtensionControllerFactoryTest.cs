@@ -64,7 +64,7 @@ namespace BA.MultiTenantMVC.Framework.UnitTests.Core
             var result = ExtensionControllerFactoryCreateInstance(typeof(HomeController), "Default");
 
             //Assert
-            Assert.IsNotNull(((BaseController)result).Ressources);
+            Assert.IsNotNull(((BaseController)result).Resources);
 
         }
 

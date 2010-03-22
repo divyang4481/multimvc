@@ -51,7 +51,7 @@ namespace BA.MultiMvc.Framework.Core
             if (controller != null)
             {
                 controller.Context = context;
-                controller.Ressources = resources;
+                controller.Resources = resources;
                 return controller;
             }
 
