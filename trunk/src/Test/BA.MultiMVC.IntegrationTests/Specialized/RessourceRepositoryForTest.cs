@@ -1,5 +1,5 @@
-﻿using BA.MultiTenantMVC.Sample.Models.Infrastructure;
-using BA.MultiTenantMVC.Sample.Models.Infrastructure.Linq;
+﻿using BA.MultiMvc.Sample.Models.Infrastructure.Linq;
+using BA.MultiTenantMVC.Sample.Models.Infrastructure;
 
 namespace BA.MultiMvc.Framework.IntegrationTests.Specialized
 {

@@ -8,8 +8,8 @@
     <ProjectGuid>{3F1B67AA-140C-419E-9F8B-1F7DE6EBDB20}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BA.MultiTenantMvc.Test.Util</RootNamespace>
-    <AssemblyName>BA.MultiTenantMvc.Test.Util</AssemblyName>
+    <RootNamespace>BA.MultiMvc.Test.Util</RootNamespace>
+    <AssemblyName>BA.MultiMvc.Test.Util</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

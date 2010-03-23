@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
+
 using System.Configuration;
 using System.Transactions;
 using BA.MultiMvc.Framework.IntegrationTests.Specialized;
 using BA.MultiMvc.Framework.Ressources;
-using BA.MultiTenantMVC.Sample.Models.Infrastructure;
+using BA.MultiMvc.Sample.Models.Infrastructure.Linq;
 using NUnit.Framework;
-using BA.MultiTenantMVC.Sample.Models.Infrastructure.Linq;
 using BA.MultiMvc.Framework.Core;
 using BA.MultiMvc.Framework.IntegrationTests.Stubs;
 
