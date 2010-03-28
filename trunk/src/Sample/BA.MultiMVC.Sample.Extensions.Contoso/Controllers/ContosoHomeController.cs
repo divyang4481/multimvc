@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
-using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Controllers;
-using BA.MultiTenantMVC.Sample.Models.ViewModel;
+using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Controllers;
+using BA.MultiMvc.Sample.Models.ViewModel;
 
 namespace BA.MultiMvc.Sample.Extensions.Contoso.Controllers
 {
@@ -11,7 +11,7 @@ namespace BA.MultiMvc.Sample.Extensions.Contoso.Controllers
         {
 
             var vm = new HomeVM();
-            vm.Message = "Welcome to ASP.NET MVC on Contoso site!";
+            vm.Message = "Welcome to ASP.NET Mvc on Contoso site!";
 
             return View(vm);
         }

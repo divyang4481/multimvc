@@ -1,9 +1,9 @@
 ﻿using System.Web.Mvc;
-using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Controllers;
-using BA.MultiTenantMVC.Sample.Models.ViewModel;
+using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Controllers;
+using BA.MultiMvc.Sample.Models.ViewModel;
 using BA.MultiMvc.Sample.Extensions.AdventureWorks.ViewModel;
 
-namespace BA.MultiMvc.Framework.Core.MultiMVC.Sample.Extensions.Contoso.Controllers
+namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample.Extensions.Contoso.Controllers
 {
     [HandleError]
     public class AdventureworksHomeController : HomeController
@@ -13,7 +13,7 @@ namespace BA.MultiMvc.Framework.Core.MultiMVC.Sample.Extensions.Contoso.Controll
             get
             {
                 var view = new IndexViewModel();
-                view.Message = "Welcome to ASP.NET MVC on Adventureworks site!";
+                view.Message = "Welcome to ASP.NET Mvc on Adventureworks site!";
                 return view;
             }
         }

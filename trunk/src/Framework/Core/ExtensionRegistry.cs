@@ -11,14 +11,12 @@ namespace BA.MultiMvc.Framework.Core
 
         protected void ScanControllersAndRepositoriesFromPath(string path)
         {
-
-            
-                Scan(o =>
-                     {
-                         o.AssembliesFromPath(path);
-                         o.AddAllTypesOf<BaseController>().NameBy(type => type.Name.Replace("Controller", ""));
-                         o.AddAllTypesOf<ITenantModel>().NameBy(type => type.Name);
-                     });
+            Scan(o =>
+                 {
+                     o.AssembliesFromPath(path);
+                     o.AddAllTypesOf<BaseController>().NameBy(type => type.Name.Replace("Controller", ""));
+                     o.AddAllTypesOf<ITenantModel>().NameBy(type => type.Name);
+                 });
             
         }
 

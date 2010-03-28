@@ -1,4 +1,4 @@
-﻿using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Models.Infrastructure;
+﻿using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
 
 namespace BA.MultiMvc.Sample.Extensions.Contoso.Model.Infrasturcture
 {

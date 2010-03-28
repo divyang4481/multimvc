@@ -1,13 +1,13 @@
 ﻿using System.Web;
-using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Models.Domain;
-using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Models.Infrastructure;
+using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
+using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
 using BA.MultiMvc.Framework.Core;
 using BA.MultiMvc.Framework.Ressources;
-using BA.MultiTenantMVC.Framework.UnitTests.Ressources;
+using BA.MultiMvc.Framework.UnitTests.Ressources;
 using StructureMap;
 using BA.MultiMvc.Framework.Caching;
 
-namespace BA.MultiTenantMVC.Framework.UnitTests
+namespace BA.MultiMvc.Framework.UnitTests
 {
     public static class BootstrapperForTest
     {

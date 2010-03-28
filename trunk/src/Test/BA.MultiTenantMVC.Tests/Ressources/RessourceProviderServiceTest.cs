@@ -3,7 +3,7 @@ using BA.MultiMvc.Framework.Core;
 using BA.MultiMvc.Framework.Ressources;
 using NUnit.Framework;
 
-namespace BA.MultiTenantMVC.Framework.UnitTests.Ressources
+namespace BA.MultiMvc.Framework.UnitTests.Ressources
 {
     [TestFixture]
     public class RessourceProviderServiceTest

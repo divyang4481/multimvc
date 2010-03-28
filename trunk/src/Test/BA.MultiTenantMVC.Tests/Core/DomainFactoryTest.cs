@@ -1,17 +1,17 @@
 ﻿using BA.MultiMvc.Framework.Core;
-using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Models.Domain;
-using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Models.Infrastructure;
-using BA.MultiMvc.Framework.Core.MultiTenantMVC.Test.Util.ParamatrizedTests;
+using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
+using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
+using BA.MultiMvc.Framework.Core.MultiMvc.Test.Util.ParamatrizedTests;
 using BA.MultiMvc.Framework.Ressources;
 using BA.MultiMvc.Sample.Extensions.Contoso.Model.Domain;
 using BA.MultiMvc.Sample.Extensions.Contoso.Model.Infrasturcture;
 using NUnit.Framework;
 
 
-namespace BA.MultiTenantMVC.Framework.UnitTests.Core
+namespace BA.MultiMvc.Framework.UnitTests.Core
 {
     /// <summary>
-    /// Summary description for SaasMVCFactory
+    /// Summary description for SaasMvcFactory
     /// </summary>
     [TestFixture]
     public class DomainFactoryTest

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using BA.MultiMvc.Framework.Ressources;
 
-namespace BA.MultiTenantMVC.Framework.UnitTests.Ressources
+namespace BA.MultiMvc.Framework.UnitTests.Ressources
 {
     public class RessourceRepositoryStub:IRessourceRepository
     {

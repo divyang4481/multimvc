@@ -4,7 +4,7 @@ using BA.MultiMvc.Sample.Models.Infrastructure.Linq;
 using System.Linq;
 using BA.MultiMvc.Framework.Core;
 
-namespace BA.MultiTenantMVC.Sample.Models.Infrastructure
+namespace BA.MultiMvc.Sample.Models.Infrastructure
 {
     public class RessourceRepository :  IRessourceRepository
     {

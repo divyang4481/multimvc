@@ -1,4 +1,3 @@
-
 using System.Configuration;
 using System.Transactions;
 using BA.MultiMvc.Framework.IntegrationTests.Specialized;

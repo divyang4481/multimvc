@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BA.MultiTenantMVC.Sample.Models.Infrastructure.Linq
+namespace BA.MultiMvc.Sample.Models.Infrastructure.Linq
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -22,7 +22,7 @@ namespace BA.MultiTenantMVC.Sample.Models.Infrastructure.Linq
 	using System;
 	
 	
-	[System.Data.Linq.Mapping.DatabaseAttribute(Name="MultiMVCSampleDB")]
+	[System.Data.Linq.Mapping.DatabaseAttribute(Name="MultiMvcSampleDB")]
 	public partial class DBDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -34,12 +34,6 @@ namespace BA.MultiTenantMVC.Sample.Models.Infrastructure.Linq
     partial void UpdateRessource(Ressource instance);
     partial void DeleteRessource(Ressource instance);
     #endregion
-		
-		public DBDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString, mappingSource)
-		{
-			OnCreated();
-		}
 		
 		public DBDataContext(string connection) : 
 				base(connection, mappingSource)

@@ -4,7 +4,7 @@ using System.Web.Routing;
 using BA.MultiMvc.Framework.Core;
 
 
-namespace BA.MultiMvc.Framework.Core.MultiMVC.Test.Util.Stubs
+namespace BA.MultiMvc.Framework.Core.MultiMvc.Test.Util.Stubs
 {
 
     public class ExtensionControllerFactoryForTest : ExtensionControllerFactory

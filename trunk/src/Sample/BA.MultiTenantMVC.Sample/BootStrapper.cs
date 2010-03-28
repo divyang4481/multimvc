@@ -1,14 +1,14 @@
 ﻿using System.Web;
-using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Models.Domain;
-using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Models.Infrastructure;
+using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
+using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
 using BA.MultiMvc.Framework.Ressources;
 using StructureMap;
-using BA.MultiTenantMVC.Sample.Models.Infrastructure;
+using BA.MultiMvc.Sample.Models.Infrastructure;
 using BA.MultiMvc.Framework.Caching;
 using System.IO;
 using System.Text;
 
-namespace BA.MultiMvc.Framework.Core.MultiMVC.Sample
+namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample
 {
     public static class Bootstrapper
     {

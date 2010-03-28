@@ -3,7 +3,7 @@ using System.Web.Routing;
 using BA.MultiMvc.Framework.Ressources;
 using BA.MultiMvc.Framework.ViewEngine;
 
-namespace BA.MultiMvc.Framework.Core.MultiMVC.Sample
+namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
@@ -16,7 +16,7 @@ namespace BA.MultiMvc.Framework.Core.MultiMVC.Sample
                 routes, 
                 "Default",
                 "Home",
-                "BA.MultiTenantMVC.Sample.Controllers",
+                "BA.MultiMvc.Sample.Controllers",
                 "en",
                 true
                 );

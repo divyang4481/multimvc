@@ -1,15 +1,15 @@
 ﻿using System;
-using BA.MultiMvc.Framework.Core.MultiMVC.Sample.Controllers;
+using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Controllers;
 
-using BA.MultiMvc.Framework.Core.MultiMVC.Test.Util.Stubs;
+using BA.MultiMvc.Framework.Core.MultiMvc.Test.Util.Stubs;
 using BA.MultiMvc.Framework.Core;
 using BA.MultiMvc.Sample.Extensions.Contoso.Controllers;
 using NUnit.Framework;
 
-namespace BA.MultiTenantMVC.Framework.UnitTests.Core
+namespace BA.MultiMvc.Framework.UnitTests.Core
 {
     /// <summary>
-    /// Summary description for SaasMVCFactory
+    /// Summary description for SaasMvcFactory
     /// </summary>
     [TestFixture]
     public class ExtensionControllerFactoryTest
