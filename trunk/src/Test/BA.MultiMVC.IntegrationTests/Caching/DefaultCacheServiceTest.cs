@@ -11,6 +11,12 @@ namespace BA.MultiMvc.Framework.IntegrationTests.Caching
         const string Expected = "Expected object";
         const string TenantName = "DefaultTenant";
         private const string LanguageCode = "fr";
+        
+        [TestFixtureSetUp]
+        public void Initialize()
+        {
+            BootstrapperForIntegrationTest.ConfigureStructureMap(".");
+        }
 
         [Test]
         public void Add_WithSameContext_ObjectInCacheShouldBeRetrieved()

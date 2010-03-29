@@ -3,39 +3,32 @@ using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
 using BA.MultiMvc.Framework.Core;
 using BA.MultiMvc.Framework.Ressources;
-using BA.MultiMvc.Framework.UnitTests.Ressources;
+using BA.MultiMvc.Test.Util.Stubs;
 using StructureMap;
 using BA.MultiMvc.Framework.Caching;
 
-namespace BA.MultiMvc.Framework.UnitTests
+namespace BA.MultiMvc.Framework.IntegrationTests
 {
-    public static class BootstrapperForTest
+    public static class BootstrapperForIntegrationTest
     {
         #region Methods
 
         public static void ConfigureStructureMap(string extensionPath)
         {
             ObjectFactory.Initialize(x =>
-                                         {
-                                             x.AddRegistry(new SampleRegistry(extensionPath));
-                                         });
+             {
+                 x.AddRegistry(new UnitTestRegistry(extensionPath));
+             });
         }
 
-        public static string ExtensionPath
-        {
-            get
-            {
-                return HttpContext.Current.Server.MapPath("~/Extensions");
-            }
-        }
         #endregion Methods
     }
 
-    public class SampleRegistry : ExtensionRegistry
+    public class UnitTestRegistry : ExtensionRegistry
     {
         #region Constructors
 
-        public SampleRegistry(string extensionPath)
+        public UnitTestRegistry(string extensionPath)
         {
             ForRequestedType<User>()
                 .TheDefaultIsConcreteType<User>();

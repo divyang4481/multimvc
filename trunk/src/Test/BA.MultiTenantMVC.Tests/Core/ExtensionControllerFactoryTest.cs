@@ -1,9 +1,8 @@
 ﻿using System;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Controllers;
-
-using BA.MultiMvc.Framework.Core.MultiMvc.Test.Util.Stubs;
 using BA.MultiMvc.Framework.Core;
 using BA.MultiMvc.Sample.Extensions.Contoso.Controllers;
+using BA.MultiMvc.Test.Util.Stubs;
 using NUnit.Framework;
 
 namespace BA.MultiMvc.Framework.UnitTests.Core
@@ -17,7 +16,7 @@ namespace BA.MultiMvc.Framework.UnitTests.Core
         [TestFixtureSetUp]
         public void Initialize()
         {
-            BootstrapperForTest.ConfigureStructureMap(".");
+            BootstrapperForUnitTest.ConfigureStructureMap(".");
         }
 
         [Test]

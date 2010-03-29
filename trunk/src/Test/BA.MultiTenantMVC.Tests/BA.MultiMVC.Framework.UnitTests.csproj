@@ -59,13 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BootStrapperForTest.cs" />
+    <Compile Include="BootStrapperForUnitTest.cs" />
     <Compile Include="Core\DomainFactoryTest.cs" />
     <Compile Include="Core\ExtensionControllerFactoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\StructureMapConfigurationTest.cs" />
     <Compile Include="Ressources\RessourceProviderServiceTest.cs" />
-    <Compile Include="Ressources\RessourceRepositoryStub.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AuthoringTests.txt" />

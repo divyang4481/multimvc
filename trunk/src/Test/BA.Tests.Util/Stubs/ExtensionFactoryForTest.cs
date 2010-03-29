@@ -2,11 +2,11 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 using BA.MultiMvc.Framework.Core;
+using BA.MultiMvc.Framework.Core.MultiMvc.Test.Util;
 
 
-namespace BA.MultiMvc.Framework.Core.MultiMvc.Test.Util.Stubs
+namespace BA.MultiMvc.Test.Util.Stubs
 {
-
     public class ExtensionControllerFactoryForTest : ExtensionControllerFactory
     {
         #region properties

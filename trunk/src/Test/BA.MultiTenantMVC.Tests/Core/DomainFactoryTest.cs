@@ -20,7 +20,7 @@ namespace BA.MultiMvc.Framework.UnitTests.Core
         [TestFixtureSetUp]
         public void Initialize()
         {
-            BootstrapperForTest.ConfigureStructureMap(".");
+            BootstrapperForUnitTest.ConfigureStructureMap(".");
         }
 
         [Test]
