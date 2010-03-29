@@ -24,9 +24,9 @@ namespace BA.MultiMvc.Framework.Core
         #endregion Properties
 
         #region Methods
-        internal void Init(IDictionary<string, string> resoures, TenantContext context)
+        internal void Init(TenantContext context)
         {
-            _resources = resoures;
+            _resources = context.Resources;
             _context = context;
         }
 
