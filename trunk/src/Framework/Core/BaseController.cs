@@ -8,19 +8,31 @@ namespace BA.MultiMvc.Framework.Core
 {
     public class BaseController : Controller
     {
+        private IDictionary<string, string> _resources;
+        private TenantContext _context;
+        
         #region Properties
-
-        public TenantContext Context { get; set; }
-        public IDictionary<string, string> Resources { get; set; }
+        public TenantContext Context
+        {
+            get { return _context; }
+        }
+        
+        public IDictionary<string, string> Resources
+        {
+            get { return _resources; }
+        }
         #endregion Properties
 
         #region Methods
+        internal void Init(IDictionary<string, string> resoures, TenantContext context)
+        {
+            _resources = resoures;
+            _context = context;
+        }
 
         protected void AddModelErrorsToForm(NameValueCollection formCollection, ErrorSummary errorSummary)
         {
-            ModelState.AddModelErrors(errorSummary, Resources, formCollection); 
-            
-            
+            ModelState.AddModelErrors(errorSummary, Resources, formCollection);             
         }
 
         protected override void OnActionExecuted(ActionExecutedContext filterContext)
