@@ -50,11 +50,16 @@ namespace BA.MultiMvc.Framework.Core
 
             if (controller != null)
             {
-                controller.Init(context);
+                controller.Init(context,GetRessources(context));
                 return controller;
             }
 
             return null;
+        }
+        private static IDictionary<string, string> GetRessources(TenantContext context)
+        {
+            var factory = new TenantFactory(context);
+            return factory.Create<IRessourceProviderService>().GetRessources();
         }
         private static BaseController CreateControllerExtension(string tenantKey, Type controllerType)
         {

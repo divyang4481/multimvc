@@ -13,14 +13,10 @@ namespace BA.MultiMvc.Framework.Core
        {
            TenantKey = tenantKey;
            Language = language;
-           _resources = GetRessources();
        }
 
        public string TenantKey { get; set; }
        public string Language { get; set; }
-
-       private IDictionary<string, string> _resources;
-       public IDictionary<string, string> Resources { get{return _resources;}}
       
        public string ConnectionString
         {
@@ -35,12 +31,6 @@ namespace BA.MultiMvc.Framework.Core
                 _connectionString = value;
             }
         }
-
-       private IDictionary<string,string>GetRessources()
-       {
-           var factory = new TenantFactory(this);
-           return factory.Create<IRessourceProviderService>().GetRessources();
-       }
 
        protected virtual string GetConnectionString()
        {
