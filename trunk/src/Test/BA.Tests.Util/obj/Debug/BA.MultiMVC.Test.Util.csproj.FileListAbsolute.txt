@@ -1,5 +1,3 @@
-C:\Dev\multimvc\src\Test\BA.Tests.Util\bin\Debug\BA.MultiTenantMVC.Test.Util.dll
-C:\Dev\multimvc\src\Test\BA.Tests.Util\bin\Debug\BA.MultiTenantMVC.Test.Util.pdb
 C:\Dev\multimvc\src\Test\BA.Tests.Util\bin\Debug\BA.MultiMVC.Framework.dll
 C:\Dev\multimvc\src\Test\BA.Tests.Util\bin\Debug\Moq.dll
 C:\Dev\multimvc\src\Test\BA.Tests.Util\bin\Debug\nunit.framework.dll
@@ -8,5 +6,7 @@ C:\Dev\multimvc\src\Test\BA.Tests.Util\bin\Debug\Castle.Components.Validator.dll
 C:\Dev\multimvc\src\Test\BA.Tests.Util\bin\Debug\nunit.framework.xml
 C:\Dev\multimvc\src\Test\BA.Tests.Util\bin\Debug\BA.MultiMVC.Framework.pdb
 C:\Dev\multimvc\src\Test\BA.Tests.Util\obj\Debug\ResolveAssemblyReference.cache
-C:\Dev\multimvc\src\Test\BA.Tests.Util\obj\Debug\BA.MultiTenantMVC.Test.Util.dll
-C:\Dev\multimvc\src\Test\BA.Tests.Util\obj\Debug\BA.MultiTenantMVC.Test.Util.pdb
+C:\Dev\multimvc\src\Test\BA.Tests.Util\bin\Debug\BA.MultiMvc.Test.Util.dll
+C:\Dev\multimvc\src\Test\BA.Tests.Util\bin\Debug\BA.MultiMvc.Test.Util.pdb
+C:\Dev\multimvc\src\Test\BA.Tests.Util\obj\Debug\BA.MultiMvc.Test.Util.dll
+C:\Dev\multimvc\src\Test\BA.Tests.Util\obj\Debug\BA.MultiMvc.Test.Util.pdb
