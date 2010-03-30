@@ -9,6 +9,13 @@ namespace BA.MultiMvc.Framework
     public class ExtensionControllerFactory : StructureMapControllerFactory
     {
         #region Methods
+        
+        protected virtual TenantContext GetTenantContext(RequestContext request)
+        {
+            var tenantKey = request.RouteData.GetTenantKey();
+            var language = request.RouteData.GetLanguage();
+            return  new TenantContext(tenantKey, language);
+        }
 
         protected override IController GetControllerInstance(Type controllerType)
         {
@@ -20,15 +27,6 @@ namespace BA.MultiMvc.Framework
             }
             return null;
         }
-
-        protected virtual TenantContext GetTenantContext(RequestContext request)
-        {
-            var tenantKey = request.RouteData.GetTenantKey();
-            var language = request.RouteData.GetLanguage();
-            return  new TenantContext(tenantKey, language);
-        }
-
-        
 
         protected virtual IController GetControllerInstance(TenantContext context, Type controllerType)
         {
