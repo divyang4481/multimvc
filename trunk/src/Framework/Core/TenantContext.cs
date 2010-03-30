@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using BA.MultiMvc.Framework.Resources;
 
 namespace BA.MultiMvc.Framework.Core
 {

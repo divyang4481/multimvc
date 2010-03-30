@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using BA.MultiMvc.Framework.Caching;
 using BA.MultiMvc.Framework.Core;
 
 namespace BA.MultiMvc.Framework.IntegrationTests.Stubs

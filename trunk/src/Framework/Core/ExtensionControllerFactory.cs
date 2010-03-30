@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Web.Mvc;
 using BA.MultiMvc.Framework.Helpers;
 using StructureMap;
 using System.Web.Routing;
-using BA.MultiMvc.Framework.Resources;
 
 
 namespace BA.MultiMvc.Framework.Core

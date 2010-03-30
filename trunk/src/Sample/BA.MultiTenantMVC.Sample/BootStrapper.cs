@@ -1,10 +1,8 @@
 ﻿using System.Web;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
-using BA.MultiMvc.Framework.Resources;
 using StructureMap;
 using BA.MultiMvc.Sample.Models.Infrastructure;
-using BA.MultiMvc.Framework.Caching;
 using System.IO;
 using System.Text;
 

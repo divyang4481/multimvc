@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using BA.MultiMvc.Framework.Resources;
 using BA.MultiMvc.Sample.Models.Infrastructure.Linq;
 using System.Linq;
 using BA.MultiMvc.Framework.Core;

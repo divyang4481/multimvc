@@ -1,7 +1,6 @@
 using System.Configuration;
 using System.Transactions;
 using BA.MultiMvc.Framework.IntegrationTests.Specialized;
-using BA.MultiMvc.Framework.Resources;
 using BA.MultiMvc.Sample.Models.Infrastructure.Linq;
 using NUnit.Framework;
 using BA.MultiMvc.Framework.Core;

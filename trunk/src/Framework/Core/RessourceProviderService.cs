@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using BA.MultiMvc.Framework.Caching;
 
 
-namespace BA.MultiMvc.Framework.Resources
+namespace BA.MultiMvc.Framework.Core
 {
     public class RessourceProviderService : IResourceProviderService
     {
