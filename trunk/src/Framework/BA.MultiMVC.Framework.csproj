@@ -78,7 +78,7 @@
     <Compile Include="Culture\CultureController.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Helpers\ApplicationHelpers.cs" />
-    <Compile Include="Core\Configurator.cs" />
+    <Compile Include="Core\ConfigurationHelper.cs" />
     <Compile Include="Core\ITenantModel.cs" />
     <Compile Include="Core\ExtensionControllerFactory.cs" />
     <Compile Include="Core\ExtensionRegistry.cs" />

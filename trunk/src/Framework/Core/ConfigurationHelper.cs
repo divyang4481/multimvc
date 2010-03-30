@@ -4,7 +4,7 @@ using StructureMap;
 
 namespace BA.MultiMvc.Framework.Core
 {
-    public static class Configurator
+    public static class ConfigurationHelper
     {
 
         public static ITenantModel InjectTenantModelNamedInstance(TenantContext context, ITenantModel subject)

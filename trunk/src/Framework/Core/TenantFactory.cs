@@ -42,9 +42,9 @@ namespace BA.MultiMvc.Framework.Core
                 modelInstance = (ITenantModel)ObjectFactory.GetInstance(T);
             }
             
-            modelInstance = Configurator.InjectTenantModelNamedInstance(Context, modelInstance);
+            modelInstance = ConfigurationHelper.InjectTenantModelNamedInstance(Context, modelInstance);
 
-            Configurator.SetContextOnObjectTree(modelInstance,this.Context);
+            ConfigurationHelper.SetContextOnObjectTree(modelInstance,this.Context);
 
             return modelInstance;
         }

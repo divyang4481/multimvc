@@ -24,7 +24,7 @@ namespace BA.MultiMvc.Framework.Core
             get
             {
                 if (_connectionString == null)
-                    _connectionString = GetConnectionString();
+                    _connectionString = BuildConnectionString();
                 return _connectionString;
             }
             set
@@ -33,7 +33,7 @@ namespace BA.MultiMvc.Framework.Core
             }
         }
 
-       protected virtual string GetConnectionString()
+       protected virtual string BuildConnectionString()
        {
            
            try
