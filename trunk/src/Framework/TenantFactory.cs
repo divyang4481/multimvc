@@ -44,7 +44,7 @@ namespace BA.MultiMvc.Framework
             
             modelInstance = ConfigurationHelper.InjectTenantModelNamedInstance(Context, modelInstance);
 
-            ConfigurationHelper.SetContextOnObjectTree(modelInstance,this.Context);
+            ConfigurationHelper.SetContextOnObjectTree(modelInstance,Context);
 
             return modelInstance;
         }

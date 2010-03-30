@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Net;
-using System.Text;
 using System.Web;
-using System.Web.Compilation;
 using System.Web.Mvc;
 
 namespace BA.MultiMvc.Framework
@@ -81,11 +76,8 @@ namespace BA.MultiMvc.Framework
                     // If BuildManager returns a 404 (Not Found) that means the file did not exist
                     return false;
                 }
-                else
-                {
-                    // All other error codes imply other errors such as compilation or parsing errors
-                    throw;
-                }
+                // All other error codes imply other errors such as compilation or parsing errors
+                throw;
             }
             catch
             {
