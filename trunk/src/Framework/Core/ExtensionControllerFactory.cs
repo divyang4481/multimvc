@@ -4,7 +4,7 @@ using System.Web.Mvc;
 using BA.MultiMvc.Framework.Helpers;
 using StructureMap;
 using System.Web.Routing;
-using BA.MultiMvc.Framework.Ressources;
+using BA.MultiMvc.Framework.Resources;
 
 
 namespace BA.MultiMvc.Framework.Core
@@ -18,8 +18,7 @@ namespace BA.MultiMvc.Framework.Core
             if (RequestContext != null)
             {
                 var tenantContext = GetTenantContext(RequestContext);
-                var tenantResources = GetTenantResources(tenantContext);
-                return GetControllerInstance(tenantContext, tenantResources ,controllerType);
+                return GetControllerInstance(tenantContext, controllerType);
 
             }
             return null;
@@ -29,20 +28,12 @@ namespace BA.MultiMvc.Framework.Core
         {
             var tenantKey = request.RouteData.GetTenantKey();
             var language = request.RouteData.GetLanguage();
-            var context = new TenantContext(tenantKey, language);
-            context.Resources = GetRessources(context);
-            return context;
+            return  new TenantContext(tenantKey, language);
         }
 
-        protected virtual IDictionary<string,string> GetTenantResources(TenantContext context)
-        {
-            var factory = new TenantFactory(context);
-            var resourceProvider = factory.Create<IRessourceProviderService>();
-            return resourceProvider.GetRessources();
-        }
         
 
-        protected virtual IController GetControllerInstance(TenantContext context,IDictionary<string,string> resources, Type controllerType)
+        protected virtual IController GetControllerInstance(TenantContext context, Type controllerType)
         {
             if (controllerType==null)
                 return null;
@@ -58,11 +49,7 @@ namespace BA.MultiMvc.Framework.Core
 
             return null;
         }
-        private static IDictionary<string, string> GetRessources(TenantContext context)
-        {
-            var factory = new TenantFactory(context);
-            return factory.Create<IRessourceProviderService>().GetRessources();
-        }
+     
         private static BaseController CreateControllerExtension(string tenantKey, Type controllerType)
         {
             if (controllerType == null)

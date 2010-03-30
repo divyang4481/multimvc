@@ -25,7 +25,7 @@ namespace BA.MultiMvc.Framework.UnitTests.Core
             var result = ExtensionControllerFactoryCreateInstance(typeof(HomeController), "Default");
             
             //Assert
-            Assert.IsInstanceOfType(typeof(HomeController),result);
+            Assert.AreEqual(typeof(HomeController).FullName, result.GetType().FullName);
 
         }
 

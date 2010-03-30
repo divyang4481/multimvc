@@ -29,17 +29,17 @@ namespace BA.MultiMvc.Framework.Core
             return (T)Create(typeof(T));
         }
 
-        public ITenantModel Create(Type T)
+        public ITenantModel Create(Type tenantModelType)
         {
             ITenantModel modelInstance;
-            string tenantModelFullName = GetTenantModelFullName(T);
+            string tenantModelFullName = GetTenantModelFullName(tenantModelType);
             try
             {
                 modelInstance = (ITenantModel)ObjectFactory.GetNamedInstance(typeof(ITenantModel), tenantModelFullName);
             }
             catch (StructureMapException)
             {
-                modelInstance = (ITenantModel)ObjectFactory.GetInstance(T);
+                modelInstance = (ITenantModel)ObjectFactory.GetInstance(tenantModelType);
             }
             
             modelInstance = ConfigurationHelper.InjectTenantModelNamedInstance(Context, modelInstance);
@@ -49,13 +49,13 @@ namespace BA.MultiMvc.Framework.Core
             return modelInstance;
         }
 
-        private string GetTenantModelFullName(Type T)
+        private string GetTenantModelFullName(Type tenantModelType)
         {
 
-            if (T.GetName().StartsWith("I"))
-                return Context.TenantKey + T.GetName().Remove(0, 1);
+            if (tenantModelType.GetName().StartsWith("I",StringComparison.Ordinal))
+                return Context.TenantKey + tenantModelType.GetName().Remove(0, 1);
 
-            return Context.TenantKey + T.GetName();
+            return Context.TenantKey + tenantModelType.GetName();
         }
     }
 }

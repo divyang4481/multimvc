@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using BA.MultiMvc.Framework.Core;
 
-namespace BA.MultiMvc.Framework.Ressources
+namespace BA.MultiMvc.Framework.Resources
 {
-    public interface IRessourceProviderService:ITenantModel
+    public interface IResourceProviderService:ITenantModel
     {
         IDictionary<string, string> GetRessources();
     }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using BA.MultiMvc.Framework.Core;
 
-namespace BA.MultiMvc.Framework.Ressources
+namespace BA.MultiMvc.Framework.Resources
 {
     public interface IRessourceRepository:ITenantModel
     {

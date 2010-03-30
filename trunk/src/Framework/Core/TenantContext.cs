@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using BA.MultiMvc.Framework.Ressources;
+using BA.MultiMvc.Framework.Resources;
 
 namespace BA.MultiMvc.Framework.Core
 {
@@ -17,7 +17,17 @@ namespace BA.MultiMvc.Framework.Core
 
        public string TenantKey { get; set; }
        public string Language { get; set; }
-       public IDictionary<string, string> Resources { get; set; }
+
+       private IDictionary<string, string> _resources;
+        public IDictionary<string, string> Resources
+        {
+            get
+            {
+                if (_resources == null)
+                    _resources = LoadResources();
+                return _resources;
+            }
+        }
 
        public string ConnectionString
         {
@@ -35,7 +45,6 @@ namespace BA.MultiMvc.Framework.Core
 
        protected virtual string BuildConnectionString()
        {
-           
            try
            {
                return ConfigurationManager.ConnectionStrings[TenantKey + "Connection"].ConnectionString;
@@ -45,9 +54,16 @@ namespace BA.MultiMvc.Framework.Core
                if (ConfigurationManager.ConnectionStrings.Count >0)
                      return ConfigurationManager.ConnectionStrings[0].ConnectionString;
 
-               throw new ApplicationException("No connectring found in config file!");
+               throw new KeyNotFoundException("No connectring key found in config file!");
            }
        }
+
+        protected virtual IDictionary<string,string> LoadResources()
+        {
+            var factory = new TenantFactory(this);
+            var resourceProvider = factory.Create<IResourceProviderService>();
+            return resourceProvider.GetRessources();
+        }
 
        
       

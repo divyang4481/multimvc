@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Reflection;
 using System.Web.Mvc;
 using Castle.Components.Validator;
@@ -35,8 +36,8 @@ namespace BA.MultiMvc.Framework.Helpers
                         }
                         catch (KeyNotFoundException ex)
                         {
-                            throw new ApplicationException(
-                                String.Format("The key {0} was not found in Dictionary", message)
+                            throw new KeyNotFoundException(
+                                String.Format(CultureInfo.CurrentCulture ,"The key {0} was not found in Dictionary", message)
                                 , ex
                                 );
                         }
@@ -58,7 +59,7 @@ namespace BA.MultiMvc.Framework.Helpers
         public static string GetLanguage(this RouteData routeData)
         {
             const string defaultValue = "en";
-            return routeData.Values.ContainsKey("language") ? routeData.Values["language"].ToString().ToLower() : defaultValue;
+            return routeData.Values.ContainsKey("language") ? routeData.Values["language"].ToString().ToUpperInvariant() : defaultValue;
         }
 
         public static string GetTenantKey(this RouteData routeData)
@@ -67,11 +68,11 @@ namespace BA.MultiMvc.Framework.Helpers
             return routeData.Values.ContainsKey("tenantKey") ? routeData.Values["tenantKey"].ToString().ToCamelCased() : defaultValue;
         }
 
-        public static string ToCamelCased(this string s)
+        public static string ToCamelCased(this string value)
         {
-            var camelCased = s.ToLower();
+            var camelCased = value.ToLowerInvariant();
             camelCased = camelCased.Remove(0, 1);
-            camelCased = s.ToUpper().Substring(0, 1) + camelCased;
+            camelCased = value.ToUpperInvariant().Substring(0, 1) + camelCased;
             return camelCased;
         }
 

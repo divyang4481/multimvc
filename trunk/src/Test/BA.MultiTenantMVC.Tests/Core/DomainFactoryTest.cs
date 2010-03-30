@@ -2,7 +2,7 @@
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
 using BA.MultiMvc.Framework.Core.MultiMvc.Test.Util.ParamatrizedTests;
-using BA.MultiMvc.Framework.Ressources;
+using BA.MultiMvc.Framework.Resources;
 using BA.MultiMvc.Sample.Extensions.Contoso.Model.Domain;
 using BA.MultiMvc.Sample.Extensions.Contoso.Model.Infrasturcture;
 using NUnit.Framework;
@@ -93,7 +93,7 @@ namespace BA.MultiMvc.Framework.UnitTests.Core
             //Arrenge
             var parametrizedTest = CreateTenantFactoryTest("Default");
             //Act & Assert
-            parametrizedTest.CreateServiceAssertContextIsNotNullOnServiceProperties(typeof(IRessourceProviderService));
+            parametrizedTest.CreateServiceAssertContextIsNotNullOnServiceProperties(typeof(IResourceProviderService));
         }
 
         [Test]
@@ -102,7 +102,7 @@ namespace BA.MultiMvc.Framework.UnitTests.Core
             //Arrenge
             var parametrizedTest = CreateTenantFactoryTest("Contoso");
             //Act & Assert
-            parametrizedTest.CreateServiceAssertContextIsNotNullOnServiceProperties(typeof(IRessourceProviderService));
+            parametrizedTest.CreateServiceAssertContextIsNotNullOnServiceProperties(typeof(IResourceProviderService));
         }
             
 

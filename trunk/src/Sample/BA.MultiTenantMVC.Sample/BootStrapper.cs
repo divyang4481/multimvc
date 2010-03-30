@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
-using BA.MultiMvc.Framework.Ressources;
+using BA.MultiMvc.Framework.Resources;
 using StructureMap;
 using BA.MultiMvc.Sample.Models.Infrastructure;
 using BA.MultiMvc.Framework.Caching;
@@ -44,7 +44,7 @@ namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample
                 .TheDefaultIsConcreteType<MembershipService>();
             ForRequestedType<IUserRepository>()
                 .TheDefaultIsConcreteType<UserRepository>();
-            ForRequestedType<IRessourceProviderService>()
+            ForRequestedType<IResourceProviderService>()
                 .TheDefaultIsConcreteType<RessourceProviderService>();
             ForRequestedType<IRessourceRepository>()
                 .TheDefaultIsConcreteType<RessourceRepository>();

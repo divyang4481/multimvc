@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using BA.MultiMvc.Framework.Caching;
 
 
-namespace BA.MultiMvc.Framework.Ressources
+namespace BA.MultiMvc.Framework.Resources
 {
-    public class RessourceProviderService : IRessourceProviderService
+    public class RessourceProviderService : IResourceProviderService
     {
         public Core.TenantContext Context { get; set; }
         public IRessourceRepository RessourceRepository { get; set; }

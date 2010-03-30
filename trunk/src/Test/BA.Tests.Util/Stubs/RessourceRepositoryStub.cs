@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using BA.MultiMvc.Framework.Ressources;
+using BA.MultiMvc.Framework.Resources;
 
 namespace BA.MultiMvc.Test.Util.Stubs
 {

@@ -2,9 +2,9 @@
 using System.Web.Routing;
 using BA.MultiMvc.Framework.Core;
 
-namespace BA.MultiMvc.Framework.Ressources
+namespace BA.MultiMvc.Framework.Helpers
 {
-    public class ApplicationHelpers
+    public static class ApplicationHelpers
     {
 
         public static void ConfigureRoutes(
@@ -13,10 +13,10 @@ namespace BA.MultiMvc.Framework.Ressources
             string defaultController,
             string defaultControllerNamespace ,
             string defaultLanguage,
-            bool IIS6CompatibilityMode)
+            bool iis6CompatibilityMode)
         {
             string urlWithParameters = "{tenantKey}/{language}/{controller}X/{action}/{id}";
-            urlWithParameters = IIS6CompatibilityMode ? urlWithParameters.Replace("X", ".mvc") : urlWithParameters.Replace("X", string.Empty);
+            urlWithParameters = iis6CompatibilityMode ? urlWithParameters.Replace("X", ".mvc") : urlWithParameters.Replace("X", string.Empty);
 
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.IgnoreRoute("{resource}.ico/{*pathInfo}");
