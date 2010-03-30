@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
 using System.Web;
-using BA.MultiMvc.Framework.Core;
 
 namespace BA.MultiMvc.Framework.Culture
 {

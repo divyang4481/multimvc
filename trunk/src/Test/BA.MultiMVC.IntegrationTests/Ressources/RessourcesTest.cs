@@ -1,9 +1,9 @@
 using System.Configuration;
 using System.Transactions;
+using BA.MultiMvc.Framework;
 using BA.MultiMvc.Framework.IntegrationTests.Specialized;
 using BA.MultiMvc.Sample.Models.Infrastructure.Linq;
 using NUnit.Framework;
-using BA.MultiMvc.Framework.Core;
 using BA.MultiMvc.Framework.IntegrationTests.Stubs;
 
 namespace BA.MultiMvc.IntegrationTests

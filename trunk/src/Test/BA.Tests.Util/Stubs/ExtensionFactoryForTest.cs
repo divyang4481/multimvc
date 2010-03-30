@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 using System.Web.Routing;
-using BA.MultiMvc.Framework.Core;
+using BA.MultiMvc.Framework;
 using BA.MultiMvc.Framework.Core.MultiMvc.Test.Util;
 
 

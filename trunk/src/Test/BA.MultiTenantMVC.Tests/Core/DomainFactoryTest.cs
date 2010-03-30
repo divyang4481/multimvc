@@ -1,5 +1,4 @@
-﻿using BA.MultiMvc.Framework.Core;
-using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
+﻿using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
 using BA.MultiMvc.Framework.Core.MultiMvc.Test.Util.ParamatrizedTests;
 using BA.MultiMvc.Sample.Extensions.Contoso.Model.Domain;

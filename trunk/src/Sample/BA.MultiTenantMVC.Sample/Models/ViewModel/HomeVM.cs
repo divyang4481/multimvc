@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using BA.MultiMvc.Framework.Core;
+using BA.MultiMvc.Framework;
 
 namespace BA.MultiMvc.Sample.Models.ViewModel
 {

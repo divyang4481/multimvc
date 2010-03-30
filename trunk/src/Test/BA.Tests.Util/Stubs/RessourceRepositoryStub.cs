@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using BA.MultiMvc.Framework.Core;
+using BA.MultiMvc.Framework;
 
 namespace BA.MultiMvc.Test.Util.Stubs
 {
@@ -20,7 +20,7 @@ namespace BA.MultiMvc.Test.Util.Stubs
 
         #region ITenantModel Members
 
-        public BA.MultiMvc.Framework.Core.TenantContext Context
+        public TenantContext Context
         {
             get; set;
         }

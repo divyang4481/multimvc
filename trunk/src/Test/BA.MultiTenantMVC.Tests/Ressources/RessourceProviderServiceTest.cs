@@ -1,4 +1,3 @@
-using BA.MultiMvc.Framework.Core;
 using NUnit.Framework;
 
 namespace BA.MultiMvc.Framework.UnitTests.Ressources

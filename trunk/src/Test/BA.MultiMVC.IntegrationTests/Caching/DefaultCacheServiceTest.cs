@@ -1,5 +1,4 @@
-﻿using BA.MultiMvc.Framework.Core;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace BA.MultiMvc.Framework.IntegrationTests.Caching
 {

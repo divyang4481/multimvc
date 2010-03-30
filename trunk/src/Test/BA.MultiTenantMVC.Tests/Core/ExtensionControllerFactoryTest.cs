@@ -1,6 +1,5 @@
 ﻿using System;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Controllers;
-using BA.MultiMvc.Framework.Core;
 using BA.MultiMvc.Sample.Extensions.Contoso.Controllers;
 using BA.MultiMvc.Test.Util.Stubs;
 using NUnit.Framework;
