@@ -12,7 +12,7 @@ namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample.Extensions.Contoso.Controll
         {
             get
             {
-                var view = new IndexViewModel();
+                var view = new IndexViewModel(Context,Resources);
                 view.Message = "Welcome to ASP.NET Mvc on Adventureworks site!";
                 return view;
             }

@@ -24,9 +24,9 @@ namespace BA.MultiMvc.Framework.Core
         #endregion Properties
 
         #region Methods
-        internal void Init(TenantContext context, IDictionary<string,string> ressources)
+        internal void Init(TenantContext context)
         {
-            _resources = ressources;
+            _resources =context.Resources;
             _context = context;
         }
 
@@ -38,14 +38,7 @@ namespace BA.MultiMvc.Framework.Core
         protected override void OnActionExecuted(ActionExecutedContext filterContext)
         {
             if (ViewData.Model == null)
-                ViewData.Model = new BaseViewModel();
-
-            var vM = ViewData.Model as BaseViewModel;
-            if (vM != null)
-            {
-                vM.Resources = Resources;
-                vM.Context = Context;
-            }
+                ViewData.Model = new BaseViewModel(Context);
 
             base.OnActionExecuted(filterContext);
         }

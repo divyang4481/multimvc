@@ -4,7 +4,17 @@ namespace BA.MultiMvc.Framework.Core
 {
     public class BaseViewModel
     {
-        public TenantContext Context { get; set; }
-        public IDictionary<string,string> Resources { get; set; }
+
+        public BaseViewModel(TenantContext context)
+        {
+            _context = context;
+            _resources = context.Resources;
+        }
+
+        protected TenantContext _context;
+        public TenantContext Context { get { return _context; } }
+
+        protected IDictionary<string, string> _resources;
+        public IDictionary<string,string> Resources { get{ return _resources;} }
     }
 }

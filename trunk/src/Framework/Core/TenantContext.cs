@@ -17,7 +17,8 @@ namespace BA.MultiMvc.Framework.Core
 
        public string TenantKey { get; set; }
        public string Language { get; set; }
-      
+       public IDictionary<string, string> Resources { get; set; }
+
        public string ConnectionString
         {
             get

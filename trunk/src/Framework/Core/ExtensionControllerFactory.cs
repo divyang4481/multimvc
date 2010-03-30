@@ -29,7 +29,9 @@ namespace BA.MultiMvc.Framework.Core
         {
             var tenantKey = request.RouteData.GetTenantKey();
             var language = request.RouteData.GetLanguage();
-            return new TenantContext(tenantKey, language);
+            var context = new TenantContext(tenantKey, language);
+            context.Resources = GetRessources(context);
+            return context;
         }
 
         protected virtual IDictionary<string,string> GetTenantResources(TenantContext context)
@@ -50,7 +52,7 @@ namespace BA.MultiMvc.Framework.Core
 
             if (controller != null)
             {
-                controller.Init(context,GetRessources(context));
+                controller.Init(context);
                 return controller;
             }
 

@@ -12,7 +12,7 @@ namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample.Controllers
         {
             get
             {
-              var view = new HomeVM();
+              var view = new HomeVM(this.Context);
               view.Message = "Welcome to ASP.NET Mvc on Default site!";
               return view;
             }
