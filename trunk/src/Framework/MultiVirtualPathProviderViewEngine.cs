@@ -5,20 +5,19 @@ using System.Linq;
 using System.Web;
 using System.Web.Hosting;
 using System.Web.Mvc;
-using BA.MultiMvc.Framework.Helpers;
 
 namespace BA.MultiMvc.Framework
 {
-    [AspNetHostingPermission(System.Security.Permissions.SecurityAction.LinkDemand, Level = AspNetHostingPermissionLevel.Minimal)]
+   
     [AspNetHostingPermission(System.Security.Permissions.SecurityAction.InheritanceDemand, Level = AspNetHostingPermissionLevel.Minimal)]
     public abstract class MultiVirtualPathProviderViewEngine : IViewEngine
     {
         // format is ":ViewCacheEntry:{cacheType}:{prefix}:{name}:{controllerName}:{TenantKey}"
-        private const string _cacheKeyFormat = ":ViewCacheEntry:{0}:{1}:{2}:{3}:{4}";
-        private const string _cacheKeyPrefix_Master = "Master";
-        private const string _cacheKeyPrefix_Partial = "Partial";
-        private const string _cacheKeyPrefix_View = "View";
-        private static readonly string[] _emptyLocations = new string[0];
+        private const string CacheKeyFormat = ":ViewCacheEntry:{0}:{1}:{2}:{3}:{4}";
+        private const string CacheKeyPrefixMaster = "Master";
+        private const string CacheKeyPrefixPartial = "Partial";
+        private const string CacheKeyPrefixView = "View";
+        private static readonly string[] EmptyLocations = new string[0];
 
         private VirtualPathProvider _vpp;
 
@@ -79,7 +78,7 @@ namespace BA.MultiMvc.Framework
 
         private string CreateCacheKey(string prefix, string name, string controllerName,string tenantName)
         {
-            return String.Format(CultureInfo.InvariantCulture, _cacheKeyFormat,
+            return String.Format(CultureInfo.InvariantCulture, CacheKeyFormat,
                                  GetType().AssemblyQualifiedName, prefix, name, controllerName, tenantName);
         }
 
@@ -105,7 +104,7 @@ namespace BA.MultiMvc.Framework
 
             string[] searched;
             string controllerName = controllerContext.RouteData.GetRequiredString("controller");
-            string partialPath = GetPath(controllerContext, PartialViewLocationFormats, "PartialViewLocationFormats", partialViewName, controllerName, _cacheKeyPrefix_Partial, useCache, out searched);
+            string partialPath = GetPath(controllerContext, PartialViewLocationFormats, "PartialViewLocationFormats", partialViewName, controllerName, CacheKeyPrefixPartial, useCache, out searched);
 
             if (String.IsNullOrEmpty(partialPath))
             {
@@ -130,8 +129,8 @@ namespace BA.MultiMvc.Framework
             string[] masterLocationsSearched;
 
             string controllerName = controllerContext.RouteData.GetRequiredString("controller");
-            string viewPath = GetPath(controllerContext, ViewLocationFormats, "ViewLocationFormats", viewName, controllerName, _cacheKeyPrefix_View, useCache, out viewLocationsSearched);
-            string masterPath = GetPath(controllerContext, MasterLocationFormats, "MasterLocationFormats", masterName, controllerName, _cacheKeyPrefix_Master, useCache, out masterLocationsSearched);
+            string viewPath = GetPath(controllerContext, ViewLocationFormats, "ViewLocationFormats", viewName, controllerName, CacheKeyPrefixView, useCache, out viewLocationsSearched);
+            string masterPath = GetPath(controllerContext, MasterLocationFormats, "MasterLocationFormats", masterName, controllerName, CacheKeyPrefixMaster, useCache, out masterLocationsSearched);
 
             if (String.IsNullOrEmpty(viewPath) || (String.IsNullOrEmpty(masterPath) && !String.IsNullOrEmpty(masterName)))
             {
@@ -143,7 +142,7 @@ namespace BA.MultiMvc.Framework
 
         private string GetPath(ControllerContext controllerContext, string[] locations, string locationsPropertyName, string name, string controllerName, string cacheKeyPrefix, bool useCache, out string[] searchedLocations)
         {
-            searchedLocations = _emptyLocations;
+            searchedLocations = EmptyLocations;
             string tenantKey = controllerContext.RouteData.GetTenantKey();
             
             if (String.IsNullOrEmpty(name))
@@ -185,7 +184,7 @@ namespace BA.MultiMvc.Framework
 
                 if (FileExists(controllerContext, virtualPath))
                 {
-                    searchedLocations = _emptyLocations;
+                    searchedLocations = EmptyLocations;
                     result = virtualPath;
                     ViewLocationCache.InsertViewLocation(controllerContext.HttpContext, cacheKey, result);
                     break;

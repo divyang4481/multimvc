@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
-using BA.MultiMvc.Framework.Helpers;
+using BA.MultiMvc.Sample;
 
 namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample
 {

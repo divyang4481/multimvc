@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using BA.MultiMvc.Framework.Helpers;
 using StructureMap;
 
 namespace BA.MultiMvc.Framework

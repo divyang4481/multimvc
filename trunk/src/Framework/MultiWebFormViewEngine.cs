@@ -10,8 +10,6 @@ using System.Web.Mvc;
 
 namespace BA.MultiMvc.Framework
 {
-    [AspNetHostingPermission(System.Security.Permissions.SecurityAction.LinkDemand, Level = AspNetHostingPermissionLevel.Minimal)]
-    [AspNetHostingPermission(System.Security.Permissions.SecurityAction.InheritanceDemand, Level = AspNetHostingPermissionLevel.Minimal)]
     public class MultiWebFormViewEngine : MultiVirtualPathProviderViewEngine
     {
         private IBuildManager _buildManager;

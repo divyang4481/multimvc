@@ -1,12 +1,11 @@
 ﻿using System.Web;
+using BA.MultiMvc.Framework;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
 using StructureMap;
 using BA.MultiMvc.Sample.Models.Infrastructure;
-using System.IO;
-using System.Text;
 
-namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample
+namespace BA.MultiMvc.Sample
 {
     public static class Bootstrapper
     {
@@ -15,9 +14,9 @@ namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample
         public static void ConfigureStructureMap(string extensionPath)
         {
             ObjectFactory.Initialize(x =>
-            {
-                x.AddRegistry(new SampleRegistry(extensionPath));
-            });
+                                         {
+                                             x.AddRegistry(new SampleRegistry(extensionPath));
+                                         });
         }
 
         public static string ExtensionPath
@@ -43,8 +42,8 @@ namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample
             ForRequestedType<IUserRepository>()
                 .TheDefaultIsConcreteType<UserRepository>();
             ForRequestedType<IResourceProviderService>()
-                .TheDefaultIsConcreteType<RessourceProviderService>();
-            ForRequestedType<IRessourceRepository>()
+                .TheDefaultIsConcreteType<ResourceProviderService>();
+            ForRequestedType<IResourceRepository>()
                 .TheDefaultIsConcreteType<RessourceRepository>();
             ForRequestedType<ICacheService>()
                 .TheDefaultIsConcreteType<DefaultCacheService>();

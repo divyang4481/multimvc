@@ -1,7 +1,4 @@
-﻿using System.IO;
-using System.Web.Mvc;
-using StructureMap;
-using StructureMap.Configuration.DSL;
+﻿using StructureMap.Configuration.DSL;
 
 namespace BA.MultiMvc.Framework
 {

@@ -4,6 +4,6 @@ namespace BA.MultiMvc.Framework
 {
     public interface IResourceProviderService:ITenantModel
     {
-        IDictionary<string, string> GetRessources();
+        IDictionary<string, string> LoadResources();
     }
 }

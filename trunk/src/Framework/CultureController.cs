@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using System.Web;
 
-namespace BA.MultiMvc.Framework.Culture
+namespace BA.MultiMvc.Framework
 {
     public class CultureController : BaseController
     {

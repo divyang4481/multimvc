@@ -1,5 +1,4 @@
 ﻿using System;
-using BA.MultiMvc.Framework.Helpers;
 using NUnit.Framework;
 
 namespace BA.MultiMvc.Framework.Core.MultiMvc.Test.Util.ParamatrizedTests

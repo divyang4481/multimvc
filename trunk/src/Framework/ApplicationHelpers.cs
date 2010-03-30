@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace BA.MultiMvc.Framework.Helpers
+namespace BA.MultiMvc.Framework
 {
     public static class ApplicationHelpers
     {

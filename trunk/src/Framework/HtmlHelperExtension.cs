@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 
-namespace BA.MultiMvc.Framework.Helpers
+namespace BA.MultiMvc.Framework
 {
     public static class HtmlHelperExtension
     {
@@ -11,11 +11,11 @@ namespace BA.MultiMvc.Framework.Helpers
             return value.ActionLink(
                 linkText, "SetLanguage", "Culture",
                 new
-                {
-                    newLanguage = languageCode,
-                    actionName = value.ViewContext.RouteData.Values["action"],
-                    controllerName = value.ViewContext.RouteData.Values["controller"]
-                },
+                    {
+                        newLanguage = languageCode,
+                        actionName = value.ViewContext.RouteData.Values["action"],
+                        controllerName = value.ViewContext.RouteData.Values["controller"]
+                    },
                 null
                 );
         }

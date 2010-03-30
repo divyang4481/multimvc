@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
-using BA.MultiMvc.Framework.Core.MultiMvc.Sample;
+using BA.MultiMvc.Sample;
 using BA.MultiMvc.Sample.Extensions.Contoso.Controllers;
 using NUnit.Framework;
 using StructureMap;

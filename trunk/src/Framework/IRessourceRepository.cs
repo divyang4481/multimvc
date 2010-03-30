@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace BA.MultiMvc.Framework
 {
-    public interface IRessourceRepository:ITenantModel
+    public interface IResourceRepository:ITenantModel
     {
         IDictionary<string, string> Find(string language);
     }

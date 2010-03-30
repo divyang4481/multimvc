@@ -34,8 +34,8 @@ namespace BA.MultiMvc.Framework.IntegrationTests
             ForRequestedType<IUserRepository>()
                 .TheDefaultIsConcreteType<UserRepository>();
             ForRequestedType<IResourceProviderService>()
-                .TheDefaultIsConcreteType<RessourceProviderService>();
-            ForRequestedType<IRessourceRepository>()
+                .TheDefaultIsConcreteType<ResourceProviderService>();
+            ForRequestedType<IResourceRepository>()
                 .TheDefaultIsConcreteType<RessourceRepositoryStub>();
             ForRequestedType<ICacheService>()
                 .TheDefaultIsConcreteType<DefaultCacheService>();

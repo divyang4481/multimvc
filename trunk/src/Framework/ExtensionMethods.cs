@@ -7,15 +7,15 @@ using Castle.Components.Validator;
 using System.Collections.Specialized;
 using System.Web.Routing;
 
-namespace BA.MultiMvc.Framework.Helpers
+namespace BA.MultiMvc.Framework
 {
     public static class ExtensionMethods
     {
         public static void AddModelErrors(
-          this ModelStateDictionary modelState,
-          ErrorSummary errorSummary,
-          IDictionary<string,string> dictionary,
-          NameValueCollection data)
+            this ModelStateDictionary modelState,
+            ErrorSummary errorSummary,
+            IDictionary<string,string> dictionary,
+            NameValueCollection data)
         {
             if (errorSummary != null && errorSummary.HasError)
             {
@@ -29,10 +29,10 @@ namespace BA.MultiMvc.Framework.Helpers
                             modelState.SetModelValue(
                                 propertyInError,
                                 new ValueProviderResult(GetValue(data, propertyInError),
-                                    ""
-                                    , System.Globalization.CultureInfo.CurrentCulture
-                                        )
-                                    );
+                                                        ""
+                                                        , CultureInfo.CurrentCulture
+                                    )
+                                );
                         }
                         catch (KeyNotFoundException ex)
                         {

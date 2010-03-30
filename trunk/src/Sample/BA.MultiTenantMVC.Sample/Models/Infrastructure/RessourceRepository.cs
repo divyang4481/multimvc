@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace BA.MultiMvc.Sample.Models.Infrastructure
 {
-    public class RessourceRepository :  IRessourceRepository
+    public class RessourceRepository :  IResourceRepository
     {
         protected DBDataContext _db;
 

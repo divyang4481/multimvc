@@ -38,11 +38,11 @@ namespace BA.MultiMvc.IntegrationTests
         {
             //Arrange
             var ressourceRepository = new RessourceRepositoryForTest(_db);
-            var subject = new RessourceProviderService(ressourceRepository,new StubCacheService());
+            var subject = new ResourceProviderService(ressourceRepository,new StubCacheService());
             subject.Context = new TenantContext("Default", Language);
 
             //Act
-            var result = subject.GetRessources();
+            var result = subject.LoadResources();
 
             //Assert
             Assert.AreEqual(result[RessourceKeyString],RessourceValueString);

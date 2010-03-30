@@ -6,7 +6,7 @@ using BA.MultiMvc.Framework;
 
 namespace BA.MultiMvc.Test.Util.Stubs
 {
-    public class RessourceRepositoryStub:IRessourceRepository
+    public class RessourceRepositoryStub:IResourceRepository
     {
         #region IRessourceRepository Members
 
