@@ -74,7 +74,6 @@
     </Compile>
     <Compile Include="Models\Domain\DomainFactory.cs" />
     <Compile Include="Models\Domain\User.cs" />
-    <Compile Include="Models\Infrastructure\IMembershipService.cs" />
     <Compile Include="Models\Infrastructure\IUserRepository.cs" />
     <Compile Include="Models\Infrastructure\Linq\DB.designer.cs">
       <AutoGen>True</AutoGen>

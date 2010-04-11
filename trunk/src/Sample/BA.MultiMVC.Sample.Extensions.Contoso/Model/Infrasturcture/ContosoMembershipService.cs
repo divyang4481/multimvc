@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BA.MultiMvc.Framework;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
 
 namespace BA.MultiMvc.Sample.Extensions.Contoso.Model.Infrasturcture
@@ -16,14 +17,7 @@ namespace BA.MultiMvc.Sample.Extensions.Contoso.Model.Infrasturcture
 
         public IUserRepository UserRepository
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get; set;
         }
 
         public void Register(BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain.User user)
@@ -42,14 +36,31 @@ namespace BA.MultiMvc.Sample.Extensions.Contoso.Model.Infrasturcture
 
         public BA.MultiMvc.Framework.TenantContext Context
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get; set;
+        }
+
+        #endregion
+
+        #region IMembershipService Members
+
+        public int MinPasswordLength
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public bool ValidateUser(string userName, string password)
+        {
+            throw new NotImplementedException();
+        }
+
+        public System.Web.Security.MembershipCreateStatus CreateUser(string userName, string password, string email)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ChangePassword(string userName, string oldPassword, string newPassword)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
