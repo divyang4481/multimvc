@@ -1,9 +1,8 @@
 ﻿using System.Web.Mvc;
-using System.Web.UI.WebControls;
-using BA.MultiMvc.Framework.Core;
+using BA.MultiMvc.Framework;
 using BA.MultiMvc.Sample.Models.ViewModel;
 
-namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample.Controllers
+namespace BA.MultiMvc.Sample.Controllers
 {
     [HandleError]
     public class HomeController : BaseController
@@ -12,9 +11,9 @@ namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample.Controllers
         {
             get
             {
-              var view = new HomeVM(this.Context);
-              view.Message = "Welcome to ASP.NET Mvc on Default site!";
-              return view;
+                var view = new HomeVM(this.Context);
+                view.Message = "Welcome to ASP.NET Mvc on Default site!";
+                return view;
             }
         }
 

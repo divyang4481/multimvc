@@ -75,6 +75,7 @@
     <Compile Include="BaseController.cs" />
     <Compile Include="BaseViewModel.cs" />
     <Compile Include="IFormsAuthenticationService.cs" />
+    <Compile Include="IMembershipService.cs" />
     <Compile Include="TenantContext.cs" />
     <Compile Include="TenantFactory.cs" />
     <Compile Include="CultureController.cs" />

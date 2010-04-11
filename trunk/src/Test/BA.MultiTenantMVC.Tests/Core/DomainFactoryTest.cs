@@ -1,6 +1,7 @@
 ﻿using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
 using BA.MultiMvc.Framework.Core.MultiMvc.Test.Util.ParamatrizedTests;
+using BA.MultiMvc.Sample.Controllers;
 using BA.MultiMvc.Sample.Extensions.Contoso.Model.Domain;
 using BA.MultiMvc.Sample.Extensions.Contoso.Model.Infrasturcture;
 using NUnit.Framework;
@@ -64,7 +65,7 @@ namespace BA.MultiMvc.Framework.UnitTests.Core
             //Arrenge
             var parametrizedTest = CreateTenantFactoryTest("Default");
             //Act & Assert
-            parametrizedTest.CreateServiceAssertIsInstanceOfType(typeof(IMembershipService), typeof(MembershipService));
+            parametrizedTest.CreateServiceAssertIsInstanceOfType(typeof(IMembershipService), typeof(AccountMembershipService));
         }
 
         [Test]

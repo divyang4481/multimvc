@@ -2,6 +2,7 @@
 using BA.MultiMvc.Framework;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
+using BA.MultiMvc.Sample.Controllers;
 using StructureMap;
 using BA.MultiMvc.Sample.Models.Infrastructure;
 
@@ -37,8 +38,8 @@ namespace BA.MultiMvc.Sample
         {
             ForRequestedType<User>()
                 .TheDefaultIsConcreteType<User>();
-            ForRequestedType<IMembershipService>()
-                .TheDefaultIsConcreteType<MembershipService>();
+            ForRequestedType<BA.MultiMvc.Framework.IMembershipService>()
+                .TheDefaultIsConcreteType<AccountMembershipService>();
             ForRequestedType<IUserRepository>()
                 .TheDefaultIsConcreteType<UserRepository>();
             ForRequestedType<IResourceProviderService>()
@@ -50,6 +51,7 @@ namespace BA.MultiMvc.Sample
             ForRequestedType<IFormsAuthenticationService>()
                 .TheDefaultIsConcreteType<FormsAuthenticationService>();
 
+            SelectConstructor(() => new AccountMembershipService());
 
             ScanControllersAndRepositoriesFromPath(extensionPath);
         }

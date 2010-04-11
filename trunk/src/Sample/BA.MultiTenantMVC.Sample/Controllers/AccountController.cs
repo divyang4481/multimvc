@@ -3,11 +3,10 @@ using System.Globalization;
 using System.Security.Principal;
 using System.Web.Mvc;
 using System.Web.Security;
-using BA.MultiMvc.Framework.Core;
+using BA.MultiMvc.Framework;
 
-namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample.Controllers
+namespace BA.MultiMvc.Sample.Controllers
 {
-
     [HandleError]
     public class AccountController : BaseController
     {
@@ -178,9 +177,9 @@ namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample.Controllers
             if (newPassword == null || newPassword.Length < MembershipService.MinPasswordLength)
             {
                 ModelState.AddModelError("newPassword",
-                    String.Format(CultureInfo.CurrentCulture,
-                         "You must specify a new password of {0} or more characters.",
-                         MembershipService.MinPasswordLength));
+                                         String.Format(CultureInfo.CurrentCulture,
+                                                       "You must specify a new password of {0} or more characters.",
+                                                       MembershipService.MinPasswordLength));
             }
 
             if (!String.Equals(newPassword, confirmPassword, StringComparison.Ordinal))
@@ -222,9 +221,9 @@ namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample.Controllers
             if (password == null || password.Length < MembershipService.MinPasswordLength)
             {
                 ModelState.AddModelError("password",
-                    String.Format(CultureInfo.CurrentCulture,
-                         "You must specify a password of {0} or more characters.",
-                         MembershipService.MinPasswordLength));
+                                         String.Format(CultureInfo.CurrentCulture,
+                                                       "You must specify a password of {0} or more characters.",
+                                                       MembershipService.MinPasswordLength));
             }
             if (!String.Equals(password, confirmPassword, StringComparison.Ordinal))
             {
@@ -272,30 +271,8 @@ namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample.Controllers
         }
         #endregion
     }
-
-
-
-    public class FormsAuthenticationService : IFormsAuthenticationService
-    {
-        public void SignIn(string userName, bool createPersistentCookie)
-        {
-            FormsAuthentication.SetAuthCookie(userName, createPersistentCookie);
-        }
-        public void SignOut()
-        {
-            FormsAuthentication.SignOut();
-        }
-    }
-
-    public interface IMembershipService
-    {
-        int MinPasswordLength { get; }
-
-        bool ValidateUser(string userName, string password);
-        MembershipCreateStatus CreateUser(string userName, string password, string email);
-        bool ChangePassword(string userName, string oldPassword, string newPassword);
-    }
-
+    
+   
     public class AccountMembershipService : IMembershipService
     {
         private MembershipProvider _provider;
@@ -335,5 +312,7 @@ namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample.Controllers
             MembershipUser currentUser = _provider.GetUser(userName, true /* userIsOnline */);
             return currentUser.ChangePassword(oldPassword, newPassword);
         }
+
+        public TenantContext Context { get; set; }
     }
 }
