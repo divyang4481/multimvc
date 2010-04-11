@@ -33,7 +33,9 @@ namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample
             RegisterRoutes(RouteTable.Routes);
             RegisterViewEngines(ViewEngines.Engines);
             Bootstrapper.ConfigureStructureMap(Bootstrapper.ExtensionPath);
-            ApplicationHelpers.ApplicationStart();
+            ControllerBuilder.Current.SetControllerFactory(
+              new ExtensionControllerFactory()
+              );
         }
     }
 }

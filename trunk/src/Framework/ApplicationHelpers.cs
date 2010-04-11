@@ -34,13 +34,6 @@ namespace BA.MultiMvc.Framework
                 );
         }
 
-        public static void ApplicationStart()
-        {
-
-            ControllerBuilder.Current.SetControllerFactory(
-                new ExtensionControllerFactory()
-                );
-        }
 
     }
 }
