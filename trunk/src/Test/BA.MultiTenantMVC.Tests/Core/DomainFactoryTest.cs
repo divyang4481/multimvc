@@ -1,9 +1,9 @@
 ﻿using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
-using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
 using BA.MultiMvc.Framework.Core.MultiMvc.Test.Util.ParamatrizedTests;
 using BA.MultiMvc.Sample.Controllers;
 using BA.MultiMvc.Sample.Extensions.Contoso.Model.Domain;
 using BA.MultiMvc.Sample.Extensions.Contoso.Model.Infrasturcture;
+using BA.MultiMvc.Sample.Models.Infrastructure;
 using NUnit.Framework;
 
 
@@ -41,14 +41,7 @@ namespace BA.MultiMvc.Framework.UnitTests.Core
             parametrizedTest.CreateRepositoryAssertIsInstanceOfType(typeof(IUserRepository), typeof(UserRepository));
         }
 
-        [Test]
-        public void CreateUserRepository_ForContoso_IsContosoUserRepository()
-        {
-            //Arrenge
-            var parametrizedTest = CreateTenantFactoryTest("Contoso");
-            //Act & Assert
-            parametrizedTest.CreateRepositoryAssertIsInstanceOfType(typeof(IUserRepository), typeof(ContosoUserRepository));
-        }
+     
 
         [Test]
         public void CreateService_ForDefault_IsNotNull()
@@ -106,26 +99,17 @@ namespace BA.MultiMvc.Framework.UnitTests.Core
             
 
         [Test]
-        public void CreateService_ForDefault_RepositoryIsUserRepository()
+        public void CreateService_ForContoso_RepositoryIsUserRepository()
         {
             //Arrenge
-            var parametrizedTest = CreateTenantFactoryTest("Default");
+            var parametrizedTest = CreateTenantFactoryTest("Contoso");
             //Act & Assert
             parametrizedTest.CreateServiceAssertRepositoryIsInstanceOfType(
                 typeof(IMembershipService), 
                 typeof(UserRepository));
         }
 
-        [Test]
-        public void CreateService_ForContoso_RepositoryIsContosoUserRepository()
-        {
-            //Arrenge
-            var parametrizedTest = CreateTenantFactoryTest("Contoso");
-            //Act & Assert
-            parametrizedTest.CreateServiceAssertRepositoryIsInstanceOfType(
-                typeof(IMembershipService),
-                typeof(ContosoUserRepository));
-        }
+      
 
         [Test]
         public void CreateUser_ForDefault_IsUser()

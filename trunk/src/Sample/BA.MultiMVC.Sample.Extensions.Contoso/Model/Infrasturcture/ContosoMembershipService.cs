@@ -3,34 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using BA.MultiMvc.Framework;
-using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
+using BA.MultiMvc.Sample.Models.Infrastructure;
 
 namespace BA.MultiMvc.Sample.Extensions.Contoso.Model.Infrasturcture
 {
     public class ContosoMembershipService:IMembershipService
     {
+        private IUserRepository _userRepository;
+
         public ContosoMembershipService(IUserRepository userRepository) 
         {
+            _userRepository = userRepository;
         }
-
-        #region IMembershipService Members
 
         public IUserRepository UserRepository
-        {
-            get; set;
+        { 
+            get{ return _userRepository;}
+            set { _userRepository = value; }
         }
 
-        public void Register(BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain.User user)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Login(string userName, string password)
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
+       
 
         #region ITenantModel Members
 

@@ -1,8 +1,7 @@
 ﻿using System.Web;
 using BA.MultiMvc.Framework;
-using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
-using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
 using BA.MultiMvc.Sample.Controllers;
+using BA.MultiMvc.Sample.Models.Infrastructure.Linq;
 using StructureMap;
 using BA.MultiMvc.Sample.Models.Infrastructure;
 
@@ -36,8 +35,6 @@ namespace BA.MultiMvc.Sample
         
         public SampleRegistry(string extensionPath)
         {
-            ForRequestedType<User>()
-                .TheDefaultIsConcreteType<User>();
             ForRequestedType<BA.MultiMvc.Framework.IMembershipService>()
                 .TheDefaultIsConcreteType<AccountMembershipService>();
             ForRequestedType<IUserRepository>()

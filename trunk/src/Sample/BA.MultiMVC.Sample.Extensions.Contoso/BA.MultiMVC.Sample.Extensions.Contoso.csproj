@@ -50,7 +50,6 @@
     <Compile Include="Controllers\ContosoHomeController.cs" />
     <Compile Include="Model\Domain\ContosoUser.cs" />
     <Compile Include="Model\Infrasturcture\ContosoMembershipService.cs" />
-    <Compile Include="Model\Infrasturcture\ContosoUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

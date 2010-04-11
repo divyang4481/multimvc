@@ -1,7 +1,8 @@
-﻿using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
-using BA.MultiMvc.Framework.Core;
+﻿using BA.MultiMvc.Framework;
+using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
 
-namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure
+
+namespace BA.MultiMvc.Sample.Models.Infrastructure
 {
     public interface IUserRepository:ITenantModel
     {

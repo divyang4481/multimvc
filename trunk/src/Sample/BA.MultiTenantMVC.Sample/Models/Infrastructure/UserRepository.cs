@@ -1,20 +1,18 @@
 ﻿using System;
-using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
+using BA.MultiMvc.Framework;
+using BA.MultiMvc.Sample.Models.Infrastructure.Linq;
 
-namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure
+namespace BA.MultiMvc.Sample.Models.Infrastructure
 {
     public class UserRepository:IUserRepository 
     {
         string _client;
 
+        protected DBDataContext DataContext;
+
         #region public method
-
-        public void Init(string client)
-        {
-            _client = client;
-        }
-
-        public void Save(User user)
+        
+        public void Save(BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain.User user)
         {
             throw new NotImplementedException();
         }
@@ -30,9 +28,15 @@ namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure
 
         #region ITenantModel Members
 
+        private TenantContext _context;
         public TenantContext Context
         {
-            get; set;
+            get { return _context; }
+            set
+            {
+                _context = value;
+                DataContext = new DBDataContext(_context.ConnectionString);
+            }
         }
 
         #endregion

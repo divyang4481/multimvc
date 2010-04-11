@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Domain;
-using BA.MultiMvc.Framework.Core.MultiMvc.Sample.Models.Infrastructure;
 using BA.MultiMvc.Sample.Controllers;
+using BA.MultiMvc.Sample.Models.Infrastructure;
 using BA.MultiMvc.Test.Util.Stubs;
 using StructureMap;
 
