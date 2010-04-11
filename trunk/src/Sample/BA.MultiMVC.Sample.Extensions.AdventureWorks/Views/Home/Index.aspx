@@ -9,10 +9,12 @@
     <h1><%= Model.Resources["Home.Title"] %></h1>
     <h2><%= Html.Encode(Model.Message) %></h2>
     <p>
-        This is the substitute view
+        This is the substitute view!
+    </p>
+    <p>
         To learn more about ASP.NET Mvc visit <a href="http://asp.net/mvc" title="ASP.NET Mvc Website">http://asp.net/mvc</a>.
     </p>
     <p>
-        Your username is: <%= Model.UserName %>
+        UserName from IndexViewModel: <%= Model.UserName %>
     </p>
 </asp:Content>
