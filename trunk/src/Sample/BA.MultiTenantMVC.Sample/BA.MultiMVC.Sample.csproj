@@ -97,7 +97,6 @@
       <DependentUpon>MultiMVCSampleDB.mdf</DependentUpon>
     </Content>
     <Content Include="Default.aspx" />
-    <Content Include="Extensions\AdventureWorks\Views\Home\Index.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />
@@ -145,11 +144,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Extensions\AdventureWorks\Bin\" />
-    <Folder Include="Extensions\AdventureWorks\Content\" />
-    <Folder Include="Extensions\Contoso\Bin\" />
-    <Folder Include="Extensions\Contoso\Content\" />
-    <Folder Include="Extensions\Contoso\Views\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
