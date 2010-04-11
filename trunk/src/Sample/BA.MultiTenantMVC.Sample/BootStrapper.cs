@@ -47,6 +47,8 @@ namespace BA.MultiMvc.Sample
                 .TheDefaultIsConcreteType<RessourceRepository>();
             ForRequestedType<ICacheService>()
                 .TheDefaultIsConcreteType<DefaultCacheService>();
+            ForRequestedType<IFormsAuthenticationService>()
+                .TheDefaultIsConcreteType<FormsAuthenticationService>();
 
 
             ScanControllersAndRepositoriesFromPath(extensionPath);

@@ -70,9 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DefaultCacheService.cs" />
+    <Compile Include="FormsAuthenticationService.cs" />
     <Compile Include="ICacheService.cs" />
     <Compile Include="BaseController.cs" />
     <Compile Include="BaseViewModel.cs" />
+    <Compile Include="IFormsAuthenticationService.cs" />
     <Compile Include="TenantContext.cs" />
     <Compile Include="TenantFactory.cs" />
     <Compile Include="CultureController.cs" />

@@ -23,13 +23,13 @@ namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample.Controllers
         // This constructor is not used by the Mvc framework but is instead provided for ease
         // of unit testing this type. See the comments at the end of this file for more
         // information.
-        public AccountController(IFormsAuthentication formsAuth, IMembershipService service)
+        public AccountController(IFormsAuthenticationService formsAuth, IMembershipService service)
         {
             FormsAuth = formsAuth ?? new FormsAuthenticationService();
             MembershipService = service ?? new AccountMembershipService();
         }
 
-        public IFormsAuthentication FormsAuth
+        public IFormsAuthenticationService FormsAuth
         {
             get;
             private set;
@@ -273,18 +273,9 @@ namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample.Controllers
         #endregion
     }
 
-    // The FormsAuthentication type is sealed and contains static members, so it is difficult to
-    // unit test code that calls its members. The interface and helper class below demonstrate
-    // how to create an abstract wrapper around such a type in order to make the AccountController
-    // code unit testable.
 
-    public interface IFormsAuthentication
-    {
-        void SignIn(string userName, bool createPersistentCookie);
-        void SignOut();
-    }
 
-    public class FormsAuthenticationService : IFormsAuthentication
+    public class FormsAuthenticationService : IFormsAuthenticationService
     {
         public void SignIn(string userName, bool createPersistentCookie)
         {
