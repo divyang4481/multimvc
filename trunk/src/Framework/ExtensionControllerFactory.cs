@@ -17,24 +17,24 @@ namespace BA.MultiMvc.Framework
             return  new TenantContext(tenantKey, language);
         }
 
-        protected override IController GetControllerInstance(Type controllerType)
+        protected override IController GetControllerInstance(System.Web.Routing.RequestContext requestContext, Type controllerType)
         {
-            if (RequestContext != null)
+            if (requestContext != null)
             {
-                var tenantContext = GetTenantContext(RequestContext);
-                return GetControllerInstance(tenantContext, controllerType);
+                var tenantContext = GetTenantContext(requestContext);
+                return GetControllerInstance(requestContext,tenantContext, controllerType);
 
             }
             return null;
         }
 
-        protected virtual IController GetControllerInstance(TenantContext context, Type controllerType)
+        protected virtual IController GetControllerInstance(System.Web.Routing.RequestContext requestContext, TenantContext context, Type controllerType)
         {
             if (controllerType==null)
                 return null;
 
             var controller = CreateControllerExtension(context.TenantKey, controllerType)
-                             ?? base.GetControllerInstance(controllerType) as BaseController;
+                             ?? base.GetControllerInstance(requestContext , controllerType) as BaseController;
 
             if (controller != null)
             {

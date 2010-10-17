@@ -15,31 +15,30 @@ namespace BA.MultiMvc.Test.Util.Stubs
         {
             get
             {
-                return TenantKey;
+                return _tenantKey;
             }
             set
             {
                 _tenantKey = value;
-                setRequestContext(_tenantKey);
             }
         }
         #endregion
 
         #region methods
-        private void setRequestContext(string tenantKey)
+        private RequestContext GetRequestContext(string tenantKey)
         {
             var routreData = new RouteData();
             routreData.Values.Add("tenantKey", tenantKey);
             routreData.Values.Add("language", "fr");
             routreData.Values.Add("controller", "HomeController");
-            RequestContext = new RequestContext(
+            return new RequestContext(
                 MvcMockHelpers.FakeHttpContext(),
                 routreData);
         }
 
         public IController GetControllerInstanceInvoker(Type type)
         {
-            return GetControllerInstance(type);
+            return GetControllerInstance(GetRequestContext(this.TenantKey),type);
         }
 
         

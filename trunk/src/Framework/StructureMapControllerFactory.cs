@@ -8,7 +8,7 @@ namespace BA.MultiMvc.Framework
     {
         #region Methods
 
-        protected override IController GetControllerInstance(Type controllerType)
+        protected override IController  GetControllerInstance(System.Web.Routing.RequestContext requestContext, Type controllerType)
         {
             if (controllerType == null)
                 return null;

@@ -8,8 +8,8 @@
     <ProjectGuid>{A26E06A2-3468-4DD0-9E7C-7155C7807E84}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BA.MultiMvc.Framework</RootNamespace>
-    <AssemblyName>BA.MultiMvc.Framework</AssemblyName>
+    <RootNamespace>BA.MultiMVC</RootNamespace>
+    <AssemblyName>BA.MultiMVC</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -22,8 +22,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRules>-Microsoft.Interoperability#CA1403;-Microsoft.Interoperability#CA1406;-Microsoft.Interoperability#CA1413;-Microsoft.Interoperability#CA1402;-Microsoft.Interoperability#CA1407;-Microsoft.Interoperability#CA1404;-Microsoft.Interoperability#CA1410;-Microsoft.Interoperability#CA1411;-Microsoft.Interoperability#CA1405;-Microsoft.Interoperability#CA1409;-Microsoft.Interoperability#CA1415;-Microsoft.Interoperability#CA1408;-Microsoft.Interoperability#CA1414;-Microsoft.Interoperability#CA1412;-Microsoft.Interoperability#CA1400;-Microsoft.Interoperability#CA1401;-Microsoft.Mobility#CA1600;-Microsoft.Mobility#CA1601;-Microsoft.Portability#CA1903;-Microsoft.Portability#CA1901;-Microsoft.Portability#CA1900</CodeAnalysisRules>
-    <RunCodeAnalysis>false</RunCodeAnalysis>
-    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -36,12 +35,12 @@
   <ItemGroup>
     <Reference Include="Castle.Components.Validator, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\Castle.Components.Validator.dll</HintPath>
+      <HintPath>..\Castle.Components.Validator.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="StructureMap, Version=2.5.3.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\StructureMap.dll</HintPath>
+      <HintPath>..\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -49,10 +48,7 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Abstractions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Routing">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -66,32 +62,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefaultCacheService.cs" />
-    <Compile Include="FormsAuthenticationService.cs" />
-    <Compile Include="ICacheService.cs" />
-    <Compile Include="BaseController.cs" />
-    <Compile Include="BaseViewModel.cs" />
-    <Compile Include="IFormsAuthenticationService.cs" />
-    <Compile Include="IMembershipService.cs" />
-    <Compile Include="TenantContext.cs" />
-    <Compile Include="TenantFactory.cs" />
-    <Compile Include="CultureController.cs" />
-    <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="ApplicationHelpers.cs" />
-    <Compile Include="ConfigurationHelper.cs" />
-    <Compile Include="ITenantModel.cs" />
-    <Compile Include="ExtensionControllerFactory.cs" />
-    <Compile Include="ExtensionRegistry.cs" />
-    <Compile Include="ExtensionMethods.cs" />
-    <Compile Include="HtmlHelperExtension.cs" />
+    <Compile Include="Core\BaseController.cs" />
+    <Compile Include="Core\TenantContext.cs" />
+    <Compile Include="Core\TenantFactory.cs" />
+    <Compile Include="Helpers\ApplicationHelpers.cs" />
+    <Compile Include="Core\Configurator.cs" />
+    <Compile Include="Core\IModel.cs" />
+    <Compile Include="Core\IService.cs" />
+    <Compile Include="Core\ExtensionControllerFactory.cs" />
+    <Compile Include="Core\ExtensionRegistry.cs" />
+    <Compile Include="Core\IRepository.cs" />
+    <Compile Include="Helpers\ExtensionMethods.cs" />
+    <Compile Include="ParametrizedTest\TenantFactoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StructureMapControllerFactory.cs" />
-    <Compile Include="IRessourceProviderService.cs" />
-    <Compile Include="IRessourceRepository.cs" />
-    <Compile Include="RessourceProviderService.cs" />
-    <Compile Include="BuildManagerWrapper.cs" />
-    <Compile Include="MultiVirtualPathProviderViewEngine.cs" />
-    <Compile Include="MultiWebFormViewEngine.cs" />
+    <Compile Include="Core\StructureMapControllerFactory.cs" />
+    <Compile Include="Ressources\RessourceDictionary.cs" />
+    <Compile Include="Ressources\IRessourceDictionary.cs" />
+    <Compile Include="Ressources\IRessourceRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Theming\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -17,7 +17,7 @@ namespace BA.MultiMvc.Framework
                         controllerName = value.ViewContext.RouteData.Values["controller"]
                     },
                 null
-                );
+                ).ToString();
         }
 
         public static string ContentPath(this HtmlHelper value, string contentName)
