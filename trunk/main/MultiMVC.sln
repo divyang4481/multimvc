@@ -1,13 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BA.MultiMVC.Framework", "..\src\Framework\BA.MultiMVC.Framework.csproj", "{A26E06A2-3468-4DD0-9E7C-7155C7807E84}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{12504B48-D63A-4552-B3C9-095A0BF3021C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{D0202C67-F4CC-459B-BDD2-13AC7E1D1F36}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B5311EC7-C608-4406-9A60-6D97BE216F95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BA.MultiMVC.Framework", "..\src\Framework\BA.MultiMVC.Framework.csproj", "{A26E06A2-3468-4DD0-9E7C-7155C7807E84}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BA.MultiMVC.Sample", "..\src\Sample\BA.MultiTenantMVC.Sample\BA.MultiMVC.Sample.csproj", "{9535DBA3-C2A9-4DCE-A09B-F076907B567A}"
 EndProject
