@@ -11,13 +11,18 @@ namespace BA.MultiMvc.Framework.Core.MultiMvc.Sample
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            ApplicationHelpers.ConfigureRoutes(
-                routes, 
-                "Default",
-                "Home",
-                "BA.MultiMvc.Sample.Controllers",
-                "en",
-                true
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapRoute(
+                "ChooseLanguage",                                              // Route name
+                "{tenantKey}",                          // URL with parameters
+                new { tenantKey = "default", controller = "Home", action = "CheckForLanguage", id = "" }
+                // Parameter defaults
+                );
+            routes.MapRoute(
+                "FullyQualified", // Route name
+                "{tenantKey}/{language}/{controller}/{action}/{id}", // URL with parameters
+                new { tenantKey = "default", language = "en",controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+            
                 );
         }
 

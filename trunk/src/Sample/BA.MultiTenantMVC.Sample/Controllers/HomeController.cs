@@ -22,7 +22,7 @@ namespace BA.MultiMvc.Sample.Controllers
             return View(HomeView);
         }
 
-        public virtual ActionResult CheckForLanguage(string client)
+        public virtual ActionResult CheckForLanguage(string tenantKey)
         {
             if (Request == null ||
                 Request.Cookies == null ||
@@ -31,7 +31,10 @@ namespace BA.MultiMvc.Sample.Controllers
                 return View("index",HomeView);
 
             string language = Request.Cookies["language"].Value;
-            return RedirectToAction("Index", new { language = language, client = client });
+
+            Response.Redirect("~/" + tenantKey + "/" + language);
+
+            return null;
         }
 
         public ActionResult About()
