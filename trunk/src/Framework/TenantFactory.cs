@@ -1,5 +1,6 @@
 ﻿using System;
 using StructureMap;
+using StructureMap.TypeRules;
 
 namespace BA.MultiMvc.Framework
 {
@@ -39,7 +40,16 @@ namespace BA.MultiMvc.Framework
             }
             catch (StructureMapException)
             {
-                modelInstance = (ITenantModel)ObjectFactory.GetInstance(tenantModelType);
+                try
+                {
+                    modelInstance = (ITenantModel)ObjectFactory.GetInstance(tenantModelType);
+                }
+                catch (Exception)
+                {
+
+                    return null;
+                }
+                
             }
             
             modelInstance = ConfigurationHelper.InjectTenantModelNamedInstance(Context, modelInstance);

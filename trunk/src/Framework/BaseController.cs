@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Web.Mvc;
-using Castle.Components.Validator;
 
 namespace BA.MultiMvc.Framework
 {
-    public class BaseController : Controller
+    public abstract class BaseController : Controller
     {
         private IDictionary<string, string> _resources;
         private TenantContext _context;
@@ -29,11 +28,7 @@ namespace BA.MultiMvc.Framework
             _context = context;
         }
 
-        protected void AddModelErrorsToForm(NameValueCollection formCollection, ErrorSummary errorSummary)
-        {
-            ModelState.AddModelErrors(errorSummary, Resources, formCollection);             
-        }
-
+    
         protected override void OnActionExecuted(ActionExecutedContext filterContext)
         {
             if (ViewData.Model == null)

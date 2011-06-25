@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Reflection;
 using System.Web.Mvc;
-using Castle.Components.Validator;
 using System.Collections.Specialized;
 using System.Web.Routing;
 
@@ -11,40 +10,7 @@ namespace BA.MultiMvc.Framework
 {
     public static class ExtensionMethods
     {
-        public static void AddModelErrors(
-            this ModelStateDictionary modelState,
-            ErrorSummary errorSummary,
-            IDictionary<string,string> dictionary,
-            NameValueCollection data)
-        {
-            if (errorSummary != null && errorSummary.HasError)
-            {
-                foreach (var propertyInError in errorSummary.InvalidProperties)
-                {
-                    foreach (var message in errorSummary.GetErrorsForProperty(propertyInError))
-                    {
-                        try
-                        {
-                            modelState.AddModelError(propertyInError, dictionary[message]);
-                            modelState.SetModelValue(
-                                propertyInError,
-                                new ValueProviderResult(GetValue(data, propertyInError),
-                                                        ""
-                                                        , CultureInfo.CurrentCulture
-                                    )
-                                );
-                        }
-                        catch (KeyNotFoundException ex)
-                        {
-                            throw new KeyNotFoundException(
-                                String.Format(CultureInfo.CurrentCulture ,"The key {0} was not found in Dictionary", message)
-                                , ex
-                                );
-                        }
-                    }
-                }
-            }
-        }
+       
 
         public static string GetValue(this NameValueCollection collection, string index)
         {

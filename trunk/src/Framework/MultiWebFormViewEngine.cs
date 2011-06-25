@@ -1,88 +1,303 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using System.Net;
-using System.Web;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Web.Mvc;
 
 namespace BA.MultiMvc.Framework
 {
-    public class MultiWebFormViewEngine : MultiVirtualPathProviderViewEngine
+    public class MultiWebFormViewEngine : WebFormViewEngine, IViewEngineCallback
     {
-        private IBuildManager _buildManager;
+        /// <summary>
+        /// The <see cref="ViewEngineHelper"/> object that is used to locate
+        /// views for the view engine.
+        /// </summary>
+        private readonly ViewEngineHelper helper;
 
+        /// <summary>
+        /// Initializes a new instance of the MultiWebFormViewEngine class.
+        /// </summary>
         public MultiWebFormViewEngine()
+            : this(null)
         {
-            MasterLocationFormats = new[] {
-                                              "~/Extensions/{2}/Views/{1}/{0}.master",
-                                              "~/Extensions/{2}/Views/Shared/{0}.master",
-                                              "~/Views/{1}/{0}.master",
-                                              "~/Views/Shared/{0}.master"
-                                          };
-
-            ViewLocationFormats = new[] {
-                                            "~/Extensions/{2}/Views/{1}/{0}.aspx",
-                                            "~/Extensions/{2}/Views/{1}/{0}.ascx",
-                                            "~/Extensions/{2}/Views/Shared/{0}.aspx",
-                                            "~/Extensions/{2}/Views/Shared/{0}.ascx",
-                                            "~/Views/{1}/{0}.aspx",
-                                            "~/Views/{1}/{0}.ascx",
-                                            "~/Views/Shared/{0}.aspx",
-                                            "~/Views/Shared/{0}.ascx"
-                                        };
-
-            PartialViewLocationFormats = ViewLocationFormats;
         }
 
-        internal IBuildManager BuildManager
+        /// <summary>
+        /// Initializes a new instance of the MultiWebFormViewEngine class.
+        /// </summary>
+        /// <param name="viewPageActivator">
+        /// The <see cref="IViewPageActivator"/> object to use to locate and
+        /// create view objects for the view engine.
+        /// </param>
+        public MultiWebFormViewEngine(IViewPageActivator viewPageActivator) :
+            base(viewPageActivator)
         {
-            get
-            {
-                if (_buildManager == null)
-                {
-                    _buildManager = new BuildManagerWrapper();
-                }
-                return _buildManager;
-            }
-            set
-            {
-                _buildManager = value;
-            }
-        }
-       
-
-        protected override IView CreatePartialView(ControllerContext controllerContext, string partialPath)
+            var areaFormats = new[]
         {
-            return new WebFormView(partialPath, null);
-        }
-
-        protected override IView CreateView(ControllerContext controllerContext, string viewPath, string masterPath)
+            "~/Extensions/Areas/{3}/{2}/Views/{1}/{0}.master",
+            "~/Extensions/Areas/{3}/{2}/Views/Shared/{0}.master",
+            "~/Areas/{2}/Views/{1}/{0}.master",
+            "~/Areas/{2}/Views/Shared/{0}.master",
+             "~/Extensions/Areas/{3}/{2}/Views/{1}/{0}.aspx",
+            "~/Extensions/Areas/{3}/{2}/Views/Shared/{0}.aspx",
+            "~/Areas/{2}/Views/{1}/{0}.aspx",
+            "~/Areas/{2}/Views/Shared/{0}.aspx",
+             "~/Extensions/Areas/{3}/{2}/Views/{1}/{0}.ascx",
+            "~/Extensions/Areas/{3}/{2}/Views/Shared/{0}.ascx",
+            "~/Areas/{2}/Views/{1}/{0}.ascx",
+            "~/Areas/{2}/Views/Shared/{0}.ascx",
+        };
+            var viewFormats = new[]
         {
-            return new WebFormView(viewPath, masterPath);
+            "~/Extensions/{2}/Views/{1}/{0}.master",
+            "~/Extensions/{2}/Views/Shared/{0}.master",
+            "~/Views/{1}/{0}.master",
+            "~/Views/Shared/{0}.master",
+            "~/Extensions/{2}/Views/{1}/{0}.aspx",
+            "~/Extensions/{2}/Views/Shared/{0}.aspx",
+            "~/Views/{1}/{0}.aspx",
+            "~/Views/Shared/{0}.aspx",
+            "~/Extensions/{2}/Views/{1}/{0}.ascx",
+            "~/Extensions/{2}/Views/Shared/{0}.ascx",
+            "~/Views/{1}/{0}.ascx",
+            "~/Views/Shared/{0}.ascx",
+
+        };
+
+            this.AreaMasterLocationFormats = areaFormats;
+            this.AreaPartialViewLocationFormats = areaFormats;
+            this.AreaViewLocationFormats = areaFormats;
+            this.MasterLocationFormats = viewFormats;
+            this.PartialViewLocationFormats = viewFormats;
+            this.ViewLocationFormats = viewFormats;
+
+            this.helper = new ViewEngineHelper(this);
         }
 
-        [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes",
-            Justification = "Exceptions are interpreted as indicating that the file does not exist.")]
-        protected override bool FileExists(ControllerContext controllerContext, string virtualPath)
+
+        /// <summary>
+        /// Gets the list of location formats for master views belonging to
+        /// areas.
+        /// </summary>
+        /// <value>
+        /// The value of this property is an array of strings containing
+        /// string formats for the locations where master views can be located.
+        /// </value>
+        IEnumerable<string> IViewEngineCallback.AreaMasterLocationFormats
         {
-            try
-            {
-                object viewInstance = BuildManager.CreateInstanceFromVirtualPath(virtualPath, typeof(object));
-
-                return viewInstance != null;
-            }
-            catch (HttpException he)
-            {
-                if (he.GetHttpCode() == (int)HttpStatusCode.NotFound)
-                {
-                    // If BuildManager returns a 404 (Not Found) that means the file did not exist
-                    return false;
-                }
-                // All other error codes imply other errors such as compilation or parsing errors
-                throw;
-            }
-            catch
-            {
-                return false;
-            }
+            get { return this.AreaMasterLocationFormats; }
         }
+
+        /// <summary>
+        /// Gets the list of location formats for partial views belonging to
+        /// areas.
+        /// </summary>
+        /// <value>
+        /// The value of this property is an array of strings containing
+        /// string formats for the locations where partial views can be
+        /// located.
+        /// </value>
+        IEnumerable<string> IViewEngineCallback.AreaPartialViewLocationFormats
+        {
+            get { return this.AreaPartialViewLocationFormats; }
+        }
+
+        /// <summary>
+        /// Gets the list of location formats for area views.
+        /// </summary>
+        /// <value>
+        /// The value of this property is an array of strings containing
+        /// string formats for the locations where views can be located.
+        /// </value>
+        IEnumerable<string> IViewEngineCallback.AreaViewLocationFormats
+        {
+            get { return this.AreaViewLocationFormats; }
+        }
+
+        /// <summary>
+        /// Gets the list of supported file extensions for the view engine.
+        /// </summary>
+        /// <value>
+        /// The value of this property is a collection of strings containing
+        /// the supported file extensions for the view engine.
+        /// </value>
+        IEnumerable<string> IViewEngineCallback.FileExtensions
+        {
+            get { return this.FileExtensions; }
+        }
+
+        /// <summary>
+        /// Gets the list of location formats for master views.
+        /// </summary>
+        /// <value>
+        /// The value of this property is an array of strings containing
+        /// string formats for the locations where master views can be located.
+        /// </value>
+        IEnumerable<string> IViewEngineCallback.MasterLocationFormats
+        {
+            get { return this.MasterLocationFormats; }
+        }
+
+        /// <summary>
+        /// Gets the list of location formats for partial views.
+        /// </summary>
+        /// <value>
+        /// The value of this property is an array of strings containing
+        /// string formats for the locations where partial views can be
+        /// located.
+        /// </value>
+        IEnumerable<string> IViewEngineCallback.PartialViewLocationFormats
+        {
+            get { return this.PartialViewLocationFormats; }
+        }
+
+        /// <summary>
+        /// Gets the view engine object.
+        /// </summary>
+        /// <value>
+        /// The value of this property is an <see cref="IViewEngine"/> object.
+        /// </value>
+        IViewEngine IViewEngineCallback.ViewEngine
+        {
+            get { return this; }
+        }
+
+        /// <summary>
+        /// Gets the list of location formats for non-area views.
+        /// </summary>
+        /// <value>
+        /// The value of this property is an array of strings containing
+        /// string formats for the locations where views can be located.
+        /// </value>
+        IEnumerable<string> IViewEngineCallback.ViewLocationFormats
+        {
+            get { return this.ViewLocationFormats; }
+        }
+
+        /// <summary>
+        /// Searches the view locations to find the requested partial view.
+        /// </summary>
+        /// <param name="controllerContext">
+        /// The <see cref="ControllerContext"/> object for the current request.
+        /// </param>
+        /// <param name="partialViewName">
+        /// The name of the partial view to locate.
+        /// </param>
+        /// <param name="useCache">
+        /// True to use the cache to find the view, or false to forcibly search
+        /// for the partial view's file.
+        /// </param>
+        /// <returns>
+        /// Returns a <see cref="ViewEngineResult"/> object containing the view
+        /// if the view was found, or the list of locations that were searched
+        /// if the view was not found.
+        /// </returns>
+        public override ViewEngineResult FindPartialView(
+            ControllerContext controllerContext,
+            string partialViewName,
+            bool useCache)
+        {
+            return this.helper.FindPartialView(
+                controllerContext,
+                partialViewName,
+                useCache);
+        }
+
+        /// <summary>
+        /// Searches the view locations to find the requested view.
+        /// </summary>
+        /// <param name="controllerContext">
+        /// The <see cref="ControllerContext"/> object for the current request.
+        /// </param>
+        /// <param name="viewName">
+        /// The name of the view.
+        /// </param>
+        /// <param name="masterName">
+        /// The name of the master view.
+        /// </param>
+        /// <param name="useCache">
+        /// If true, use the cache to find the path to the view and master
+        /// view.
+        /// </param>
+        /// <returns>
+        /// Returns a <see cref="ViewEngineResult"/> object that contains the
+        /// view and master view, or the list of locations that were searched
+        /// if the view was not found.
+        /// </returns>
+        public override ViewEngineResult FindView(
+            ControllerContext controllerContext,
+            string viewName,
+            string masterName,
+            bool useCache)
+        {
+            return this.helper.FindView(
+                controllerContext,
+                viewName,
+                masterName,
+                useCache);
+        }
+
+        /// <summary>
+        /// Creates a partial view object.
+        /// </summary>
+        /// <param name="controllerContext">
+        /// The <see cref="ControllerContext"/> object for the current request.
+        /// </param>
+        /// <param name="path">
+        /// The path of the selected partial view.
+        /// </param>
+        /// <returns>
+        /// Returns an <see cref="IView"/> object for the partial view.
+        /// </returns>
+        IView IViewEngineCallback.CreatePartialView(
+            ControllerContext controllerContext,
+            string path)
+        {
+            return this.CreatePartialView(controllerContext, path);
+        }
+
+        /// <summary>
+        /// Creates a view object.
+        /// </summary>
+        /// <param name="controllerContext">
+        /// The <see cref="ControllerContext"/> object for the current request.
+        /// </param>
+        /// <param name="viewPath">
+        /// The path of the view.
+        /// </param>
+        /// <param name="masterPath">
+        /// The path of the master template.
+        /// </param>
+        /// <returns>
+        /// Returns an <see cref="IView"/> object for the view.
+        /// </returns>
+        IView IViewEngineCallback.CreateView(
+            ControllerContext controllerContext,
+            string viewPath,
+            string masterPath)
+        {
+            return this.CreateView(controllerContext, viewPath, masterPath);
+        }
+
+        /// <summary>
+        /// Determines whether the specified file exists.
+        /// </summary>
+        /// <param name="controllerContext">
+        /// The <see cref="ControllerContext"/> object for the current request.
+        /// </param>
+        /// <param name="path">
+        /// The path of the file.
+        /// </param>
+        /// <returns>
+        /// Returns true if the file exists, or false if the file does not
+        /// exist.
+        /// </returns>
+        bool IViewEngineCallback.FileExists(
+            ControllerContext controllerContext,
+            string path)
+        {
+            return this.FileExists(controllerContext, path);
+        }
+    
     }
 }

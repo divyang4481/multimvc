@@ -9,10 +9,11 @@ C:\Dev\MultiMVC\multimvc\src\Sample\BA.MultiTenantMVC.Sample\bin\BA.MultiMVC.Fra
 C:\Dev\MultiMVC\multimvc\src\Sample\BA.MultiTenantMVC.Sample\bin\BA.MultiMVC.Framework.pdb
 C:\Dev\multimvc\src\Sample\BA.MultiTenantMVC.Sample\bin\BA.MultiMVC.Framework.dll
 C:\Dev\multimvc\src\Sample\BA.MultiTenantMVC.Sample\bin\StructureMap.dll
-C:\Dev\multimvc\src\Sample\BA.MultiTenantMVC.Sample\bin\Castle.Components.Validator.dll
 C:\Dev\multimvc\src\Sample\BA.MultiTenantMVC.Sample\bin\BA.MultiMVC.Framework.pdb
 C:\Dev\multimvc\src\Sample\BA.MultiTenantMVC.Sample\obj\Debug\ResolveAssemblyReference.cache
 C:\Dev\multimvc\src\Sample\BA.MultiTenantMVC.Sample\bin\BA.MultiMvc.Sample.dll
 C:\Dev\multimvc\src\Sample\BA.MultiTenantMVC.Sample\bin\BA.MultiMvc.Sample.pdb
 C:\Dev\multimvc\src\Sample\BA.MultiTenantMVC.Sample\obj\Debug\BA.MultiMvc.Sample.dll
 C:\Dev\multimvc\src\Sample\BA.MultiTenantMVC.Sample\obj\Debug\BA.MultiMvc.Sample.pdb
+C:\Dev\multimvc\src\Sample\BA.MultiTenantMVC.Sample\bin\StructureMap.pdb
+C:\Dev\multimvc\src\Sample\BA.MultiTenantMVC.Sample\bin\StructureMap.xml

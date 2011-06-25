@@ -51,13 +51,13 @@ namespace BA.MultiMvc.Framework
                 return null;
 
             string controllerName = tenantKey + controllerType.Name.Replace("Controller", "");
-
+            
             BaseController controller;
             try
             {
                 controller = ObjectFactory.GetNamedInstance(typeof(BaseController), controllerName) as BaseController;
             }
-            catch (StructureMapException)
+            catch (StructureMapException ex)
             {
                 return null;
             }

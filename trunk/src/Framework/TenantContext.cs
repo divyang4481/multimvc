@@ -61,7 +61,7 @@ namespace BA.MultiMvc.Framework
         {
             var factory = new TenantFactory(this);
             var resourceProvider = factory.Create<IResourceProviderService>();
-            return resourceProvider.LoadResources();
+            return (resourceProvider !=null)? resourceProvider.LoadResources():null;
         }
 
        
