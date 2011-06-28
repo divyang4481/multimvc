@@ -109,9 +109,7 @@
     <Compile Include="HtmlHelperExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StructureMapControllerFactory.cs" />
-    <Compile Include="IRessourceProviderService.cs" />
-    <Compile Include="IRessourceRepository.cs" />
-    <Compile Include="RessourceProviderService.cs" />
+    <Compile Include="IRessourceProvider.cs" />
     <Compile Include="BuildManagerWrapper.cs" />
     <Compile Include="ViewEngineHelper.cs" />
     <Compile Include="MultiRazoViewEngine.cs" />

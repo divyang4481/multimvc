@@ -16,18 +16,7 @@ namespace BA.MultiMvc.Framework
 
         public string TenantKey { get; set; }
         public string Language { get; set; }
-
-        private IDictionary<string, string> _resources;
-        public IDictionary<string, string> Resources
-        {
-            get
-            {
-                if (_resources == null)
-                    _resources = LoadResources();
-                return _resources;
-            }
-        }
-
+        
         public string ConnectionString
         {
             get
@@ -55,16 +44,7 @@ namespace BA.MultiMvc.Framework
 
                 throw new KeyNotFoundException("No connectring key found in config file!");
             }
-        }
-
-        protected virtual IDictionary<string,string> LoadResources()
-        {
-            var factory = new TenantFactory(this);
-            var resourceProvider = factory.Create<IResourceProviderService>();
-            return (resourceProvider !=null)? resourceProvider.LoadResources():null;
-        }
-
-       
+        }      
       
     }
 }

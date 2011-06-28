@@ -86,7 +86,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Models\Infrastructure\RessourceRepository.cs" />
+    <Compile Include="Models\Infrastructure\ResourceProvider.cs" />
     <Compile Include="Models\Infrastructure\UserRepository.cs" />
     <Compile Include="Models\ViewModel\HomeVM.cs" />
     <Compile Include="Views\Home\IndexView.cs">

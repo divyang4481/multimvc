@@ -5,10 +5,10 @@ namespace BA.MultiMvc.Framework
     public class BaseViewModel
     {
 
-        public BaseViewModel(TenantContext context)
+        public BaseViewModel(TenantContext context, IDictionary<string,string> resources)
         {
             _context = context;
-            _resources = context.Resources;
+            this._resources = resources;
         }
 
         private TenantContext _context;

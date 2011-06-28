@@ -10,7 +10,7 @@ namespace BA.MultiMvc.Sample.Extensions.AdventureWorks.ViewModel
     public class IndexViewModel:HomeVM
     {
         public IndexViewModel(TenantContext context, IDictionary<string,string> resources)
-            :base (context){}
+            :base (context,resources){}
 
         public string UserName { get { return "Geoffrey"; } }
     }

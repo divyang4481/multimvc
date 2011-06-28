@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Web.Compilation;
 using System.Web.Mvc;
 
 namespace BA.MultiMvc.Framework
@@ -17,14 +18,22 @@ namespace BA.MultiMvc.Framework
         
         public IDictionary<string, string> Resources
         {
-            get { return _resources; }
+            get
+            {
+                if (_resources == null)
+                {
+                    var factory = new TenantFactory(this.Context);
+                    var resourceProvider = factory.Create<IResourceProvider>();
+                    _resources = (resourceProvider != null) ? resourceProvider.GetResources() : null;
+                }
+                return _resources;
+            }
         }
         #endregion Properties
 
         #region Methods
         internal void Init(TenantContext context)
         {
-            _resources =context.Resources;
             _context = context;
         }
 
@@ -32,7 +41,7 @@ namespace BA.MultiMvc.Framework
         protected override void OnActionExecuted(ActionExecutedContext filterContext)
         {
             if (ViewData.Model == null)
-                ViewData.Model = new BaseViewModel(Context);
+                ViewData.Model = new BaseViewModel(Context, Resources);
 
             base.OnActionExecuted(filterContext);
         }

@@ -80,21 +80,21 @@ namespace BA.MultiMvc.Framework.UnitTests.Core
         }
 
         [Test]
-        public void CreateRessourceProviderService_ForDefault_ContextIsNotNullOnCacheService()
+        public void CreateRessourceProviderService_ForDefault_ContextIsNotNullOnResourceProvider()
         {
             //Arrenge
             var parametrizedTest = CreateTenantFactoryTest("Default");
             //Act & Assert
-            parametrizedTest.CreateServiceAssertContextIsNotNullOnServiceProperties(typeof(IResourceProviderService));
+            parametrizedTest.CreateServiceAssertContextIsNotNullOnServiceProperties(typeof(IResourceProvider));
         }
 
         [Test]
-        public void CreateRessourceProviderService_ForContoso_ContextIsNotNullOnCacheService()
+        public void CreateRessourceProviderService_ForContoso_ContextIsNotNullResourceProvider()
         {
             //Arrenge
             var parametrizedTest = CreateTenantFactoryTest("Contoso");
             //Act & Assert
-            parametrizedTest.CreateServiceAssertContextIsNotNullOnServiceProperties(typeof(IResourceProviderService));
+            parametrizedTest.CreateServiceAssertContextIsNotNullOnServiceProperties(typeof(IResourceProvider));
         }
             
 

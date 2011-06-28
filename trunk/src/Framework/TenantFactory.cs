@@ -44,7 +44,7 @@ namespace BA.MultiMvc.Framework
                 {
                     modelInstance = (ITenantModel)ObjectFactory.GetInstance(tenantModelType);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
 
                     return null;

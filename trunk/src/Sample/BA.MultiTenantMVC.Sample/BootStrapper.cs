@@ -39,12 +39,8 @@ namespace BA.MultiMvc.Sample
                 .TheDefaultIsConcreteType<AccountMembershipService>();
             ForRequestedType<IUserRepository>()
                 .TheDefaultIsConcreteType<UserRepository>();
-            ForRequestedType<IResourceProviderService>()
-                .TheDefaultIsConcreteType<ResourceProviderService>();
-            ForRequestedType<IResourceRepository>()
-                .TheDefaultIsConcreteType<RessourceRepository>();
-            ForRequestedType<ICacheService>()
-                .TheDefaultIsConcreteType<DefaultCacheService>();
+            ForRequestedType<IResourceProvider>().TheDefaultIsConcreteType<ResourceProvider>();
+            ForRequestedType<ICacheService>().TheDefaultIsConcreteType<DefaultCacheService>();
             ForRequestedType<IFormsAuthenticationService>()
                 .TheDefaultIsConcreteType<FormsAuthenticationService>();
 

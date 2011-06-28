@@ -87,7 +87,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stubs\ExtensionFactoryForTest.cs" />
     <Compile Include="ParamatrizedTests\TenantFactoryTest.cs" />
-    <Compile Include="Stubs\RessourceRepositoryStub.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Framework\BA.MultiMVC.Framework.csproj">

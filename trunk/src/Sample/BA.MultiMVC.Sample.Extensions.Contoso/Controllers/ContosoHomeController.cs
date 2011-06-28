@@ -10,10 +10,12 @@ namespace BA.MultiMvc.Sample.Extensions.Contoso.Controllers
         public override ActionResult Index()
         {
 
-            var vm = new HomeVM(Context);
+            var vm = new HomeVM(Context,Resources);
             vm.Message = "Welcome to ASP.NET Mvc on Contoso site!";
 
+// ReSharper disable Asp.NotResolved
             return View(vm);
+// ReSharper restore Asp.NotResolved
         }
     }
 }

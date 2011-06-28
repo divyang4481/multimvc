@@ -34,10 +34,8 @@ namespace BA.MultiMvc.Framework.IntegrationTests
                 .TheDefaultIsConcreteType<AccountMembershipService>();
             ForRequestedType<IUserRepository>()
                 .TheDefaultIsConcreteType<UserRepository>();
-            ForRequestedType<IResourceProviderService>()
-                .TheDefaultIsConcreteType<ResourceProviderService>();
-            ForRequestedType<IResourceRepository>()
-                .TheDefaultIsConcreteType<RessourceRepositoryStub>();
+            ForRequestedType<IResourceProvider>()
+                .TheDefaultIsConcreteType<ResourceProvider>();
             ForRequestedType<ICacheService>()
                 .TheDefaultIsConcreteType<DefaultCacheService>();
 
