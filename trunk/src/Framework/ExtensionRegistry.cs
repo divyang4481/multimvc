@@ -1,4 +1,6 @@
-﻿using StructureMap.Configuration.DSL;
+﻿using System.Web.Mvc;
+using BackToOwner.Web.Setup;
+using StructureMap.Configuration.DSL;
 
 namespace BA.MultiMvc.Framework
 {
@@ -11,12 +13,20 @@ namespace BA.MultiMvc.Framework
             Scan(o =>
                      {
                          o.AssembliesFromPath(path);
-                         o.AddAllTypesOf<BaseController>().NameBy(type => type.Name.Replace("Controller", ""));
+                         o.AddAllTypesOf<Controller>().NameBy(type => type.Name.Replace("Controller", ""));
                          o.AddAllTypesOf<ITenantModel>().NameBy(type => type.Name);
                      });
             
         }
 
+        protected void ScanResourceCreation()
+        {
+            Scan(o=>
+                     {
+                         o.AssembliesFromApplicationBaseDirectory();
+                         o.AddAllTypesOf<NHResourceCreation>().NameBy(type => type.Name.Replace("ResourceCreation", ""));
+                     });
+        }
         #endregion Methods
     }
 }

@@ -1,71 +1,48 @@
 ﻿using System;
 using System.Web.Mvc;
 using StructureMap;
-using System.Web.Routing;
 
 
 namespace BA.MultiMvc.Framework
 {
+    /// <summary>
+    /// Controller Factory that should be registred to enable multi tenancy controllers.
+    /// It get controller instances for a specific Tenant.  If it don't find one it returns the default Controller.
+    /// </summary>
     public class ExtensionControllerFactory : StructureMapControllerFactory
     {
         #region Methods
-        
-        protected virtual TenantContext GetTenantContext(RequestContext request)
-        {
-            var tenantKey = request.RouteData.GetTenantKey();
-            var language = request.RouteData.GetLanguage();
-            return  new TenantContext(tenantKey, language);
-        }
 
         protected override IController GetControllerInstance(System.Web.Routing.RequestContext requestContext, Type controllerType)
         {
-            if (requestContext != null)
-            {
-                var tenantContext = GetTenantContext(requestContext);
-                return GetControllerInstance(requestContext,tenantContext, controllerType);
-
-            }
-            return null;
-        }
-
-        protected virtual IController GetControllerInstance(System.Web.Routing.RequestContext requestContext, TenantContext context, Type controllerType)
-        {
-            if (controllerType==null)
+            if (controllerType==null||requestContext==null)
                 return null;
 
-            var controller = CreateControllerExtension(context.TenantKey, controllerType)
-                             ?? base.GetControllerInstance(requestContext , controllerType) as BaseController;
+            var controller = CreateControllerExtension(TenantContext.TenantKey, controllerType)
+                             ?? base.GetControllerInstance(requestContext , controllerType) as Controller;
 
-            if (controller != null)
-            {
-                controller.Init(context);
-                return controller;
-            }
-
-            return null;
+            return controller;
         }
      
-        private static BaseController CreateControllerExtension(string tenantKey, Type controllerType)
+        private static Controller CreateControllerExtension(string tenantKey, Type controllerType)
         {
             if (controllerType == null)
                 return null;
 
             string controllerName = tenantKey + controllerType.Name.Replace("Controller", "");
             
-            BaseController controller;
+            Controller controller;
             try
             {
-                controller = ObjectFactory.GetNamedInstance(typeof(BaseController), controllerName) as BaseController;
+                controller = ObjectFactory.GetNamedInstance(typeof(Controller), controllerName) as Controller;
             }
-            catch (StructureMapException ex)
+            catch (StructureMapException)
             {
                 return null;
             }
 
             return controller;
         }
-
-       
 
         #endregion Methods
     }

@@ -4,19 +4,9 @@ using StructureMap.TypeRules;
 
 namespace BA.MultiMvc.Framework
 {
-    public  class TenantFactory
+    public static class TenantFactory
     {
-        public TenantFactory(TenantContext context)
-        {
-            Context  = context;
-        }
-
-        public TenantContext Context
-        {
-            get;
-            set;
-        }
-
+       
         /// <summary>
         /// Create a new Service.
         /// The service can contain Repositories or other Services.  
@@ -25,12 +15,12 @@ namespace BA.MultiMvc.Framework
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public T Create<T>() where T : ITenantModel
+        public static T Create<T>() where T : ITenantModel
         {
             return (T)Create(typeof(T));
         }
 
-        public ITenantModel Create(Type tenantModelType)
+        public static ITenantModel Create(Type tenantModelType)
         {
             ITenantModel modelInstance;
             string tenantModelFullName = GetTenantModelFullName(tenantModelType);
@@ -44,28 +34,25 @@ namespace BA.MultiMvc.Framework
                 {
                     modelInstance = (ITenantModel)ObjectFactory.GetInstance(tenantModelType);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-
                     return null;
                 }
                 
             }
             
-            modelInstance = ConfigurationHelper.InjectTenantModelNamedInstance(Context, modelInstance);
-
-            ConfigurationHelper.SetContextOnObjectTree(modelInstance,Context);
+            modelInstance = ConfigurationHelper.InjectTenantModelNamedInstance(modelInstance);
 
             return modelInstance;
         }
 
-        private string GetTenantModelFullName(Type tenantModelType)
+        private static string GetTenantModelFullName(Type tenantModelType)
         {
 
             if (tenantModelType.GetName().StartsWith("I",StringComparison.Ordinal))
-                return Context.TenantKey + tenantModelType.GetName().Remove(0, 1);
+                return TenantContext.TenantKey + tenantModelType.GetName().Remove(0, 1);
 
-            return Context.TenantKey + tenantModelType.GetName();
+            return TenantContext.TenantKey + tenantModelType.GetName();
         }
     }
 }

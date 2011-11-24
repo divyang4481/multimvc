@@ -4,47 +4,85 @@ using System.Configuration;
 
 namespace BA.MultiMvc.Framework
 {
-    public class TenantContext
+    /// <summary>
+    /// Provide access to tenant context info
+    /// </summary>
+    public static class TenantContext
     {
-        private string _connectionString;
+        private static ITenantContextProvider _provider;
 
-        public TenantContext(string tenantKey, string language)
+        /// <summary>
+        /// Need to be called once - generally in the Application start to register the proper TenantContextProvider
+        /// </summary>
+        /// <param name="provider"></param>
+        public static void SetTenantContextProvider(ITenantContextProvider provider)
         {
-            TenantKey = tenantKey;
-            Language = language;
+            _provider = provider;
         }
 
-        public string TenantKey { get; set; }
-        public string Language { get; set; }
-        
-        public string ConnectionString
+        /// <summary>
+        /// The Tenant named.  
+        /// </summary>
+        public static string TenantKey
         {
             get
             {
-                if (_connectionString == null)
-                    _connectionString = BuildConnectionString();
-                return _connectionString;
-            }
-            set
-            {
-                _connectionString = value;
+                string tenantKey = _provider.TenantKey;
+                return tenantKey.ToCamelCase();
             }
         }
 
-        protected virtual string BuildConnectionString()
+        /// <summary>
+        /// The current language
+        /// </summary>
+        public static string Language
         {
-            try
+            get { return _provider.Language.ToLower(); }
+        }
+        
+        /// <summary>
+        /// The DB name of the tenant.
+        /// </summary>
+        public static string DbName
+        {
+            get
             {
-                return ConfigurationManager.ConnectionStrings[TenantKey + "Connection"].ConnectionString;
+                var conn = ConfigurationManager.ConnectionStrings["db" + TenantContext.TenantKey].ConnectionString;
+                int beginIndex = conn.IndexOf("Database=") + 9;
+                int endIndex = conn.IndexOf(";", beginIndex);
+                return conn.Substring(beginIndex, endIndex - beginIndex);
             }
-            catch (NullReferenceException)
-            {
-                if (ConfigurationManager.ConnectionStrings.Count >0)
-                    return ConfigurationManager.ConnectionStrings[0].ConnectionString;
+        }
 
-                throw new KeyNotFoundException("No connectring key found in config file!");
+        /// <summary>
+        /// The connectionstring of the tenant.
+        /// </summary>
+        public static string ConnectionString
+        {
+            get
+            {
+                try
+                {
+                    return ConfigurationManager.ConnectionStrings["Db" + TenantContext.TenantKey].ConnectionString;
+                }
+                catch (NullReferenceException)
+                {
+                    if (ConfigurationManager.ConnectionStrings.Count >0)
+                        return ConfigurationManager.ConnectionStrings[0].ConnectionString;
+
+                    throw new KeyNotFoundException("No connectring key found in config file!");
+                }
             }
-        }      
+            
+        }
+
+        
       
+    }
+
+    public interface ITenantContextProvider
+    {
+        string TenantKey { get; }
+        string Language { get; }
     }
 }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace BA.MultiMvc.Framework
@@ -9,10 +6,10 @@ namespace BA.MultiMvc.Framework
     public class MultiWebFormViewEngine : WebFormViewEngine, IViewEngineCallback
     {
         /// <summary>
-        /// The <see cref="ViewEngineHelper"/> object that is used to locate
-        /// views for the view engine.
+        /// ViewEngine for Razor views.  Support MultiTenancy as it first look for a view into: ~/Extensions/[TenantKey]/Views/[Controller]/[ViewName].cshtml
+        /// If it does not find the view in one of the Tenant folder it look in the default MVC location.
         /// </summary>
-        private readonly ViewEngineHelper helper;
+        private readonly ViewEngineHelper _helper;
 
         /// <summary>
         /// Initializes a new instance of the MultiWebFormViewEngine class.
@@ -45,7 +42,7 @@ namespace BA.MultiMvc.Framework
              "~/Extensions/Areas/{3}/{2}/Views/{1}/{0}.ascx",
             "~/Extensions/Areas/{3}/{2}/Views/Shared/{0}.ascx",
             "~/Areas/{2}/Views/{1}/{0}.ascx",
-            "~/Areas/{2}/Views/Shared/{0}.ascx",
+            "~/Areas/{2}/Views/Shared/{0}.ascx"
         };
             var viewFormats = new[]
         {
@@ -60,8 +57,7 @@ namespace BA.MultiMvc.Framework
             "~/Extensions/{2}/Views/{1}/{0}.ascx",
             "~/Extensions/{2}/Views/Shared/{0}.ascx",
             "~/Views/{1}/{0}.ascx",
-            "~/Views/Shared/{0}.ascx",
-
+            "~/Views/Shared/{0}.ascx"
         };
 
             this.AreaMasterLocationFormats = areaFormats;
@@ -71,7 +67,7 @@ namespace BA.MultiMvc.Framework
             this.PartialViewLocationFormats = viewFormats;
             this.ViewLocationFormats = viewFormats;
 
-            this.helper = new ViewEngineHelper(this);
+            this._helper = new ViewEngineHelper(this);
         }
 
 
@@ -197,7 +193,7 @@ namespace BA.MultiMvc.Framework
             string partialViewName,
             bool useCache)
         {
-            return this.helper.FindPartialView(
+            return this._helper.FindPartialView(
                 controllerContext,
                 partialViewName,
                 useCache);
@@ -230,7 +226,7 @@ namespace BA.MultiMvc.Framework
             string masterName,
             bool useCache)
         {
-            return this.helper.FindView(
+            return this._helper.FindView(
                 controllerContext,
                 viewName,
                 masterName,

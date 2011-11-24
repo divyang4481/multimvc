@@ -3,6 +3,10 @@ using System.Web;
 
 namespace BA.MultiMvc.Framework
 {
+    /// <summary>
+    /// Caches objects per Tenant and Language.
+    /// Used primarly by the Resource provider to cache the Dictionary containing the site resources.<see cref="TenantResources"/>
+    /// </summary>
     public class DefaultCacheService:ICacheService 
     {
         public DefaultCacheService()
@@ -33,17 +37,11 @@ namespace BA.MultiMvc.Framework
         {
             get
             {
-                return Context.TenantKey + "_" + Context.Language; 
+                return TenantContext.TenantKey + "_" + TenantContext.Language; 
             }
         }
 
         public int CacheTimeSeconds
-        {
-            get;
-            set;
-        }
-
-        public TenantContext Context
         {
             get;
             set;

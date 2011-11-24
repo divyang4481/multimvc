@@ -4,6 +4,9 @@ using StructureMap;
 
 namespace BA.MultiMvc.Framework
 {
+    /// <summary>
+    /// ControllerFactory that retrieve controllers from the StructureMap repository.
+    /// </summary>
     public class StructureMapControllerFactory : DefaultControllerFactory
     {
         #region Methods

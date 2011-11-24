@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.Routing;
 using System.Web.Routing;
 
 namespace BA.MultiMvc.Framework
@@ -27,7 +24,7 @@ namespace BA.MultiMvc.Framework
         /// The callback object that the helper can use to obtain information
         /// from the view engine.
         /// </summary>
-        private readonly IViewEngineCallback callback;
+        private readonly IViewEngineCallback _callback;
 
         /// <summary>
         /// Initializes a new instance of the ViewEngineHelper class.
@@ -37,7 +34,7 @@ namespace BA.MultiMvc.Framework
         /// </param>
         public ViewEngineHelper(IViewEngineCallback callback)
         {
-            this.callback = callback;
+            this._callback = callback;
         }
 
         /// <summary>
@@ -80,8 +77,8 @@ namespace BA.MultiMvc.Framework
             string[] searchedLocations;
             var path = this.GetPath(
                 controllerContext,
-                this.callback.PartialViewLocationFormats,
-                this.callback.AreaPartialViewLocationFormats,
+                this._callback.PartialViewLocationFormats,
+                this._callback.AreaPartialViewLocationFormats,
                 partialViewName,
                 controllerName,
                 "Partial",
@@ -92,10 +89,10 @@ namespace BA.MultiMvc.Framework
                 return new ViewEngineResult(searchedLocations);
             }
 
-            var partialView = this.callback.CreatePartialView(
+            var partialView = this._callback.CreatePartialView(
                 controllerContext,
                 path);
-            return new ViewEngineResult(partialView, this.callback.ViewEngine);
+            return new ViewEngineResult(partialView, this._callback.ViewEngine);
         }
 
         /// <summary>
@@ -144,8 +141,8 @@ namespace BA.MultiMvc.Framework
                 controllerContext.RouteData.GetRequiredString("controller");
             var viewPath = this.GetPath(
                 controllerContext,
-                this.callback.ViewLocationFormats,
-                this.callback.AreaViewLocationFormats,
+                this._callback.ViewLocationFormats,
+                this._callback.AreaViewLocationFormats,
                 viewName,
                 controllerName,
                 "View",
@@ -153,8 +150,8 @@ namespace BA.MultiMvc.Framework
                 out viewSearchedLocations);
             var masterPath = this.GetPath(
                 controllerContext,
-                this.callback.MasterLocationFormats,
-                this.callback.AreaMasterLocationFormats,
+                this._callback.MasterLocationFormats,
+                this._callback.AreaMasterLocationFormats,
                 masterName,
                 controllerName,
                 "Master",
@@ -164,11 +161,11 @@ namespace BA.MultiMvc.Framework
                 string.IsNullOrEmpty(masterName);
             if (!string.IsNullOrEmpty(viewPath) && hasMaster)
             {
-                var view = this.callback.CreateView(
+                var view = this._callback.CreateView(
                     controllerContext,
                     viewPath,
                     masterPath);
-                return new ViewEngineResult(view, this.callback.ViewEngine);
+                return new ViewEngineResult(view, this._callback.ViewEngine);
             }
 
             var searchedLocations =
@@ -329,14 +326,14 @@ namespace BA.MultiMvc.Framework
         /// </returns>
         private bool FilePathIsSupported(string virtualPath)
         {
-            if (this.callback.FileExtensions == null)
+            if (this._callback.FileExtensions == null)
             {
                 return true;
             }
 
             var extension = VirtualPathUtility.GetExtension(virtualPath)
                 .TrimStart(new[] { '.' });
-            return this.callback.FileExtensions.Contains(
+            return this._callback.FileExtensions.Contains(
                 extension,
                 StringComparer.OrdinalIgnoreCase);
         }
@@ -412,7 +409,7 @@ namespace BA.MultiMvc.Framework
                 );
             if (useCache)
             {
-                return this.callback.ViewLocationCache.GetViewLocation(
+                return this._callback.ViewLocationCache.GetViewLocation(
                     controllerContext.HttpContext,
                     cacheKey);
             }
@@ -492,11 +489,11 @@ namespace BA.MultiMvc.Framework
                     controllerName,
                     areaName,
                     tenantKey);
-                if (this.callback.FileExists(controllerContext, path))
+                if (this._callback.FileExists(controllerContext, path))
                 {
                     searchedLocations = EmptyLocations;
                     virtualPath = path;
-                    this.callback.ViewLocationCache.InsertViewLocation(
+                    this._callback.ViewLocationCache.InsertViewLocation(
                         controllerContext.HttpContext,
                         cacheKey,
                         virtualPath);
@@ -537,13 +534,13 @@ namespace BA.MultiMvc.Framework
         {
             var virtualPath = name;
             if (!this.FilePathIsSupported(name) ||
-                !this.callback.FileExists(controllerContext, name))
+                !this._callback.FileExists(controllerContext, name))
             {
                 virtualPath = string.Empty;
                 searchedLocations = new[] { name };
             }
 
-            this.callback.ViewLocationCache.InsertViewLocation(
+            this._callback.ViewLocationCache.InsertViewLocation(
                 controllerContext.HttpContext,
                 cacheKey,
                 virtualPath);

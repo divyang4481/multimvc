@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Reflection;
-using System.Web.Mvc;
 using System.Collections.Specialized;
 using System.Web.Routing;
 
 namespace BA.MultiMvc.Framework
 {
+    /// <summary>
+    /// Generic helper methods  
+    /// </summary>
     public static class ExtensionMethods
     {
-       
-
         public static string GetValue(this NameValueCollection collection, string index)
         {
             var originalValue = "";
@@ -31,18 +30,19 @@ namespace BA.MultiMvc.Framework
         public static string GetTenantKey(this RouteData routeData)
         {
             const string defaultValue = "Default";
-            return routeData.Values.ContainsKey("tenantKey") ? routeData.Values["tenantKey"].ToString().ToCamelCased() : defaultValue;
+            return routeData.Values.ContainsKey("tenantKey") ? routeData.Values["tenantKey"].ToString().ToCamelCase() : defaultValue;
         }
 
-        public static string ToCamelCased(this string value)
+        public static string ToCamelCase(this string value)
         {
+            if (String.IsNullOrEmpty(value))
+                return value;
+
             var camelCased = value.ToLowerInvariant();
             camelCased = camelCased.Remove(0, 1);
             camelCased = value.ToUpperInvariant().Substring(0, 1) + camelCased;
             return camelCased;
         }
-
-        
 
         public static IList<PropertyInfo> FindProperties(this object subject, Type filter)
         {
