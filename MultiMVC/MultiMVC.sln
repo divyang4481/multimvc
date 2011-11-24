@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BA.MultiMVC.Framework", "..\Framework\BA.MultiMVC.Framework.csproj", "{A26E06A2-3468-4DD0-9E7C-7155C7807E84}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{B535BF7D-A18F-44EA-9EE3-27A12DB153A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{F84AD289-37C2-4D26-9865-D6A4AEFE78C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{57AD98F5-704C-4723-9471-B7E9104272B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,5 +22,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A26E06A2-3468-4DD0-9E7C-7155C7807E84} = {B535BF7D-A18F-44EA-9EE3-27A12DB153A1}
 	EndGlobalSection
 EndGlobal
