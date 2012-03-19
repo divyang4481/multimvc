@@ -11,13 +11,17 @@ namespace BA.MultiMvc.Framework
     {
         public DefaultCacheService()
         {
-            CacheTimeSeconds = 60;
+            CacheTimeSeconds = 120;
         }
 
         public object GetObject(string key)
         {
-
             return HttpRuntime.Cache[ConstructFullKeyName(key)];
+        }
+
+        public void Clear(string key)
+        {
+            HttpRuntime.Cache.Remove(ConstructFullKeyName(key));
         }
 
         public void Add(string key, object value)

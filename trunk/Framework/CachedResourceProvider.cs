@@ -28,6 +28,11 @@ namespace BA.MultiMvc.Framework
             return (IDictionary<string, string>)CacheService.GetObject("resources");
         }
 
+        public void ClearCache()
+        {
+            CacheService.Clear("resources");
+        }
+
         protected abstract IDictionary<string, string> GetResourcesFromDB(string language);
     }
 }
