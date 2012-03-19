@@ -11,7 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{57AD98F5-7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BA.MultiWebApp", "..\Sample\BA.MultiWebApp\BA.MultiWebApp.csproj", "{0ED65BD1-B482-4421-B2CD-0D6861E9A1D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BA.MultiMvc.Test", "Test\BA.MultiMvc.Test.csproj", "{421B2FA5-79B1-429E-835A-74DAC1C76E83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0B99D352-F11E-4A83-B8CB-28CAED30A66E}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		MultiMVC.vsmdi = MultiMVC.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = MultiMVC.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -25,6 +37,10 @@ Global
 		{0ED65BD1-B482-4421-B2CD-0D6861E9A1D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ED65BD1-B482-4421-B2CD-0D6861E9A1D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ED65BD1-B482-4421-B2CD-0D6861E9A1D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{421B2FA5-79B1-429E-835A-74DAC1C76E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{421B2FA5-79B1-429E-835A-74DAC1C76E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{421B2FA5-79B1-429E-835A-74DAC1C76E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{421B2FA5-79B1-429E-835A-74DAC1C76E83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A26E06A2-3468-4DD0-9E7C-7155C7807E84} = {B535BF7D-A18F-44EA-9EE3-27A12DB153A1}
 		{0ED65BD1-B482-4421-B2CD-0D6861E9A1D1} = {F84AD289-37C2-4D26-9865-D6A4AEFE78C6}
+		{421B2FA5-79B1-429E-835A-74DAC1C76E83} = {57AD98F5-704C-4723-9471-B7E9104272B4}
+		{0B99D352-F11E-4A83-B8CB-28CAED30A66E} = {57AD98F5-704C-4723-9471-B7E9104272B4}
 	EndGlobalSection
 EndGlobal
