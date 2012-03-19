@@ -23,6 +23,7 @@ namespace BA.MultiMvc.Framework
             return subject;
         }
         
+		
         private static bool IsATenantModelProperty(PropertyInfo property)
         {
             return typeof (ITenantModel).IsAssignableFrom(property.PropertyType);
