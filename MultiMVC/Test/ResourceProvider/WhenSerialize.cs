@@ -9,30 +9,14 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace BA.MultiMvc.Test
 {
     [TestClass]
-    public class WhenGetData:GivenWhenThen
+    public class WhenSerialize:GivenResourcesToSerialize
     {
-        protected List<RessourceDictionaryItem> RessourcesToSerialize;
-        protected string Path = "RessourceDictionary.xml";
-
-        public override void Given()
-        {
-           base.Given();
-           RessourcesToSerialize = new List<RessourceDictionaryItem>();
-           RessourcesToSerialize.Add(new RessourceDictionaryItem
-                                         {En = "Hello world", Fr = "Bonjour le monde", Nl = "Dag de wereld"}
-                                         );
-           RessourcesToSerialize.Add(new RessourceDictionaryItem {En = "Other Hello world!"});
-          
-            
-            
-        }
-
         public override void When()
         {
             XmlSerializer serializer = new XmlSerializer(typeof(List<RessourceDictionaryItem>));
             using (FileStream stream = new FileStream(Path, FileMode.OpenOrCreate))
             {
-                serializer.Serialize(stream, RessourcesToSerialize);
+                serializer.Serialize(stream, ResourcesToSerialize);
                 stream.Close();
             };
         }
