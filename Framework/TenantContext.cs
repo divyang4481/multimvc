@@ -70,7 +70,8 @@ namespace BA.MultiMvc.Framework
                     if (ConfigurationManager.ConnectionStrings.Count >0)
                         return ConfigurationManager.ConnectionStrings[0].ConnectionString;
 
-                    throw new KeyNotFoundException("No connectring key found in config file!");
+                    //throw new KeyNotFoundException("No connectring key found in config file!");
+                    return null;
                 }
             }
             

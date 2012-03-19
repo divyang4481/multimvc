@@ -13,6 +13,7 @@ namespace BA.MultiMvc.Framework
     {
         #region Methods
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
         protected override IController GetControllerInstance(System.Web.Routing.RequestContext requestContext, Type controllerType)
         {
             if (controllerType==null||requestContext==null)

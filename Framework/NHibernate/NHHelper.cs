@@ -33,7 +33,7 @@ namespace BA.MultiMVC.Framework.NHibernate
             {
                 try
                 {
-                    _sessionFactoryCache.Add(tenantKey,BuildSessionFactory(tenantKey));
+                    _sessionFactoryCache.Add(tenantKey, BuildSessionFactory(tenantKey, "BackToOwner.Golf.Web"));
                 }
                 catch (ArgumentException)
                 {}
@@ -42,9 +42,11 @@ namespace BA.MultiMVC.Framework.NHibernate
             return _sessionFactoryCache[tenantKey];
         }
 
-        public static Configuration GetNhConfig(string tenantKey)
+      
+
+        public static Configuration GetNhConfig(string tenantKey, string assemblyName)
         {
-            
+
             return new Configuration()
             .Proxy(proxy =>
                     proxy.ProxyFactoryFactory<ProxyFactoryFactory>())
@@ -54,10 +56,7 @@ namespace BA.MultiMVC.Framework.NHibernate
                 db.ConnectionStringName = "db" + tenantKey;
                 db.BatchSize = 100;
             })
-            .AddAssembly(
-                //String.Compare(tenantKey,"default",true)==0 ?"BackToOwner.Web":"BackToOwner.Web.Extensions."+ tenantKey.ToCamelCase()
-                 "BackToOwner.Golf.Web"
-            ) 
+            .AddAssembly(assemblyName)
             .AddProperties(
                 new Dictionary<string, string>()
                     {
@@ -65,14 +64,13 @@ namespace BA.MultiMVC.Framework.NHibernate
                         {"current_session_context_class", IsWeb ? "web":"thread_static"}
                     }
             );
-          
-            
-        }
 
+
+        }
        
-        public static void CreateShemaExportFile(string outputfileName, string tenantKey)
+        public static void CreateShemaExportFile(string outputfileName, string tenantKey, string assemblyName)
         {
-            var nhConfig = NHHelper.GetNhConfig(tenantKey);
+            var nhConfig = NHHelper.GetNhConfig(tenantKey,assemblyName);
 
             var schemaExport = new SchemaExport(nhConfig);
             schemaExport
@@ -80,9 +78,9 @@ namespace BA.MultiMVC.Framework.NHibernate
                 .Execute(false, false, false);
         }
 
-        public static ISessionFactory BuildSessionFactory(string tenantKey)
+        public static ISessionFactory BuildSessionFactory(string tenantKey, string assemblyName)
         {
-            var nhConfig = GetNhConfig(tenantKey);
+            var nhConfig = GetNhConfig(tenantKey,assemblyName);
             return nhConfig.BuildSessionFactory();
             
             
