@@ -1,0 +1,156 @@
+﻿@using BA.MultiMvc.Framework
+@using BackToOwner.Golf.Web.ViewModels
+@section head {
+    <title>@TenantResources.Values["edit_profile_title"]</title>
+}
+@model EditOwnerRequest
+<script type="text/javascript">
+    function bindoptions(source, target) {
+        var countrycode = "";
+        $(source + " option:selected ").each(function () {
+            countrycode += $(this).val();
+        });
+        $(target).text(countrycode);
+    }
+
+    $(function () {
+        $("#FirstName").focus();
+        bindoptions("#CountryCode", "#country_prefix");
+        bindoptions("#CountryCode2", "#country_prefix2");
+
+        $("#CountryCode").change(function () {
+            bindoptions("#CountryCode", "#country_prefix");
+        });
+        $("#CountryCode2").change(function () {
+            bindoptions("#CountryCode2", "#country_prefix2");
+        });
+
+        $("#PhoneNumber").mask("999999999?999");
+        $("#PhoneNumber2").mask("999999999?999");
+    });
+    
+
+    
+</script>
+<div class="block">
+    <h1>@TenantResources.Values["edit_profile_title"]</h1>
+</div>
+<br />
+@using (Html.BeginForm())
+{ 
+    <fieldset>
+        <legend>@TenantResources.Values["contact_data"]</legend>
+        <div id="confirmation">
+            @Html.DisplayFor(n => n.ConfirmationMessage)
+        </div>
+        <div id="contactdata">
+            <div class="left-box">
+                <div class="row">
+                    <div class="label">
+                        @TenantResources.Values["gender"]</div>
+                    <div class="input">
+                        @Html.DropDownList("gender", Model.GenderList)
+                        @Html.ValidationMessageFor(model => model.Gender)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        @TenantResources.Values["firstname"]
+                    </div>
+                    <div class="input">
+                        @Html.TextBoxFor(model => model.FirstName, new { maxlength = 25, size = 25 })
+                        @Html.ValidationMessageFor(model => model.FirstName)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        @TenantResources.Values["lastname"]
+                    </div>
+                    <div class="input">
+                        @Html.TextBoxFor(model => model.LastName, new { maxlength = 25, size = 25 })
+                        @Html.ValidationMessageFor(model => model.LastName)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="rowtitle">
+                        <div class="cell">
+                            @TenantResources.Values["number"]
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell" id="country">
+                            @Html.DropDownList("CountryCode", Model.CountryCodeList)
+                            @Html.ValidationMessageFor(model => model.CountryCode)
+                        </div>
+                        <div class="cell">
+                            +(<span id="country_prefix"></span>)
+                            @Html.TextBoxFor(model => model.PhoneNumber, new { maxlength = 12, size = 12 })
+                            @Html.ValidationMessageFor(model => model.PhoneNumber)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-box">
+                <div class="row">
+                    <div class="label">
+                        &nbsp;
+                    </div>
+                    <div class="input">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        E-mail
+                    </div>
+                    <div class="input">
+                        @Html.TextBoxFor(model => model.Email, new { maxlength = 255, size = 180 })
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        @TenantResources.Values["email2"]
+                    </div>
+                    <div class="input">
+                        @Html.TextBoxFor(model => model.Email2, new { maxlength = 255, size = 180 })
+                        @Html.ValidationMessageFor(model => model.Email2)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="rowtitle">
+                        <div class="cell">
+                            @TenantResources.Values["mobile_nr"] (2)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell" id="country2">
+                            @Html.DropDownList("CountryCode2", Model.CountryCodeList)
+                            @Html.ValidationMessageFor(model => model.CountryCode2)
+                        </div>
+                        <div class="cell">
+                            +(<span id="country_prefix2"></span>)
+                            @Html.TextBoxFor(model => model.PhoneNumber2, new { maxlength = 12, size = 12 })
+                            @Html.ValidationMessageFor(model => model.PhoneNumber2)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <input type="image" value="next" src="@Url.Content("~/Content/" + TenantContext.TenantKey + "/Images/play.png")" title="Save" alt="SUBMIT!" name="Command" id="Command" height="35" width="35">
+                </div>
+                <div>
+                    @Html.ActionLink(TenantResources.Values["change_password_title"], "ChangePassword")
+                </div>
+            </div>
+
+        </div>
+         <div class="sub_command">
+                    <a href="@Url.Action("DeleteAccount")">
+                        <img src="@Url.Content("~/Content/" + TenantContext.TenantKey + "/images/delete.png")" title="@TenantResources.Values["delete_account_title"]" height="35" width="35" />
+                    </a>
+                </div>
+    </fieldset>
+            
+}

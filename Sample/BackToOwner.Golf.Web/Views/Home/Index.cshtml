@@ -1,0 +1,34 @@
+﻿@using BA.MultiMvc.Framework
+@using BackToOwner.Golf.Web.Models
+@model  HomeIndexRequest
+@section head {
+    <title>
+        @TenantResources.Values["home_title"]</title>
+}
+<div class="homecont">
+    <script language="javascript">
+        jQuery(function ($) {
+            $("#BadgeNbr").mask("***-***-***");
+        });
+
+        $(function () {
+            $("#BadgeNbr").focus();
+        })
+    </script>
+    <h1>GOLFLABEL.NET</h1>
+    @Html.Raw(TenantResources.Values["home_body"])
+    <div class="code">
+        @Html.Raw(TenantResources.Values["default_box_text"])
+        @using (Html.BeginForm())
+        {
+            
+            @Html.TextBoxFor(model => model.BadgeNbr, new { @class = "input_label" })
+            <input class="submit" type="submit" value="Submit" />
+            @Html.ValidationMessageFor(model => model.BadgeNbr)
+        }
+    </div>
+    <div class="links">
+        @Html.ActionLink(TenantResources.Values["edit_profile_box_link"], "EditProfile", "Account")
+        @Html.ActionLink(TenantResources.Values["add_badge_box_link"], "AddBadge", "Account")
+    </div>
+</div>

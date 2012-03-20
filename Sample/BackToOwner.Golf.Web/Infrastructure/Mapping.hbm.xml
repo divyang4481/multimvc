@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="BackToOwner.Golf.Web" namespace="BackToOwner.Golf.Web.Models">
+  
+  
+  <class name="Owner" >
+    <id name="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <property name="FirstName" not-null="true" />
+    <property name="LastName" not-null="true" />
+    <property name="Gender" not-null="true" type="BackToOwner.Golf.Web.Models.GenderEnumStringType, BackToOwner.Golf.Web" />
+    <property column="Language" name="Language" not-null="true" type="BackToOwner.Golf.Web.Models.LanguageEnumStringType, BackToOwner.Golf.Web"/>
+    <property name="PasswordHash" not-null="true"/>
+    <property name="PasswordSalt" not-null="true" />
+    <property name="RegistrationDate" not-null="true" />
+    <set name="Badges"  inverse="true" access="field.camelcase-underscore" cascade="save-update">
+      <key column="OwnerId" />
+      <one-to-many class="Badge" />
+    </set>
+    <map name="EmailAddresses" cascade="all-delete-orphan" table="EmailAddress">
+      <key column="OwnerId" />
+      <index column="EmailIndex" type="System.Int32"/>
+      <element column="EmailValue" type="System.String"/>
+    </map>
+    <map name="Mobiles"  cascade="all-delete-orphan" table="Mobiles">
+      <key column="OwnerId" />
+      <index column="PhoneNumberIndex" type="System.Int32"/>
+      <element column="PhoneNumberValue" type="System.String"/>
+    </map>
+  </class >
+  
+  <class name="Badge">
+    <id name="Nbr" length="9">
+    </id>
+    <version name="Version" />
+    <many-to-one name="Owner" class="Owner" column="OwnerId" />
+    <many-to-one name="Lot" class="Lot" column="LotId" />
+  </class>
+
+  <class name="Lot">
+    <id name="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <property name="RegistrationDate" not-null="true" />
+    <property name="Name" not-null="true"/>
+    <property name="Description" type="StringClob" />
+    <property name="Amount" not-null="true" />
+  </class>
+  
+  <class name="Declaration" >
+    <id name="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <property name="EmailAddress" />
+    <property name="FirstName" />
+    <property name="LastName" />
+    <property name="Language" />
+    <property name="PhoneNumber" not-null="true" />
+    <property name="Message" />
+    <property name="RegistrationDate" not-null="true" />
+    <many-to-one name="RetrivedBadge" class="Badge" column="BadgeNbr"/>
+  </class>
+
+  <class name="Resource">
+    <id name="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" />
+    <property name="Language" not-null="true" length="2" index="ULabelLanguage" />
+    <property name="Label" not-null="true" length="255" index="ULabelLanguage"/>
+    <property name="Value" not-null="true" type="StringClob" />
+  </class>
+  
+</hibernate-mapping>

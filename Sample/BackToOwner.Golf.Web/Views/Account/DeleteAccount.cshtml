@@ -1,0 +1,28 @@
+﻿@using System.Web.UI.WebControls
+@using BA.MultiMvc.Framework
+@{
+    ViewBag.Title = "DeleteAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section head {
+    <title>@TenantResources.Values["delete_account_title"]</title>
+}
+<h2>@TenantResources.Values["delete_account_title"]</h2>
+@using (Html.BeginForm())
+{
+    <div>
+        <fieldset>
+            <legend>@TenantResources.Values["delete_account_text"]</legend>
+            <div class="ok_cancel">
+                <div class="ok">
+                    <input type="image" value="add" src="@Url.Content("~/Content/" + TenantContext.TenantKey + "/Images/confirm.png")" alt="DELETE!" title="Ok" name="Command" id="Command" height="35" width="35">
+                </div>
+                <div class="cancel">
+                     <a href="@Url.Action("Index","Home")">
+                        <img src="@Url.Content("~/Content/" + TenantContext.TenantKey + "/images/cancel.png")" title="@TenantResources.Values["cancel"]" height="35" width="35" />
+                    </a>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+}

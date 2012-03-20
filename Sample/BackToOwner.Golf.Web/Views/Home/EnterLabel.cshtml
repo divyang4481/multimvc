@@ -1,0 +1,31 @@
+﻿@using BA.MultiMvc.Framework
+@using BackToOwner.Golf.Web.Models
+@model  HomeIndexRequest
+@section head {
+    <title>
+        @TenantResources.Values["home_title"]</title>
+}
+<script language="javascript">
+    jQuery(function ($) {
+        $("#BadgeNbr").mask("***-***-***");
+        $("#BadgeNbr").focus();
+    });
+</script>
+<div id="content">
+    <div class="inCont">
+        @using (Html.BeginForm())
+        {
+
+            @Html.Raw(TenantResources.Values["enter_label_text"])
+            
+            @Html.TextBoxFor(model => model.BadgeNbr, TenantResources.Values["err_required"])
+            <br />
+            @Html.ValidationMessageFor(model => model.BadgeNbr)
+            <br />
+            <input type="image" value="submit" src="@Url.Content("~/Content/" + TenantContext.TenantKey + "/Images/play.png")" alt="SUBMIT!" name="submit" height="35" width="35"/>
+            <br />
+            @TenantResources.Values["activate_tip"]
+     
+        }
+    </div>
+</div>

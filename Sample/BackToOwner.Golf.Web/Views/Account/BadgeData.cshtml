@@ -1,0 +1,15 @@
+﻿@using BackToOwner.Golf.Web.ViewModels;
+@model IEnumerable<BackToOwner.Golf.Web.Models.Badge>
+@{
+    Layout = null;
+}
+@foreach (var badge in this.Model)
+{
+    <tr>
+        <td>@Html.DisplayFor(m => badge.PretyNbr)
+        </td>
+        <td>
+            @Html.ActionLink("Remove", "RemoveBadge", new { badgeNbr = badge.Nbr })
+        </td>
+    </tr>
+}

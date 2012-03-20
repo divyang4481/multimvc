@@ -1,0 +1,16 @@
+﻿@using BA.MultiMvc.Framework
+@using BackToOwner.Golf.Web.Models
+@section head {
+    <title>
+        @TenantResources.Values["faq_title"]</title>
+}
+<div id="content">
+    <div class="inCont">
+        <ul class="menu_left">
+            @Html.Raw(@TenantResources.Values["faq_list"])
+        </ul>
+        <div class="response">
+            @Html.Raw(@TenantResources.Values["faq_body"])
+        </div>
+    </div>
+</div>
