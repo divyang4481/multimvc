@@ -1,0 +1,12 @@
+﻿@using BA.MultiMvc.Framework
+@section head {
+    <title>@TenantResources.Values["privacy_title"]</title>
+}
+<div id="content">
+    <div class="inCont">
+        <h1>@TenantResources.Values["privacy_title"]</h1>
+        <p>
+            @Html.Raw(@TenantResources.Values["privacy_body"])
+        </p>
+    </div>
+</div>

@@ -1,0 +1,122 @@
+﻿@using BA.MultiMvc.Framework
+@using BackToOwner.Golf.Web.ViewModels
+@model  ActivateIndexRequest
+@section head {
+    <title>
+        @TenantResources.Values["activate_title"]</title>
+}
+<script type="text/javascript">
+    $(function () {
+        $("#Password").focus();
+    })
+</script>
+<div id="inCont">
+    <div id="center-frame_ALL">
+        <div class="block">
+            <h1>@TenantResources.Values["activate_title"]</h1>
+        </div>
+        <br />
+        @using (Html.BeginForm())
+        { 
+            <fieldset>
+                <legend>@TenantResources.Values["contact_data"]</legend>
+                <div id="contactdata">
+                    <table>
+                        <tr>
+                            <td class="label">
+                                @TenantResources.Values["password"]
+                            </td>
+                            <td class="input">
+                                @Html.PasswordFor(model => model.Password, new { maxlength = 50, size = 25 })
+                            </td>
+                            <td class="error">
+                                @Html.ValidationMessageFor(model => model.Password, TenantResources.Values["password_error"])
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                @TenantResources.Values["confirm_password"]
+                            </td>
+                            <td class="input">
+                                @Html.PasswordFor(model => model.ConfirmPassword, new { maxlength = 50, size = 25 })
+                            </td>
+                            <td class="error">
+                                @Html.ValidationMessageFor(model => model.ConfirmPassword, TenantResources.Values["password_confirm_error"])
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                @TenantResources.Values["gender"]
+                            </td>
+                            <td class="input">
+                                @Html.DropDownList("gender", Model.GenderList)
+                            </td>
+                            <td class="error">
+                                @Html.ValidationMessageFor(model => model.Gender)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                @TenantResources.Values["firstname"]
+                            </td>
+                            <td class="input">
+                                @Html.TextBoxFor(model => model.FirstName, new { maxlength = 255, size = 25 })
+                            </td>
+                            <td class="error">
+                                @Html.ValidationMessageFor(model => model.FirstName, TenantResources.Values["err_required"])
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                @TenantResources.Values["lastname"]
+                            </td>
+                            <td class="input">
+                                @Html.TextBoxFor(model => model.LastName, new { maxlength = 255, size = 25 })
+                            </td>
+                            <td class="error">
+                                @Html.ValidationMessageFor(model => model.LastName, TenantResources.Values["err_required"])
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                E-mail:
+                            </td>
+                            <td class="input">
+                                @Html.TextBoxFor(model => model.Email, new { maxlength = 100, size = 50 })
+                            </td>
+                            <td class="error">
+                                @Html.ValidationMessageFor(model => model.Email, TenantResources.Values["err_email"])
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                @TenantResources.Values["confirm_email"]
+                            </td>
+                            <td class="input">
+                                @Html.TextBoxFor(model => model.ConfirmEmail, new { maxlength = 255, size = 50 })
+                            </td>
+                            <td class="error">
+                                @Html.ValidationMessageFor(model => model.ConfirmEmail, TenantResources.Values["err_email_notsame"])
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                @TenantResources.Values["email2"]
+                            </td>
+                            <td class="input">
+                                @Html.TextBoxFor(model => model.Email2, new { maxlength = 255, size = 50 })
+                            </td>
+                            <td class="error">
+                                @Html.ValidationMessageFor(model => model.Email2)
+                            </td>
+                        </tr>
+                    </table>
+                     <div class="next_btn">
+                        <input type="image" value="next" src="@Url.Content("~/Content/" + TenantContext.TenantKey + "/Images/play.png")" alt="SUBMIT!" name="Command" id="Command" height="35" width="35">
+                    </div>
+                </div>
+            </fieldset>
+            
+        }
+    </div>
+</div>

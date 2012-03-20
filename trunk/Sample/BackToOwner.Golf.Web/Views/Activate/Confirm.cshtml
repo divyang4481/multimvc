@@ -1,0 +1,25 @@
+﻿@using BA.MultiMvc.Framework
+@using BackToOwner.Golf.Web.ViewModels
+@model ActivateConfirmRequest
+
+@section head {
+    <title>
+        @TenantResources.Values["confirm_title"]</title>
+}
+@{
+    ViewBag.Title = "Confirm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="inCont">
+    <div id="center-frame_ALL">
+        <div class="block">
+            <h1>@TenantResources.Values["confirm_title"]</h1>
+        </div>
+       <div class="one_column">
+            @Html.Raw(@Model.ConfirmationMessage)
+        </div>
+    </div>
+</div>
+
+
+

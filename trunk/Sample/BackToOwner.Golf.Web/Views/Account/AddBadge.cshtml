@@ -1,0 +1,37 @@
+﻿@using BA.MultiMvc.Framework
+@using BackToOwner.Golf.Web.ViewModels
+@section head {
+    <title>@TenantResources.Values["add_badge_title"]</title>
+}
+@model AddBadgeRequest
+
+<script language="javascript">
+    jQuery(function ($) {
+        $("#NewBadgeNbr").mask("***-***-***");
+        $("#NewBadgeNbr").focus();
+    });
+</script>
+<h2>@TenantResources.Values["add_badge_title"]</h2>
+<p>@Html.ValidationSummary()</p>
+@using (@Html.BeginForm("AddBadge","Account"))
+{
+    <table>
+        <thead>
+            <th>
+                @TenantResources.Values["your_badge_nbrs"]
+            </th>
+        </thead>
+        <tbody id="tabledata">
+             @Html.Action("BadgeData", new { id = Model })
+        </tbody>
+    </table>
+    <div>
+        <p>
+            @TenantResources.Values["new_badge"]
+            @Html.TextBoxFor(n => n.NewBadgeNbr, new { maxlength = 11, size = 25 })
+            @Html.ValidationMessageFor(model => model.NewBadgeNbr)
+            <input type="image" value="add" src="@Url.Content("~/Content/" + TenantContext.TenantKey + "/Images/play.png")" alt="SUBMIT!" name="Command" id="Command" height="35" width="35">
+        </p>
+    </div>
+    
+}

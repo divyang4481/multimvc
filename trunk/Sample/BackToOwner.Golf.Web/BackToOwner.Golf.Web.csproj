@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{311B3F03-672A-42AB-A616-8250E27D63AE}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BackToOwner.Golf.Web</RootNamespace>
+    <AssemblyName>BackToOwner.Golf.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DeployIisAppPath>BackToOwner.Golf.Web_deploy</DeployIisAppPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BA.MultiMvc.Framework, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\BA.MultiMVC.Framework.0.0.1.0\BA.MultiMvc.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.2.5.2\lib\NET35\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DataAnnotationsExtensions, Version=0.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DataAnnotationsExtensions.0.6.0.0\lib\NETFramework40\DataAnnotationsExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DataAnnotationsExtensions.ClientValidation, Version=0.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DataAnnotationsExtensions.MVC3.0.6.0.0\lib\NETFramework40\DataAnnotationsExtensions.ClientValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.3.1.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\90\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SqlServer Smo\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\90\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.3.1.0.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\packages\NHibernate.Castle.3.1.0.4000\lib\Net35\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=2.6.3.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.2.6.3\lib\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.DirectoryServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\ApplicationFacade.cs" />
+    <Compile Include="Binders\ServiceInitBinder.cs" />
+    <Compile Include="Binders\WCFModelBinderProvider.cs" />
+    <Compile Include="Binders\XMLModelBinderProvider.cs" />
+    <Compile Include="BootStrapper.cs" />
+    <Compile Include="Controllers\ActivateController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LandingController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Filters\LanguageAttribute.cs" />
+    <Compile Include="Filters\LogExceptionAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ServiceHelper.cs" />
+    <Compile Include="Infrastructure\AuthenticationService.cs" />
+    <Compile Include="Infrastructure\DistributorService.cs" />
+    <Compile Include="Infrastructure\IDistributorService.cs" />
+    <Compile Include="Infrastructure\ISecurityService.cs" />
+    <Compile Include="Infrastructure\ISmsService.cs" />
+    <Compile Include="Infrastructure\Log4NetLoggerService.cs" />
+    <Compile Include="Infrastructure\MailFactory.cs" />
+    <Compile Include="Infrastructure\MailService.cs" />
+    <Compile Include="Infrastructure\MapperService.cs" />
+    <Compile Include="Infrastructure\SecurityService.cs" />
+    <Compile Include="Infrastructure\SessionService.cs" />
+    <Compile Include="Infrastructure\ClickatelSmsService.cs" />
+    <Compile Include="Models\Lot.cs" />
+    <Compile Include="ViewModels\ActivateConfirmRequest.cs" />
+    <Compile Include="ViewModels\ActivateIndexRequest.cs" />
+    <Compile Include="Models\Badge.cs" />
+    <Compile Include="ViewModels\AddBadgeRequest.cs" />
+    <Compile Include="ViewModels\ChangePasswordRequest.cs" />
+    <Compile Include="ViewModels\CustomValidationsAttributes.cs" />
+    <Compile Include="ViewModels\DeleteAccountRequest.cs" />
+    <Compile Include="ViewModels\EditOwnerRequest.cs" />
+    <Compile Include="ViewModels\SendPasswordRequest.cs" />
+    <Compile Include="ViewModels\DeclarationConfirmationRequest.cs" />
+    <Compile Include="ViewModels\DeclareIndexRequest.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\Declaration.cs" />
+    <Compile Include="ViewModels\ActivateMobileRequest.cs" />
+    <Compile Include="Models\Owner.cs" />
+    <Compile Include="Models\PhoneNumber.cs" />
+    <Compile Include="Models\Resource.cs" />
+    <Compile Include="ViewModels\DeclareSendMessageRequest.cs" />
+    <Compile Include="ViewModels\LogOnRequest.cs" />
+    <Compile Include="ViewModels\ProfileBaseRequest.cs" />
+    <Compile Include="ViewModels\ServiceInitRequest.cs" />
+    <Compile Include="ViewModels\HomeIndexRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BTOServiceAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Setup\BicycleResourceCreation.cs" />
+    <Compile Include="Setup\DefaultResourceCreation.cs" />
+    <Compile Include="Setup\CreateDB.cs" />
+    <Compile Include="Views\Activate\ViewModelsFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Infrastructure\Mapping.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Content\Bicycle\fonts\myriadpro-semibold-webfont.svg" />
+    <Content Include="Content\Bicycle\Images\English.jpg" />
+    <Content Include="Content\Bicycle\Images\Francais.jpg" />
+    <Content Include="Content\Bicycle\Images\Landing.jpg" />
+    <Content Include="Content\Bicycle\Images\Nederlands.jpg" />
+    <Content Include="Content\Bicycle\Images\next.gif" />
+    <Content Include="Content\Bicycle\Landing.css">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\Bicycle\styles.css">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\Bicycle\supersized.core.css">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\Default\Images\bandeau_accueil.png" />
+    <Content Include="Content\Default\Images\bg_content.png" />
+    <Content Include="Content\Default\Images\bg_form_login.png" />
+    <Content Include="Content\Default\Images\bg_menu.png" />
+    <Content Include="Content\Default\Images\bg_menu_home.png" />
+    <Content Include="Content\Default\Images\cancel.png" />
+    <Content Include="Content\Default\Images\confirm.png" />
+    <Content Include="Content\Default\Images\delete.png" />
+    <Content Include="Content\Default\Images\English.jpg" />
+    <Content Include="Content\Default\Images\Francais.jpg" />
+    <Content Include="Content\Default\Images\golf_background.jpg" />
+    <Content Include="Content\Default\Images\Landing.jpg" />
+    <Content Include="Content\Default\Images\logo.png" />
+    <Content Include="Content\Default\Images\Nederlands.jpg" />
+    <Content Include="Content\Default\Images\play.png" />
+    <Content Include="Content\Default\Images\progress.gif" />
+    <Content Include="Content\Default\Images\submit.png" />
+    <Content Include="Content\Default\Landing.css">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\Default\fonts\myriadpro-semibold-webfont.svg" />
+    <Content Include="Content\Default\styles.css">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\Default\supersized.core.css">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Global.asax" />
+    <None Include="Content\Bicycle\fonts\myriadpro-semibold-webfont.eot" />
+    <None Include="Content\Bicycle\fonts\myriadpro-semibold-webfont.ttf" />
+    <None Include="Content\Bicycle\fonts\myriadpro-semibold-webfont.woff" />
+    <None Include="Content\Default\fonts\myriadpro-semibold-webfont.eot" />
+    <None Include="Content\Default\fonts\myriadpro-semibold-webfont.ttf" />
+    <None Include="Content\Default\fonts\myriadpro-semibold-webfont.woff" />
+    <Content Include="Extensions\Bicycle\Views\Home\index.cshtml" />
+    <Content Include="Extensions\Bicycle\Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\CreateBTO_Default.sql" />
+    <Content Include="Scripts\dFilter.js" />
+    <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.5.1.js" />
+    <Content Include="Scripts\jquery-1.5.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.maskedinput.js" />
+    <Content Include="Scripts\knockout-2.0.0.js" />
+    <Content Include="Scripts\modernizr-1.7.js" />
+    <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Scripts\loadsuper.js" />
+    <Content Include="Scripts\supersized.3.2.7.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="packages.config" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="readme.txt" />
+    <Content Include="Views\Activate\Confirm.cshtml" />
+    <Content Include="Views\Activate\Indexold.cshtml" />
+    <Content Include="Views\Home\indexxml.cshtml" />
+    <Content Include="Views\Landing\Index.cshtml" />
+    <Content Include="Views\Home\index.cshtml" />
+    <Content Include="Views\Home\Faq.cshtml" />
+    <Content Include="Views\Home\who.cshtml" />
+    <Content Include="Views\Activate\index.cshtml" />
+    <Content Include="Views\Activate\mobile.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Account\EditProfile.cshtml" />
+    <Content Include="Views\Account\SendPassword.cshtml" />
+    <Content Include="Views\Home\EnterLabel.cshtml" />
+    <Content Include="Views\Account\AddBadge.cshtml" />
+    <Content Include="Views\Account\BadgeData.cshtml" />
+    <Content Include="Views\Account\DeleteAccount.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Home\Privacy.cshtml" />
+    <Content Include="Views\Home\Terms.cshtml" />
+    <Content Include="Views\Home\Dealers.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Golf\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SMS_COMAPILib">
+      <Guid>{B8AD23B5-6449-4797-A90A-A8698D226600}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51436</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52436/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

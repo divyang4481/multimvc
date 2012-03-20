@@ -1,0 +1,32 @@
+﻿@using BA.MultiMvc.Framework
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ViewPage1</title>
+    <link href="@Url.Content("~/Content/" + TenantContext.TenantKey + "/Landing.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="conten">
+        <div id="main_image">
+            <img alt="GolfLabel.Net" src="@Url.Content("~/Content/" + TenantContext.TenantKey + "/Images//Landing.jpg")" />
+        </div>
+        <div id="menu">
+            <a id="nlLink" href="@Url.Action("index", "home", new { language = "nl", tenantkey = TenantContext.TenantKey })" >
+                <img alt="Nederlands" src="@Url.Content("~/Content/"+TenantContext.TenantKey+"/Images/Nederlands.jpg")"/>
+            </a>
+             <a id="frLink" href="@Url.Action("index", "home", new { language = "fr", tenantkey = TenantContext.TenantKey })" >
+                <img alt="Français" src="@Url.Content("~/Content/" + TenantContext.TenantKey + "/Images/Francais.jpg")"/>
+            </a>
+             <a id="enLink" href="@Url.Action("index", "home", new { language = "en", tenantkey = TenantContext.TenantKey })" >
+                <img alt="English" src="@Url.Content("~/Content/"+TenantContext.TenantKey+"/Images/English.jpg")"/>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+

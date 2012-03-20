@@ -1,0 +1,104 @@
+﻿@using BA.MultiMvc.Framework
+@using BackToOwner.Golf.Web.ViewModels
+@model  ActivateMobileRequest
+@section head {
+    <title>
+        @TenantResources.Values["mobile_title"]</title>
+}
+<script type="text/javascript">
+    function bindoptions(source, target) {
+        var countrycode = "";
+        $(source + " option:selected ").each(function () {
+            countrycode += $(this).val();
+        });
+        $(target).text(countrycode);
+    }
+
+    $(function () {
+        $("#PhoneNumber").focus();
+
+        bindoptions("#CountryCode", "#country_prefix");
+        bindoptions("#CountryCode2", "#country_prefix2");
+
+        $("#CountryCode").change(function () {
+            bindoptions("#CountryCode", "#country_prefix");
+        });
+        $("#CountryCode2").change(function () {
+            bindoptions("#CountryCode2", "#country_prefix2");
+        });
+
+        $("#PhoneNumber").mask("999999999?999");
+        $("#PhoneNumber2").mask("999999999?999");
+    });
+    
+
+    
+</script>
+<div id="inCont">
+    <div id="center-frame_ALL">
+        <div class="block">
+            <h1>@TenantResources.Values["mobile_title"]</h1>
+        </div>
+        <br />
+        @using (Html.BeginForm())
+        { 
+            <fieldset>
+                <legend>@TenantResources.Values["mobile_nr"]</legend>
+                <table>
+                    <tr>
+                        <td>
+                            @TenantResources.Values["operator_country"]
+                        </td>
+                        <td>
+                            @TenantResources.Values["number"]
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.DropDownList("CountryCode", Model.CountryCodeList)
+                            @Html.ValidationMessageFor(model => model.CountryCode, TenantResources.Values["err_required"])
+                        <td>
+                            +(<span id="country_prefix"></span>)
+                            @Html.TextBoxFor(model => model.PhoneNumber, new { maxlength = 12, size = 12 })
+                        </td>
+                            <td>
+                                @Html.ValidationMessageFor(model => model.PhoneNumber, TenantResources.Values["err_required"])
+                            </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @TenantResources.Values["mobile_other_nr"]
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.DropDownList("CountryCode2", Model.CountryCodeList)
+                            @Html.ValidationMessageFor(model => model.CountryCode2)
+                        <td>
+                            +(<span id="country_prefix2"></span>)
+                            @Html.TextBoxFor(model => model.PhoneNumber2, new { maxlength = 12, size = 12 })
+                        </td>
+                            <td>
+                                @Html.ValidationMessageFor(model => model.PhoneNumber2)
+                            </td>
+                    </tr>
+                </table>
+                <div class="footer">
+                    <div class="cell">
+                       
+                        @Html.CheckBoxFor(model => model.AcceptTerms)&nbsp;@TenantResources.Values["accept_terms"]
+                        @Html.ValidationMessageFor(model => model.AcceptTerms, TenantResources.Values["err_accept_Terms"])
+                    </div>
+                    <div class="next_btn">
+                        <input type="image" value="next" src="@Url.Content("~/Content/" + TenantContext.TenantKey + "/Images/play.png")" alt="SUBMIT!" name="Command" id="Command" height="35" width="35">
+                    </div>
+                </div>
+            </fieldset>
+        }
+    </div>
+</div>

@@ -1,0 +1,42 @@
+﻿@using BA.MultiMvc.Framework
+@using BackToOwner.Golf.Web.Models
+
+@model  HomeIndexRequest
+@section head {
+    <title>
+        @TenantResources.Values["activate_title"]</title>
+}
+<script language="javascript">
+    jQuery(function ($) {
+        $("#BadgeNbr").mask("9999-9999-9999");
+    });
+</script>
+<div id="body_activate">
+    <div>
+        <div class="block">
+            <h1>@TenantResources.Values["welcome"]</h1>
+        </div>
+        <br />
+        <div id="activate_body">
+            @Html.Raw(TenantResources.Values["activat_index_body"])
+        </div>
+        <div id="tip">@TenantResources.Values["activate_tip"]
+        </div>
+        @Html.ValidationSummary()
+        @using (Html.BeginForm())
+        { 
+            <div id="activate_next">
+                <div id="badge_nbr_box">
+                    <input class="badge_nbr" data-val="true" data-val-required="@TenantResources.Values["err_required"]" id="BadgeNbr" name="BadgeNbr" type="text" value="@Model.BadgeNbr" />
+                </div>
+                <div id="next_btn">
+                    <input type="image" value="submit" src="@Url.Content("~/Content/" + TenantContext.TenantKey + "/Images/play.png")" alt="SUBMIT!" name="submit" height="35" width="35">
+                    
+                </div>
+                
+            </div>
+            
+
+        }
+    </div>
+</div>

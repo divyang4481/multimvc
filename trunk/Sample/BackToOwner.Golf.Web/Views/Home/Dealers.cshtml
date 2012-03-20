@@ -1,0 +1,12 @@
+﻿@using BA.MultiMvc.Framework
+@section head {
+    <title>@TenantResources.Values["dealers_title"]</title>
+}
+<div id="content">
+    <div class="inCont">
+        <h1>@TenantResources.Values["dealers_title"]</h1>
+        <p>
+            @Html.Raw(@TenantResources.Values["dealers_body"])
+        </p>
+    </div>
+</div>

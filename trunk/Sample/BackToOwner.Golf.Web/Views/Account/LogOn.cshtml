@@ -1,0 +1,39 @@
+﻿@using BA.MultiMvc.Framework
+@using BackToOwner.Golf.Web.ViewModels
+@model LogOnRequest
+@section head {
+    <title>
+        @TenantResources.Values["logon_title"]</title>
+}
+<script language="javascript">
+    jQuery(function ($) {
+        $("#LabelNbr").mask("***-***-***");
+        $("#LabelNbr").focus();
+    });
+</script>
+<div class="inCont">
+    <fieldset>
+        <legend>@TenantResources.Values["login_title"]</legend>
+        @using (Html.BeginForm())
+        {
+           
+            @Html.LabelFor(m => m.LabelNbr, TenantResources.Values["label_nbr"])<br />
+            @Html.TextBoxFor(m => m.LabelNbr)
+            @Html.ValidationMessageFor(m => m.LabelNbr)<br />
+   
+            @Html.LabelFor(m => m.Password, TenantResources.Values["login_password"])<br />
+           
+            @Html.PasswordFor(m => m.Password)
+            @Html.ValidationMessageFor(m => m.Password)<br />
+            <br />
+            @Html.CheckBoxFor(m => m.RememberMe)<span>&nbsp;@Html.LabelFor(m => m.RememberMe, TenantResources.Values["remember_me"])</span><br />
+               
+            <input class="submit" type="submit" value="Submit" /><br />
+             @Html.ValidationSummary(true, TenantResources.Values["error_login_unsuccessfull"])
+        }
+        <div class="footForm">
+            @Html.ActionLink(TenantResources.Values["send_password_link"], "SendPassword")<br />
+            @Html.ActionLink(TenantResources.Values["activate_account_link"], "EnterLabel", "Home")
+        </div>
+    </fieldset>
+</div>
