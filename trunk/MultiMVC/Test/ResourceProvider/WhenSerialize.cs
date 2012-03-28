@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
+using BA.MultiMvc.Framework;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BA.MultiMvc.Test
@@ -13,7 +14,7 @@ namespace BA.MultiMvc.Test
     {
         public override void When()
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(List<RessourceDictionaryItem>));
+            XmlSerializer serializer = new XmlSerializer(typeof(List<FileResourceProvider.RessourceDictionaryItem>));
             using (FileStream stream = new FileStream(Path, FileMode.OpenOrCreate))
             {
                 serializer.Serialize(stream, ResourcesToSerialize);
@@ -30,11 +31,11 @@ namespace BA.MultiMvc.Test
         [TestMethod]
         public void ThenCanDeserilize()
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(List<RessourceDictionaryItem>));
-            List<RessourceDictionaryItem> deserilizedObject;
+            XmlSerializer serializer = new XmlSerializer(typeof(List<FileResourceProvider.RessourceDictionaryItem>));
+            List<FileResourceProvider.RessourceDictionaryItem> deserilizedObject;
              using (FileStream stream = new FileStream(Path, FileMode.Open))
              {
-                 deserilizedObject = (List<RessourceDictionaryItem>)serializer.Deserialize(stream);
+                 deserilizedObject = (List<FileResourceProvider.RessourceDictionaryItem>)serializer.Deserialize(stream);
                  stream.Close();
              }
 

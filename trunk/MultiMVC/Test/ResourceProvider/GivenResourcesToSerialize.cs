@@ -1,19 +1,20 @@
 using System.Collections.Generic;
+using BA.MultiMvc.Framework;
 
 namespace BA.MultiMvc.Test
 {
     public class GivenResourcesToSerialize:GivenWhenThen
     {
-        protected List<RessourceDictionaryItem> ResourcesToSerialize;
+        protected List<FileResourceProvider.RessourceDictionaryItem> ResourcesToSerialize;
         protected string Path = "Ressources.xml";
 
         public override void Given()
         {
             base.Given();
-            ResourcesToSerialize = new List<RessourceDictionaryItem>();
-            ResourcesToSerialize.Add(new RessourceDictionaryItem { En = "Hello world", Fr = "Bonjour le monde", Nl = "Dag de wereld" , Key="Hello"}
+            ResourcesToSerialize = new List<FileResourceProvider.RessourceDictionaryItem>();
+            ResourcesToSerialize.Add(new FileResourceProvider.RessourceDictionaryItem { En = "Hello world", Fr = "Bonjour le monde", Nl = "Dag de wereld" , Key="Hello"}
                 );
-            ResourcesToSerialize.Add(new RessourceDictionaryItem { En = "Other Hello world!",Key="Other" });
+            ResourcesToSerialize.Add(new FileResourceProvider.RessourceDictionaryItem { En = "Other Hello world!",Key="Other" });
         }
     }
 }
