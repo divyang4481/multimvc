@@ -105,6 +105,7 @@
   <ItemGroup>
     <Compile Include="CachedResourceProvider.cs" />
     <Compile Include="DefaultCacheService.cs" />
+    <Compile Include="FileResourceProvider.cs" />
     <Compile Include="FormsAuthenticationService.cs" />
     <Compile Include="HttpTenantContextProvider.cs" />
     <Compile Include="ICacheService.cs" />
