@@ -17,8 +17,11 @@ namespace BA.MultiMvc.Framework
         public IDictionary<string, string> GetResources()
         {
             XmlSerializer serializer = new XmlSerializer(typeof(List<RessourceDictionaryItem>));
+            
             List<RessourceDictionaryItem> ressources;
-            using (FileStream stream = new FileStream("Ressources.xml", FileMode.Open))
+            string filePath = System.Web.Hosting.HostingEnvironment.MapPath("~/Ressources.xml") ?? "Ressources.xml";
+
+            using (FileStream stream = new FileStream(filePath, FileMode.Open))
             {
                 ressources = (List<RessourceDictionaryItem>)serializer.Deserialize(stream);
                 stream.Close();
