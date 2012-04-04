@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Security.AccessControl;
 using System.Xml.Serialization;
 
 namespace BA.MultiMvc.Framework
@@ -21,7 +22,7 @@ namespace BA.MultiMvc.Framework
             List<RessourceDictionaryItem> ressources;
             string filePath = System.Web.Hosting.HostingEnvironment.MapPath("~/Ressources.xml") ?? "Ressources.xml";
 
-            using (FileStream stream = new FileStream(filePath, FileMode.Open))
+            using (FileStream stream = new FileStream(filePath, FileMode.Open,FileAccess.Read))
             {
                 ressources = (List<RessourceDictionaryItem>)serializer.Deserialize(stream);
                 stream.Close();
