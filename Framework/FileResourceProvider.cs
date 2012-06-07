@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Security.AccessControl;
@@ -30,18 +31,26 @@ namespace BA.MultiMvc.Framework
             Dictionary<string,string> ret = new Dictionary<string, string>();
             foreach (var ressourceDictionaryItem in ressources)
             {
-                if (TenantContext.Language.ToLower()=="fr")
+                try
                 {
-                    ret.Add(ressourceDictionaryItem.Key ,ressourceDictionaryItem.Fr);
+                    if (TenantContext.Language.ToLower() == "fr")
+                    {
+                        ret.Add(ressourceDictionaryItem.Key, ressourceDictionaryItem.Fr);
+                    }
+                    if (TenantContext.Language.ToLower() == "nl")
+                    {
+                        ret.Add(ressourceDictionaryItem.Key, ressourceDictionaryItem.Nl);
+                    }
+                    if (TenantContext.Language.ToLower() == "en")
+                    {
+                        ret.Add(ressourceDictionaryItem.Key, ressourceDictionaryItem.En);
+                    }
                 }
-                if (TenantContext.Language.ToLower() == "nl")
+                catch (ArgumentException ex)
                 {
-                    ret.Add(ressourceDictionaryItem.Key, ressourceDictionaryItem.Nl);
+                    throw new ArgumentException(String.Format("Key with id='{0}' was allready present in dictionary", ressourceDictionaryItem.Key), ex);
                 }
-                if (TenantContext.Language.ToLower() == "en")
-                {
-                    ret.Add(ressourceDictionaryItem.Key, ressourceDictionaryItem.En);
-                }
+               
             }
             return ret;
         }
