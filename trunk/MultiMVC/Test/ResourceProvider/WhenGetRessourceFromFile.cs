@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 using BA.MultiMvc.Framework;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Rhino.Mocks;
 
 namespace BA.MultiMvc.Test
 {
-    [TestClass]
+  
     public class WhenGetRessourceFromFile:GivenResourcesToSerialize
     {
         private IDictionary<string, string> Result; 
@@ -38,7 +38,7 @@ namespace BA.MultiMvc.Test
 
         }
 
-        [TestMethod]
+        [Test]
         public void ThenResltIsNotEmpty()
         {
             Assert.IsTrue(this.Result.Count>0);
