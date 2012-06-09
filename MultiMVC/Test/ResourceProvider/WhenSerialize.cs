@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Xml.Serialization;
 using BA.MultiMvc.Framework;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace BA.MultiMvc.Test
 {
-    [TestClass]
     public class WhenSerialize:GivenResourcesToSerialize
     {
         public override void When()
@@ -22,13 +18,13 @@ namespace BA.MultiMvc.Test
             };
         }
 
-        [TestMethod]
+        [Test]
         public void ThenFileExist()
         {
             Assert.IsTrue(File.Exists(Path));
         }
 
-        [TestMethod]
+        [Test]
         public void ThenCanDeserilize()
         {
             XmlSerializer serializer = new XmlSerializer(typeof(List<FileResourceProvider.RessourceDictionaryItem>));
