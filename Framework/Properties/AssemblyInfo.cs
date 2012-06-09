@@ -2,18 +2,17 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following
+// General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MultiMvc")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("MultiMVC Framework")]
+[assembly: AssemblyDescription("This framework enables to create extendable multi tenant applications that can be custumised for every customer without making any changes to the core website. Original vision is explained on the following blog post: http://www.belgianagencies.com/blog.mvc/DisplayPost?postID=12")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("BelgianAgencies")]
 [assembly: AssemblyProduct("MultiMvc")]
-[assembly: AssemblyCopyright("Copyright © BelgianAgencies 2010")]
+[assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
 // COM, set the ComVisible attribute to true on that type.
