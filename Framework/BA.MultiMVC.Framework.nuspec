@@ -22,10 +22,7 @@ using this tokenized nuspec file.
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
       <dependencies>
-        <dependency id="Castle.Core" version="[3.0.0.4001 , 4.0)" />
-        <dependency id="Iesi.Collections" version="[3.2.0.4000, 4.0)" />
-        <dependency id="NHibernate" version="[3.1.0.4000, 4.0)" />
-        <dependency id="NHibernate.Castle" version="[3.1.0.400, 4.0)" />
+        <dependency id="NHibernate" version="[3.3, 3.4)" />
         <dependency id="structuremap" version="2.6.3" />
       </dependencies>
   </metadata>
