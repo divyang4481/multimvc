@@ -43,7 +43,7 @@ namespace BA.MultiMvc.Framework
                         InjectTenantModelNamedInstance(pluginService);
                     }
                 }
-                catch (StructureMapException)
+                catch 
                 { }
 
                 property.GetValue(obj, null);
