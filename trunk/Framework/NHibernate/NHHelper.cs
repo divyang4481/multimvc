@@ -4,7 +4,7 @@ using System.IO;
 using System.Reflection;
 using BA.MultiMvc.Framework;
 using NHibernate;
-using NHibernate.ByteCode.Castle;
+using NHibernate.Cfg;
 using NHibernate.Cfg.Loquacious;
 using NHibernate.Dialect;
 using NHibernate.Tool.hbm2ddl;
@@ -78,8 +78,6 @@ namespace BA.MultiMVC.Framework.NHibernate
         private static Configuration GetNhConfig(string tenantKey, string assemblyName)
         {
             return new Configuration()
-           .Proxy(proxy =>
-                   proxy.ProxyFactoryFactory<ProxyFactoryFactory>())
            .DataBaseIntegration(db =>
            {
                db.Dialect<MsSql2008Dialect>();
